@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/reubenob/public_html
+    - /bin/rsync -az --delete --exclude=".git" --exclude=".cpanel.yml" ./ $DEPLOYPATH
