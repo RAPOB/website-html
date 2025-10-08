@@ -6,6 +6,10 @@
 }
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; }
+  aside.profile {
+    position: static; /* Remove sticky behavior on tablets too */
+    top: auto;
+  }
 }
 
 aside.profile {
@@ -17,6 +21,15 @@ aside.profile {
   top: 20px;
   height: fit-content;
 }
+
+/* Force non-sticky behavior on mobile and tablet */
+@media (max-width: 900px) {
+  aside.profile {
+    position: static !important;
+    top: auto !important;
+  }
+}
+
 .avatar {
   width: 120px; height: 120px; border-radius: 50%;
   background: #0b1020 center/cover no-repeat;
@@ -98,7 +111,9 @@ footer {
     font-size: 14px; 
   }
   .profile { 
-    padding: 18px; 
+    padding: 18px;
+    position: static; /* Remove sticky behavior on mobile */
+    top: auto;
   }
   .avatar { 
     width: 100px; 
