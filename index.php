@@ -81,29 +81,25 @@ footer {
 </style> </head> <body> <div class="wrap"> <header class="site-header"> <div class="brand"> <div class="dot" aria-hidden="true"></div> <div>Reuben O’Brien</div> </div> <nav> <a href="#about">About</a> <a href="#projects">Projects</a> <a href="#publications">Publications</a> <a href="#contact">Contact</a> </nav> </header>
 <div class="grid">
   <aside class="profile">
-    <img src="avatar.jpg" alt="Profile photo" class="avatar" onerror="this.style.display='none'">
+    <img src="images/cover.jpeg" alt="Profile photo" class="avatar" onerror="this.style.display='none'">
     <h1>Reuben O’Brien</h1>
-    <div class="role">Your role or title</div>
-    <div class="tagline">Short tagline about your work or interests</div>
-    <p class="bio">
-      Brief bio. One or two sentences about what you do, your interests, or where you work/study.
-    </p>
-    <div class="social">
-      <a class="chip" href="mailto:you@reubenobrien.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 4-8 5L4 8V6l8 5 8-5z"/></svg>
-        <span>Email</span>
-      </a>
+    <div class="role">Robotics Development Engineer &amp; PhD Student</div>
+    <div style="margin-bottom: 18px;"><a href="https://acumino.ai/" target="_blank" rel="noopener" style="margin-right: 10px;">Acumino</a><a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a></div>
+    <div style="margin-bottom: 18px;"></div>
+    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid var(--border); padding: 12px 10px; display: flex; flex-direction: column; gap: 10px;">
       <a class="chip" href="https://github.com/rapob" target="_blank" rel="noopener" aria-label="GitHub">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A12 12 0 0 0 0 12.6c0 5.34 3.44 9.86 8.2 11.46.6.12.82-.26.82-.58 0-.28-.01-1.03-.02-2.02-3.34.75-4.04-1.64-4.04-1.64-.55-1.43-1.35-1.81-1.35-1.81-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.27 1.86 1.27 1.08 1.91 2.84 1.36 3.53 1.04.11-.8.42-1.35.76-1.66-2.67-.31-5.48-1.38-5.48-6.14 0-1.36.46-2.47 1.23-3.34-.12-.31-.53-1.56.12-3.25 0 0 1.01-.33 3.3 1.27a11.2 11.2 0 0 1 6 0c2.3-1.6 3.3-1.27 3.3-1.27.66 1.69.24 2.94.12 3.25.77.87 1.23 1.98 1.23 3.34 0 4.78-2.81 5.82-5.49 6.13.43.37.81 1.1.81 2.23 0 1.61-.02 2.9-.02 3.29 0 .32.21.7.83.58A12 12 0 0 0 24 12.6 12 12 0 0 0 12 .5Z"/></svg>
         <span>GitHub</span>
       </a>
-      <a class="chip" href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 6.5A2.44 2.44 0 1 1 4.5 4.06 2.45 2.45 0 0 1 6.94 6.5zM4.75 8.5h4.4V20h-4.4zM13 8.5h4.22v1.57h.06c.59-1.02 2.03-2.1 4.18-2.1 4.47 0 5.3 2.57 5.3 5.91V20h-4.39v-5.02c0-1.2-.02-2.76-1.68-2.76-1.69 0-1.95 1.32-1.95 2.67V20H13z"/></svg>
+      <a class="chip" href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener" aria-label="LinkedIn">
         <span>LinkedIn</span>
       </a>
-      <a class="chip" href="https://twitter.com/yourhandle" target="_blank" rel="noopener" aria-label="X">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21.5l-7.52 8.583L22.5 22h-5.845l-5.14-6.112L5.59 22H2.332l8.057-9.197L1.5 2h5.988l4.65 5.727L18.244 2zm-2.05 18h1.61L7.88 4H6.17l10.024 16z"/></svg>
-        <span>X</span>
+      <a class="chip" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+        <span>Google Scholar</span>
+      </a>
+      <a class="chip" href="https://www.researchgate.net/profile/Reuben-Obrien" target="_blank" rel="noopener" aria-label="ResearchGate">
+        <span>ResearchGate</span>
       </a>
     </div>
   </aside>
@@ -112,10 +108,10 @@ footer {
     <section id="about" class="card">
       <h2>About</h2>
       <p>
-        Welcome to my site. Replace this text with a short introduction. You can talk about your current work, interests, and what visitors can find here.
+        Reuben O'Brien is a Robotics Engineer and PhD student at the University of Glasgow, currently working as a Robotics Development Engineer at Acumino. He has previously held engineering roles at Crown Equipment Corporation, TOYOTA GAZOO Racing, and Fisher & Paykel Healthcare, contributing to autonomous robotics, onboard camera systems, and product development.
       </p>
-      <p class="muted">
-        Tip: Upload a square image named avatar.jpg next to this file to show a profile photo.
+      <p>
+        Reuben holds a Master of Engineering (First Class Honours) in Mechatronics, Robotics, and Automation Engineering from the University of Auckland, and is a finalist for Best Paper and Best Application at IEEE IROS. His projects include autonomous waterjet-powered robotic speedboats and Formula SAE electric race engineering. He has also served as President of the University of Auckland Snowsports Club and Race Engineer for the Formula SAE Team.
       </p>
     </section>
 
@@ -123,19 +119,10 @@ footer {
       <h2>Projects</h2>
       <div class="list">
         <div class="item">
-          <h3>Project One</h3>
-          <p>A brief description of what this project is and what you worked on or achieved.</p>
+          <h3><a href="https://www.fsae.co.nz/" target="_blank" rel="noopener">Formula SAE New Zealand</a></h3>
+          <p>Race Engineer for the University of Auckland Formula SAE Team, contributing to electric vehicle design and competition performance.</p>
           <div class="link-row">
-            <a class="btn" href="#" target="_blank" rel="noopener">Live demo</a>
-            <a class="btn" href="https://github.com/rapob/your-repo" target="_blank" rel="noopener">Source</a>
-          </div>
-        </div>
-        <div class="item">
-          <h3>Project Two</h3>
-          <p>Another project summary. Keep it short and focused on impact or result.</p>
-          <div class="link-row">
-            <a class="btn" href="#" target="_blank" rel="noopener">Website</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">Paper</a>
+            <a class="btn" href="https://www.fsae.co.nz/" target="_blank" rel="noopener">Project Website</a>
           </div>
         </div>
       </div>
@@ -145,19 +132,42 @@ footer {
       <h2>Publications</h2>
       <div class="list">
         <div class="item">
-          <h3>Title of Paper (Year)</h3>
-          <p class="muted">Author1, Author2, Reuben O’Brien. Venue/Conference.</p>
-          <div class="link-row">
-            <a class="btn" href="#" target="_blank" rel="noopener">PDF</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">BibTeX</a>
-          </div>
+          <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">An Autonomous, 3D Printed, Waterjet-Powered, Open-Source Robotic Trimaran for Environmental Inspection and Monitoring</a> (2024)</h3>
+          <p class="muted">Reuben O'Brien, et al. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).</p>
         </div>
         <div class="item">
-          <h3>Another Publication (Year)</h3>
-          <p class="muted">O’Brien, R., et al. Journal/Conference.</p>
-          <div class="link-row">
-            <a class="btn" href="#" target="_blank" rel="noopener">PDF</a>
-          </div>
+          <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">On the Development of Waterjet-Powered Robotic Speedboats: An Open-Source, Low-Cost Platform for Education and Research</a> (2022)</h3>
+          <p class="muted">Reuben O'Brien, et al. IEEE International Symposium on Safety, Security, and Rescue Robotics.</p>
+        </div>
+        <div class="item">
+          <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">Other publications</a></h3>
+          <p class="muted">See full list on <a href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="teams" class="card">
+      <h2>Teams & Affiliations</h2>
+      <div class="list">
+        <div class="item">
+          <h3><a href="https://newdexterity.org/" target="_blank" rel="noopener">New Dexterity</a></h3>
+          <p class="muted">Research group focused on robotics and dexterous manipulation.</p>
+        </div>
+        <div class="item">
+          <h3><a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a></h3>
+          <p class="muted">Company specializing in AI-powered robotics and automation.</p>
+        </div>
+        <div class="item">
+          <h3><a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a></h3>
+          <p class="muted">PhD Student, Biomedical Engineering.</p>
+        </div>
+        <div class="item">
+          <h3><a href="https://www.auckland.ac.nz/" target="_blank" rel="noopener">University of Auckland</a></h3>
+          <p class="muted">MEng, Mechatronics, Robotics, and Automation Engineering.</p>
+        </div>
+        <div class="item">
+          <h3><a href="https://www.araralab.uk/" target="_blank" rel="noopener">AraraLab</a></h3>
+          <p class="muted">Research group focused on robotics and artificial intelligence.</p>
         </div>
       </div>
     </section>
@@ -165,7 +175,7 @@ footer {
     <section id="contact" class="card">
       <h2>Contact</h2>
       <p>
-        The best way to reach me: <a href="mailto:you@reubenobrien.com">you@reubenobrien.com</a>
+        The easiest way to contact me is via <a href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener">LinkedIn</a>.
       </p>
     </section>
 
