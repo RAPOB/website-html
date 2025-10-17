@@ -1,4 +1,70 @@
-<?php $year = date('Y'); ?> <!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <title>Reuben O’Brien</title> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="description" content="Reuben O’Brien — personal website"> <link rel="canonical" href="https://reubenobrien.com/"> <meta property="og:title" content="Reuben O’Brien"> <meta property="og:description" content="Personal website"> <meta property="og:type" content="website"> <meta property="og:url" content="https://reubenobrien.com/"> <meta name="theme-color" content="#0f172a"> <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1"> <link rel="icon" type="image/png" href="images/cover.jpg?v=1"> <link rel="shortcut icon" href="images/cover.jpg?v=1"> <link rel="apple-touch-icon" href="images/cover.jpg?v=1"> <link rel="apple-touch-icon" sizes="180x180" href="images/cover.jpg?v=1"> <meta property="og:image" content="https://reubenobrien.com/images/cover.jpeg"> <meta property="og:site_name" content="Reuben O'Brien"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title" content="Reuben O'Brien - Robotics Engineer & PhD Student"> <meta name="twitter:description" content="Robotics Engineer at Acumino and PhD Student at University of Glasgow."> <meta name="twitter:image" content="https://reubenobrien.com/images/cover.jpeg"> <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "name": "Reuben O'Brien", "jobTitle": "Robotics Development Engineer", "affiliation": [ { "@type": "Organization", "name": "Acumino", "url": "https://acumino.ai/" }, { "@type": "Organization", "name": "University of Glasgow", "url": "https://www.gla.ac.uk/" } ], "alumniOf": { "@type": "Organization", "name": "University of Auckland", "url": "https://www.auckland.ac.nz/" }, "url": "https://reubenobrien.com/", "image": "https://reubenobrien.com/images/cover.jpeg", "sameAs": [ "https://www.linkedin.com/in/reubenapob", "https://github.com/rapob", "https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en", "https://www.researchgate.net/profile/Reuben-Obrien" ] } </script> <style> :root { --bg: #0f1426; --panel: #1E2C69; --text: #FFFFFF; --muted: #a8b3d9; --border: #2a3b7a; --accent: #F5E21D; --accent-2: #8E5EB3; --link: #F5E21D; --card: #152041; --navy: #1E2C69; --yellow: #F5E21D; --purple: #8E5EB3; --white: #FFFFFF; --black: #000000; } @media (prefers-color-scheme: light) { :root { --bg: #f8fafc; --panel: #FFFFFF; --text: #1E2C69; --muted: #475569; --border: #e2e8f0; --accent: #1E2C69; --accent-2: #8E5EB3; --link: #1E2C69; --card: #FFFFFF; } } * { box-sizing: border-box; } html, body { margin: 0; padding: 0; } body { background: linear-gradient(135deg, var(--bg), #0a0f1e 50%, var(--bg)); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; } a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; } .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; } header.site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); backdrop-filter: blur(6px); border-radius: 14px; padding: 14px 16px; margin-bottom: 24px; } .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.2px; } .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--accent); } nav a { margin-left: 16px; padding: 8px 10px; border-radius: 8px; border: 1px solid transparent; white-space: nowrap; } nav a:hover { text-decoration: none; border-color: var(--border); background: rgba(255,255,255,0.03); }
+<?php $year = date('Y'); ?>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reuben O'Brien - Robotics Engineer & PhD Student</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Robotics Engineer at Acumino and PhD Student at University of Glasgow. Research in autonomous robotics, waterjet-powered boats, and dexterous manipulation.">
+  <link rel="canonical" href="https://reubenobrien.com/">
+  <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1">
+  <link rel="shortcut icon" href="images/cover.jpeg?v=1">
+  <link rel="apple-touch-icon" href="images/cover.jpeg?v=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/cover.jpeg?v=1">
+  
+  <!-- Enhanced Open Graph meta tags -->
+  <meta property="og:title" content="Reuben O'Brien - Robotics Engineer & PhD Student">
+  <meta property="og:description" content="Robotics Engineer at Acumino and PhD Student at University of Glasgow. Research in autonomous robotics and AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reubenobrien.com/">
+  <meta property="og:image" content="https://reubenobrien.com/images/cover.jpeg">
+  <meta property="og:site_name" content="Reuben O'Brien">
+  
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reuben O'Brien - Robotics Engineer & PhD Student">
+  <meta name="twitter:description" content="Robotics Engineer at Acumino and PhD Student at University of Glasgow.">
+  <meta name="twitter:image" content="https://reubenobrien.com/images/cover.jpeg">
+  
+  <meta name="theme-color" content="#1E2C69">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Reuben O'Brien",
+    "jobTitle": "Robotics Development Engineer",
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "Acumino",
+        "url": "https://acumino.ai/"
+      },
+      {
+        "@type": "Organization",
+        "name": "University of Glasgow",
+        "url": "https://www.gla.ac.uk/"
+      }
+    ],
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "University of Auckland",
+      "url": "https://www.auckland.ac.nz/"
+    },
+    "url": "https://reubenobrien.com/",
+    "image": "https://reubenobrien.com/images/cover.jpeg",
+    "sameAs": [
+      "https://www.linkedin.com/in/reubenapob",
+      "https://github.com/rapob",
+      "https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en",
+      "https://www.researchgate.net/profile/Reuben-Obrien"
+    ]
+  }
+  </script>
+  
+  <style>
+ :root { --bg: #0f1426; --panel: #1E2C69; --text: #FFFFFF; --muted: #a8b3d9; --border: #2a3b7a; --accent: #F5E21D; --accent-2: #8E5EB3; --link: #F5E21D; --card: #152041; --navy: #1E2C69; --yellow: #F5E21D; --purple: #8E5EB3; --white: #FFFFFF; --black: #000000; } @media (prefers-color-scheme: light) { :root { --bg: #f8fafc; --panel: #FFFFFF; --text: #1E2C69; --muted: #475569; --border: #e2e8f0; --accent: #1E2C69; --accent-2: #8E5EB3; --link: #1E2C69; --card: #FFFFFF; } } * { box-sizing: border-box; } html, body { margin: 0; padding: 0; } body { background: linear-gradient(135deg, var(--bg), #0a0f1e 50%, var(--bg)); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; } a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; } .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; } header.site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); backdrop-filter: blur(6px); border-radius: 14px; padding: 14px 16px; margin-bottom: 24px; } .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.2px; } .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--accent); } nav a { margin-left: 16px; padding: 8px 10px; border-radius: 8px; border: 1px solid transparent; white-space: nowrap; } nav a:hover { text-decoration: none; border-color: var(--border); background: rgba(255,255,255,0.03); }
 .grid {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -281,7 +347,10 @@ html {
     padding: 12px;
   }
 }
-</style> </head> <body> <div class="wrap"> <header class="site-header"> <div class="brand"> <div class="dot" aria-hidden="true"></div> <div>Reuben O’Brien</div> </div> <nav> <a href="#about">About</a> <a href="#projects">Projects</a> <a href="#publications">Publications</a> <a href="#contact">Contact</a> </nav> </header>
+</style>
+</head>
+<body>
+<div class="wrap"> <header class="site-header"> <div class="brand"> <div class="dot" aria-hidden="true"></div> <div>Reuben O’Brien</div> </div> <nav> <a href="#about">About</a> <a href="#projects">Projects</a> <a href="#publications">Publications</a> <a href="#contact">Contact</a> </nav> </header>
 <div class="grid">
   <aside class="profile">
     <img src="images/cover.jpeg" alt="Profile photo" class="avatar" onerror="this.style.display='none'">
@@ -434,4 +503,6 @@ html {
     </footer>
   </main>
 </div>
-</div> </body> </html>
+</div> 
+</body>
+</html>
