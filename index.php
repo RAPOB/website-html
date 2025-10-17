@@ -389,62 +389,47 @@ html {
 
     <section id="projects" class="card">
       <h2>Projects</h2>
-      <div class="gallery">
-        <div class="gallery-item" onclick="window.location.href='projects.php'">
-          <img src="images/trimaran.jpg" alt="Autonomous Trimaran" onerror="this.src='images/fsae.jpg'">
-          <div class="gallery-overlay">
-            <h4>Autonomous Trimaran</h4>
-            <p>3D printed waterjet-powered robotic boat for environmental monitoring</p>
+      <div class="list">
+        <div class="item">
+          <h3>Autonomous Robotic Trimaran</h3>
+          <p>A 3D printed, waterjet-powered autonomous boat designed for environmental inspection and monitoring. This open-source platform combines advanced navigation systems with environmental sensors for marine research applications.</p>
+          <div class="link-row">
+            <a class="btn" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">Research Paper</a>
           </div>
         </div>
-        <div class="gallery-item" onclick="window.location.href='projects.php'">
-          <img src="images/fsae.jpg" alt="Formula SAE" onerror="this.style.display='none'">
-          <div class="gallery-overlay">
-            <h4>Formula SAE</h4>
-            <p>Electric race car design and engineering</p>
+        <div class="item">
+          <h3>Formula SAE Electric Racing</h3>
+          <p>Race Engineer for the University of Auckland Formula SAE Team, developing high-performance electric race cars. Achieved 5th place overall in the electric division at FSAE Australasia in Melbourne.</p>
+          <div class="link-row">
+            <a class="btn" href="https://www.fsae.co.nz/" target="_blank" rel="noopener">FSAE NZ</a>
           </div>
         </div>
-        <div class="gallery-item" onclick="window.location.href='projects.php'">
-          <img src="images/robotics.jpg" alt="Robotics Research" onerror="this.style.display='none'">
-          <div class="gallery-overlay">
-            <h4>Robotics Research</h4>
-            <p>AI-powered dexterous manipulation systems</p>
+        <div class="item">
+          <h3>AI-Powered Robotics Research</h3>
+          <p>Development of dexterous manipulation systems and humanoid robotics at Acumino. Working on next-generation AI-powered robot workers for addressing labor and skill shortages in various industries.</p>
+          <div class="link-row">
+            <a class="btn" href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a>
           </div>
         </div>
       </div>
-      <a href="projects.php" class="view-all-btn">
-        View All Projects →
-      </a>
     </section>
 
-    <section id="adventures" class="card">
-      <h2>Adventures</h2>
-      <div class="gallery">
-        <div class="gallery-item" onclick="window.location.href='adventures.php'">
-          <img src="images/skiing.jpg" alt="Skiing Adventures" onerror="this.style.display='none'">
-          <div class="gallery-overlay">
-            <h4>Mountain Adventures</h4>
-            <p>Snowsports club president and skiing enthusiast</p>
-          </div>
+    <section id="experience" class="card">
+      <h2>Experience & Adventures</h2>
+      <div class="list">
+        <div class="item">
+          <h3>🏆 Leadership & Team Building</h3>
+          <p>Served as President of the University of Auckland Snowsports Club with 650+ members and managed a $1.65 million club-owned lodge on Mt Ruapehu. Coordinated multi-week ski trips and handled complex logistics.</p>
         </div>
-        <div class="gallery-item" onclick="window.location.href='adventures.php'">
-          <img src="images/travel.jpg" alt="Travel" onerror="this.style.display='none'">
-          <div class="gallery-overlay">
-            <h4>Global Conferences</h4>
-            <p>Presenting research around the world</p>
-          </div>
+        <div class="item">
+          <h3>🌍 Global Conference Circuit</h3>
+          <p>Presenting research at prestigious international conferences including IEEE IROS. Finalist for Best Paper and Best Application awards, sharing innovations in autonomous robotics with the global research community.</p>
         </div>
-        <div class="gallery-item" onclick="window.location.href='adventures.php'">
-          <img src="images/teamwork.jpg" alt="Team Building" onerror="this.style.display='none'">
-          <div class="gallery-overlay">
-            <h4>Team Leadership</h4>
-            <p>Building and leading high-performance teams</p>
-          </div>
+        <div class="item">
+          <h3>🏎️ Formula SAE Racing</h3>
+          <p>Race Engineer for the University of Auckland Formula SAE Team. Led the team to 5th place overall in the electric division at FSAE Australasia in Melbourne.</p>
         </div>
       </div>
-      <a href="adventures.php" class="view-all-btn">
-        View All Adventures →
-      </a>
     </section>
 
     <section id="publications" class="card">
