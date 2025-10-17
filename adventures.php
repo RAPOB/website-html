@@ -18,21 +18,22 @@ if (is_dir($adventuresPath)) {
 
 // Fallback adventure titles and descriptions
 $adventureDescriptions = [
-    'Mountain Adventures - Exploring peaks and conquering challenges',
-    'Team Leadership - Building and managing successful teams',
-    'Global Conferences - Presenting research worldwide',
-    'Racing Engineering - High-speed innovation and competition', 
-    'Field Research - Testing technology in real environments',
-    'International Travel - Collaborative research across borders',
-    'Innovation Labs - Developing cutting-edge solutions',
-    'Team Collaboration - Working together on complex projects',
-    'Technical Challenges - Solving complex engineering problems',
-    'Competition Success - Achieving excellence in motorsport',
-    'Research Breakthroughs - Advancing the field of robotics',
-    'Adventure Sports - Pushing personal limits',
-    'Academic Excellence - Pursuing knowledge and innovation',
-    'Cultural Exploration - Experiencing diverse perspectives',
-    'Professional Growth - Developing expertise and skills'
+    // 'Mountain Adventures - Exploring peaks and conquering challenges',
+    // 'Team Leadership - Building and managing successful teams',
+    // 'Global Conferences - Presenting research worldwide',
+    // 'Racing Engineering - High-speed innovation and competition', 
+    // 'Field Research - Testing technology in real environments',
+    // 'International Travel - Collaborative research across borders',
+    // 'Innovation Labs - Developing cutting-edge solutions',
+    // 'Team Collaboration - Working together on complex projects',
+    // 'Technical Challenges - Solving complex engineering problems',
+    // 'Competition Success - Achieving excellence in motorsport',
+    // 'Research Breakthroughs - Advancing the field of robotics',
+    // 'Adventure Sports - Pushing personal limits',
+    // 'Academic Excellence - Pursuing knowledge and innovation',
+    // 'Cultural Exploration - Experiencing diverse perspectives',
+    // 'Professional Growth - Developing expertise and skills'
+    ''
 ];
 ?>
 <!doctype html>
@@ -189,7 +190,7 @@ $adventureDescriptions = [
     
     <div class="header">
       <h1>Adventures</h1>
-      <p>Capturing moments of exploration, leadership, and personal growth</p>
+      <p>Capturing moments of planned chaos</p>
       <?php if (count($images) > 0): ?>
         <p style="font-size: 0.9em; opacity: 0.8; margin-top: 12px;">
           <?php echo count($images); ?> adventures captured
