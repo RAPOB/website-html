@@ -9,7 +9,7 @@
   <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1">
   <style>
     :root { 
-      --bg: #0f0a14; 
+      --bg: #2a1810; 
       --panel: #640D5F; 
       --text: #FFFFFF; 
       --muted: #d9a8c7; 
@@ -29,7 +29,7 @@
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
     body { 
-      background: linear-gradient(135deg, var(--bg), #0a0f1e 50%, var(--bg)); 
+      background: linear-gradient(135deg, var(--bg) 0%, #3d2518 25%, #4a1a2e 50%, #2d1b69 75%, var(--bg) 100%); 
       color: var(--text); 
       font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
