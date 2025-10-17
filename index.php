@@ -1,4 +1,4 @@
-<?php $year = date('Y'); ?> <!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <title>Reuben O’Brien</title> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="description" content="Reuben O’Brien — personal website"> <link rel="canonical" href="https://reubenobrien.com/"> <meta property="og:title" content="Reuben O’Brien"> <meta property="og:description" content="Personal website"> <meta property="og:type" content="website"> <meta property="og:url" content="https://reubenobrien.com/"> <meta name="theme-color" content="#0f172a"> <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1"> <link rel="icon" type="image/png" href="images/cover.jpg?v=1"> <link rel="shortcut icon" href="images/cover.jpg?v=1"> <link rel="apple-touch-icon" href="images/cover.jpg?v=1"> <link rel="apple-touch-icon" sizes="180x180" href="images/cover.jpg?v=1"> <meta property="og:image" content="https://reubenobrien.com/images/cover.jpeg"> <meta property="og:site_name" content="Reuben O'Brien"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title" content="Reuben O'Brien - Robotics Engineer & PhD Student"> <meta name="twitter:description" content="Robotics Engineer at Acumino and PhD Student at University of Glasgow."> <meta name="twitter:image" content="https://reubenobrien.com/images/cover.jpeg"> <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "name": "Reuben O'Brien", "jobTitle": "Robotics Development Engineer", "affiliation": [ { "@type": "Organization", "name": "Acumino", "url": "https://acumino.ai/" }, { "@type": "Organization", "name": "University of Glasgow", "url": "https://www.gla.ac.uk/" } ], "alumniOf": { "@type": "Organization", "name": "University of Auckland", "url": "https://www.auckland.ac.nz/" }, "url": "https://reubenobrien.com/", "image": "https://reubenobrien.com/images/cover.jpeg", "sameAs": [ "https://www.linkedin.com/in/reubenapob", "https://github.com/rapob", "https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en", "https://www.researchgate.net/profile/Reuben-Obrien" ] } </script> <style> :root { --bg: #0b1020; --panel: #0f172a; --text: #e5e7eb; --muted: #94a3b8; --border: #1f2a44; --accent: #60a5fa; --accent-2: #22d3ee; --link: #93c5fd; --card: #111827; } @media (prefers-color-scheme: light) { :root { --bg: #f8fafc; --panel: #ffffff; --text: #0f172a; --muted: #475569; --border: #e2e8f0; --accent: #2563eb; --accent-2: #0891b2; --link: #1d4ed8; --card: #ffffff; } } * { box-sizing: border-box; } html, body { margin: 0; padding: 0; } body { background: linear-gradient(135deg, var(--bg), #0a0f1e 50%, var(--bg)); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; } a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; } .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; } header.site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); backdrop-filter: blur(6px); border-radius: 14px; padding: 14px 16px; margin-bottom: 24px; } .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.2px; } .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--accent); } nav a { margin-left: 16px; padding: 8px 10px; border-radius: 8px; border: 1px solid transparent; white-space: nowrap; } nav a:hover { text-decoration: none; border-color: var(--border); background: rgba(255,255,255,0.03); }
+<?php $year = date('Y'); ?> <!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <title>Reuben O’Brien</title> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="description" content="Reuben O’Brien — personal website"> <link rel="canonical" href="https://reubenobrien.com/"> <meta property="og:title" content="Reuben O’Brien"> <meta property="og:description" content="Personal website"> <meta property="og:type" content="website"> <meta property="og:url" content="https://reubenobrien.com/"> <meta name="theme-color" content="#0f172a"> <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1"> <link rel="icon" type="image/png" href="images/cover.jpg?v=1"> <link rel="shortcut icon" href="images/cover.jpg?v=1"> <link rel="apple-touch-icon" href="images/cover.jpg?v=1"> <link rel="apple-touch-icon" sizes="180x180" href="images/cover.jpg?v=1"> <meta property="og:image" content="https://reubenobrien.com/images/cover.jpeg"> <meta property="og:site_name" content="Reuben O'Brien"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title" content="Reuben O'Brien - Robotics Engineer & PhD Student"> <meta name="twitter:description" content="Robotics Engineer at Acumino and PhD Student at University of Glasgow."> <meta name="twitter:image" content="https://reubenobrien.com/images/cover.jpeg"> <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "name": "Reuben O'Brien", "jobTitle": "Robotics Development Engineer", "affiliation": [ { "@type": "Organization", "name": "Acumino", "url": "https://acumino.ai/" }, { "@type": "Organization", "name": "University of Glasgow", "url": "https://www.gla.ac.uk/" } ], "alumniOf": { "@type": "Organization", "name": "University of Auckland", "url": "https://www.auckland.ac.nz/" }, "url": "https://reubenobrien.com/", "image": "https://reubenobrien.com/images/cover.jpeg", "sameAs": [ "https://www.linkedin.com/in/reubenapob", "https://github.com/rapob", "https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en", "https://www.researchgate.net/profile/Reuben-Obrien" ] } </script> <style> :root { --bg: #0f1426; --panel: #1E2C69; --text: #FFFFFF; --muted: #a8b3d9; --border: #2a3b7a; --accent: #F5E21D; --accent-2: #8E5EB3; --link: #F5E21D; --card: #152041; --navy: #1E2C69; --yellow: #F5E21D; --purple: #8E5EB3; --white: #FFFFFF; --black: #000000; } @media (prefers-color-scheme: light) { :root { --bg: #f8fafc; --panel: #FFFFFF; --text: #1E2C69; --muted: #475569; --border: #e2e8f0; --accent: #1E2C69; --accent-2: #8E5EB3; --link: #1E2C69; --card: #FFFFFF; } } * { box-sizing: border-box; } html, body { margin: 0; padding: 0; } body { background: linear-gradient(135deg, var(--bg), #0a0f1e 50%, var(--bg)); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; } a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; } .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; } header.site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); backdrop-filter: blur(6px); border-radius: 14px; padding: 14px 16px; margin-bottom: 24px; } .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.2px; } .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--accent); } nav a { margin-left: 16px; padding: 8px 10px; border-radius: 8px; border: 1px solid transparent; white-space: nowrap; } nav a:hover { text-decoration: none; border-color: var(--border); background: rgba(255,255,255,0.03); }
 .grid {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -187,6 +187,100 @@ html {
   transform: translateY(-1px);
   transition: transform 0.2s ease;
 }
+
+/* Gallery styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid var(--border);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(245, 226, 29, 0.2);
+  border-color: var(--yellow);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.3s ease;
+}
+
+.gallery-item:hover img {
+  scale: 1.05;
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(30, 44, 105, 0.9));
+  color: var(--white);
+  padding: 16px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-overlay h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  color: var(--yellow);
+}
+
+.gallery-overlay p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, var(--yellow), var(--purple));
+  color: var(--navy);
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-top: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.view-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(245, 226, 29, 0.3);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  
+  .gallery-overlay {
+    padding: 12px;
+  }
+}
 </style> </head> <body> <div class="wrap"> <header class="site-header"> <div class="brand"> <div class="dot" aria-hidden="true"></div> <div>Reuben O’Brien</div> </div> <nav> <a href="#about">About</a> <a href="#projects">Projects</a> <a href="#publications">Publications</a> <a href="#contact">Contact</a> </nav> </header>
 <div class="grid">
   <aside class="profile">
@@ -226,16 +320,62 @@ html {
 
     <section id="projects" class="card">
       <h2>Projects</h2>
-      <div class="list">
-        <div class="item">
-          <img src="images/fsae.jpg" alt="Formula SAE New Zealand" class="project-image" onerror="this.style.display='none'">
-          <h3><a href="https://www.fsae.co.nz/" target="_blank" rel="noopener">Formula SAE New Zealand</a></h3>
-          <p>Race Engineer for the University of Auckland Formula SAE Team, contributing to electric vehicle design and competition performance.</p>
-          <div class="link-row">
-            <a class="btn" href="https://www.fsae.co.nz/" target="_blank" rel="noopener">Project Website</a>
+      <div class="gallery">
+        <div class="gallery-item" onclick="window.location.href='projects.php'">
+          <img src="images/trimaran.jpg" alt="Autonomous Trimaran" onerror="this.src='images/fsae.jpg'">
+          <div class="gallery-overlay">
+            <h4>Autonomous Trimaran</h4>
+            <p>3D printed waterjet-powered robotic boat for environmental monitoring</p>
+          </div>
+        </div>
+        <div class="gallery-item" onclick="window.location.href='projects.php'">
+          <img src="images/fsae.jpg" alt="Formula SAE" onerror="this.style.display='none'">
+          <div class="gallery-overlay">
+            <h4>Formula SAE</h4>
+            <p>Electric race car design and engineering</p>
+          </div>
+        </div>
+        <div class="gallery-item" onclick="window.location.href='projects.php'">
+          <img src="images/robotics.jpg" alt="Robotics Research" onerror="this.style.display='none'">
+          <div class="gallery-overlay">
+            <h4>Robotics Research</h4>
+            <p>AI-powered dexterous manipulation systems</p>
           </div>
         </div>
       </div>
+      <a href="projects.php" class="view-all-btn">
+        View All Projects →
+      </a>
+    </section>
+
+    <section id="adventures" class="card">
+      <h2>Adventures</h2>
+      <div class="gallery">
+        <div class="gallery-item" onclick="window.location.href='adventures.php'">
+          <img src="images/skiing.jpg" alt="Skiing Adventures" onerror="this.style.display='none'">
+          <div class="gallery-overlay">
+            <h4>Mountain Adventures</h4>
+            <p>Snowsports club president and skiing enthusiast</p>
+          </div>
+        </div>
+        <div class="gallery-item" onclick="window.location.href='adventures.php'">
+          <img src="images/travel.jpg" alt="Travel" onerror="this.style.display='none'">
+          <div class="gallery-overlay">
+            <h4>Global Conferences</h4>
+            <p>Presenting research around the world</p>
+          </div>
+        </div>
+        <div class="gallery-item" onclick="window.location.href='adventures.php'">
+          <img src="images/teamwork.jpg" alt="Team Building" onerror="this.style.display='none'">
+          <div class="gallery-overlay">
+            <h4>Team Leadership</h4>
+            <p>Building and leading high-performance teams</p>
+          </div>
+        </div>
+      </div>
+      <a href="adventures.php" class="view-all-btn">
+        View All Adventures →
+      </a>
     </section>
 
     <section id="publications" class="card">
