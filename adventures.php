@@ -1,4 +1,40 @@
-<?php $year = date('Y'); ?>
+<?php 
+$year = date('Y'); 
+
+// Get all images from the adventures folder
+$adventuresPath = 'images/adventures/';
+$images = [];
+
+if (is_dir($adventuresPath)) {
+    $files = scandir($adventuresPath);
+    foreach ($files as $file) {
+        if ($file !== '.' && $file !== '..' && preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $file)) {
+            $images[] = $file;
+        }
+    }
+    // Sort images alphabetically
+    sort($images);
+}
+
+// Fallback adventure titles and descriptions
+$adventureDescriptions = [
+    'Mountain Adventures - Exploring peaks and conquering challenges',
+    'Team Leadership - Building and managing successful teams',
+    'Global Conferences - Presenting research worldwide',
+    'Racing Engineering - High-speed innovation and competition', 
+    'Field Research - Testing technology in real environments',
+    'International Travel - Collaborative research across borders',
+    'Innovation Labs - Developing cutting-edge solutions',
+    'Team Collaboration - Working together on complex projects',
+    'Technical Challenges - Solving complex engineering problems',
+    'Competition Success - Achieving excellence in motorsport',
+    'Research Breakthroughs - Advancing the field of robotics',
+    'Adventure Sports - Pushing personal limits',
+    'Academic Excellence - Pursuing knowledge and innovation',
+    'Cultural Exploration - Experiencing diverse perspectives',
+    'Professional Growth - Developing expertise and skills'
+];
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -154,72 +190,44 @@
     <div class="header">
       <h1>Adventures</h1>
       <p>Capturing moments of exploration, leadership, and personal growth</p>
+      <?php if (count($images) > 0): ?>
+        <p style="font-size: 0.9em; opacity: 0.8; margin-top: 12px;">
+          <?php echo count($images); ?> adventures captured
+        </p>
+      <?php endif; ?>
     </div>
     
     <div class="gallery">
-      <div class="gallery-item">
-        <img src="images/skiing.jpg" alt="Mountain Adventures" onerror="this.src='images/cover.jpeg'">
-        <div class="gallery-overlay">
-          <h3>🎿 Mountain Adventures</h3>
-          <p>Leading ski trips and exploring New Zealand's mountains as Snowsports Club President</p>
+      <?php if (count($images) > 0): ?>
+        <?php foreach ($images as $index => $image): ?>
+          <?php 
+            $imagePath = $adventuresPath . $image;
+            $imageTitle = pathinfo($image, PATHINFO_FILENAME);
+            // Clean up the filename for display
+            $displayTitle = ucwords(str_replace(['_', '-'], ' ', $imageTitle));
+            // Get description from array, cycle through if we have more images than descriptions
+            $description = $adventureDescriptions[$index % count($adventureDescriptions)];
+          ?>
+          <div class="gallery-item">
+            <img src="<?php echo htmlspecialchars($imagePath); ?>" 
+                 alt="<?php echo htmlspecialchars($displayTitle); ?>" 
+                 loading="lazy"
+                 onerror="this.src='images/cover.jpeg'">
+            <div class="gallery-overlay">
+              <h3><?php echo htmlspecialchars($displayTitle); ?></h3>
+              <p><?php echo htmlspecialchars($description); ?></p>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <!-- Fallback content when no images are found -->
+        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+          <h3 style="color: var(--orange); margin-bottom: 16px;">No Adventures Yet</h3>
+          <p style="color: var(--muted);">
+            Upload images to the <code>images/adventures/</code> folder to see them here automatically!
+          </p>
         </div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/leadership.jpg" alt="Team Leadership" onerror="this.src='images/cover.jpeg'">
-        <div class="gallery-overlay">
-          <h3>🏆 Team Leadership</h3>
-          <p>Managing 650+ club members and coordinating complex logistics</p>
-        </div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/conference.jpg" alt="Global Conferences" onerror="this.src='images/cover.jpeg'">
-        <div class="gallery-overlay">
-          <h3>🌍 Conference Presentations</h3>
-          <p>Presenting research at IEEE IROS and international robotics conferences</p>
-        </div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/racing.jpg" alt="Formula SAE" onerror="this.src='images/cover.jpeg'">
-        <div class="gallery-overlay">
-          <h3>🏎️ Racing Engineering</h3>
-          <p>Formula SAE competition - achieving 5th place in electric division</p>
-        </div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/research.jpg" alt="Field Research" onerror="this.src='images/cover.jpeg'">
-        <div class="gallery-overlay">
-          <h3>🔬 Field Research</h3>
-          <p>Testing autonomous boats in real-world marine environments</p>
-        </div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/travel.jpg" alt="Travel Adventures" onerror="this.src='images/cover.jpeg'">
-        <div class="gallery-overlay">
-          <h3>✈️ Global Adventures</h3>
-          <p>International travel for research collaborations and conferences</p>
-        </div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/innovation.jpg" alt="Innovation Work" onerror="this.src='images/cover.jpeg'">
-        <div class="gallery-overlay">
-          <h3>💡 Innovation Labs</h3>
-          <p>Working on cutting-edge robotics and AI technologies at Acumino</p>
-        </div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/teamwork.jpg" alt="Collaborative Projects" onerror="this.src='images/cover.jpeg'">
-        <div class="gallery-overlay">
-          <h3>🤝 Collaboration</h3>
-          <p>Building cross-functional teams for complex engineering challenges</p>
-        </div>
-      </div>
+      <?php endif; ?>
     </div>
   </div>
 </body>
