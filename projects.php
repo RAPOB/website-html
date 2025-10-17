@@ -222,7 +222,7 @@
 </head>
 <body>
   <div class="wrap">
-    <a href="index.php" class="back-btn">← Back to Home</a>
+    <a href="/" class="back-btn">← Back to Home</a>
     
     <div class="header">
       <h1>Projects</h1>
