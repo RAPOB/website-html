@@ -9,18 +9,19 @@
   <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1">
   <style>
     :root { 
-      --bg: #0f1426; 
-      --panel: #1E2C69; 
+      --bg: #0f0a14; 
+      --panel: #640D5F; 
       --text: #FFFFFF; 
-      --muted: #a8b3d9; 
-      --border: #2a3b7a; 
-      --accent: #F5E21D; 
-      --accent-2: #8E5EB3; 
-      --link: #F5E21D; 
-      --card: #152041; 
-      --navy: #1E2C69;
-      --yellow: #F5E21D;
-      --purple: #8E5EB3;
+      --muted: #d9a8c7; 
+      --border: #7a2d6a; 
+      --accent: #FFB200; 
+      --accent-2: #EB5B00; 
+      --link: #FFB200; 
+      --card: #4a0a41; 
+      --orange: #FFB200;
+      --red-orange: #EB5B00;
+      --magenta: #D91656;
+      --purple: #640D5F;
       --white: #FFFFFF;
       --black: #000000;
     }
@@ -39,15 +40,15 @@
       text-align: center; 
       margin-bottom: 48px; 
       padding: 40px 20px;
-      background: linear-gradient(135deg, var(--purple), var(--navy));
+      background: linear-gradient(135deg, var(--purple), var(--magenta));
       border-radius: 20px;
-      border: 2px solid var(--yellow);
+      border: 2px solid var(--orange);
     }
     
     .header h1 { 
       font-size: 3em; 
       margin: 0 0 16px 0; 
-      color: var(--yellow);
+      color: var(--orange);
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
     
@@ -62,8 +63,8 @@
       align-items: center;
       gap: 8px;
       padding: 12px 20px;
-      background: var(--yellow);
-      color: var(--navy);
+      background: var(--orange);
+      color: var(--purple);
       text-decoration: none;
       border-radius: 25px;
       font-weight: 600;
@@ -76,90 +77,73 @@
       text-decoration: none;
     }
     
-    .adventure-grid {
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
       margin: 32px 0;
     }
     
-    .adventure-card {
-      background: var(--panel);
-      border: 2px solid var(--border);
-      border-radius: 20px;
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 4/3;
+      border-radius: 16px;
       overflow: hidden;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid var(--border);
+      background: var(--panel);
     }
     
-    .adventure-card:hover {
+    .gallery-item:hover {
       transform: translateY(-8px);
-      border-color: var(--yellow);
+      box-shadow: 0 20px 40px rgba(255, 178, 0, 0.3);
+      border-color: var(--orange);
     }
     
-    .adventure-image {
+    .gallery-item img {
       width: 100%;
-      height: 250px;
+      height: 100%;
       object-fit: cover;
-      position: relative;
+      transition: scale 0.3s ease;
     }
     
-    .adventure-content {
-      padding: 24px;
+    .gallery-item:hover img {
+      scale: 1.05;
     }
     
-    .adventure-content h3 {
-      font-size: 1.5em;
-      margin: 0 0 12px 0;
-      color: var(--yellow);
-    }
-    
-    .adventure-content p {
-      color: var(--muted);
-      margin: 0 0 16px 0;
-    }
-    
-    .adventure-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      font-size: 0.9em;
-      color: var(--muted);
-    }
-    
-    .adventure-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 16px 0;
-    }
-    
-    .tag {
-      background: var(--purple);
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(100, 13, 95, 0.95));
       color: var(--white);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.8em;
-      font-weight: 500;
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
     }
     
-    .highlight-card {
-      grid-column: 1 / -1;
-      background: linear-gradient(135deg, var(--navy), var(--purple));
-      border: 3px solid var(--yellow);
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
     }
     
-    .highlight-card .adventure-content h3 {
-      font-size: 2em;
-      color: var(--yellow);
+    .gallery-overlay h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.2em;
+      color: var(--orange);
+    }
+    
+    .gallery-overlay p {
+      margin: 0;
+      font-size: 0.9em;
+      opacity: 0.9;
     }
     
     @media (max-width: 768px) {
       .header h1 { font-size: 2em; }
-      .adventure-grid { grid-template-columns: 1fr; gap: 24px; }
+      .gallery { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
       .wrap { padding: 20px 16px 60px; }
-      .highlight-card { grid-column: 1; }
     }
   </style>
 </head>
@@ -169,114 +153,71 @@
     
     <div class="header">
       <h1>Adventures</h1>
-      <p>Leadership, exploration, and personal growth experiences</p>
+      <p>Capturing moments of exploration, leadership, and personal growth</p>
     </div>
     
-    <div class="adventure-grid">
-      <div class="adventure-card highlight-card">
-        <img src="images/leadership.jpg" alt="Leadership Experience" class="adventure-image" onerror="this.src='images/cover.jpeg'">
-        <div class="adventure-content">
-          <h3>🏆 Leadership & Team Building</h3>
-          <div class="adventure-meta">
-            <span>2019-2021</span>
-            <span>University of Auckland</span>
-          </div>
-          <p>Served as President of the University of Auckland Snowsports Club with 650+ members and managed a $1.65 million club-owned lodge on Mt Ruapehu. Coordinated multi-week ski trips, handled flights, lodging, and group logistics while liaising with local clubs and government agencies.</p>
-          <div class="adventure-tags">
-            <span class="tag">Leadership</span>
-            <span class="tag">Event Management</span>
-            <span class="tag">Team Building</span>
-            <span class="tag">Logistics</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="adventure-card">
-        <img src="images/skiing.jpg" alt="Mountain Adventures" class="adventure-image" onerror="this.src='images/cover.jpeg'">
-        <div class="adventure-content">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/skiing.jpg" alt="Mountain Adventures" onerror="this.src='images/cover.jpeg'">
+        <div class="gallery-overlay">
           <h3>🎿 Mountain Adventures</h3>
-          <div class="adventure-meta">
-            <span>Ongoing</span>
-            <span>New Zealand & Beyond</span>
-          </div>
-          <p>Passionate snowsports enthusiast with extensive experience across New Zealand's mountains. From the slopes of Mt Ruapehu to international ski destinations, exploring the intersection of adventure and leadership development.</p>
-          <div class="adventure-tags">
-            <span class="tag">Snowsports</span>
-            <span class="tag">Adventure</span>
-            <span class="tag">Outdoor Leadership</span>
-          </div>
+          <p>Leading ski trips and exploring New Zealand's mountains as Snowsports Club President</p>
         </div>
       </div>
       
-      <div class="adventure-card">
-        <img src="images/conferences.jpg" alt="Global Conferences" class="adventure-image" onerror="this.src='images/cover.jpeg'">
-        <div class="adventure-content">
-          <h3>🌍 Global Conference Circuit</h3>
-          <div class="adventure-meta">
-            <span>2022-2024</span>
-            <span>International</span>
-          </div>
-          <p>Presenting research at prestigious international conferences including IEEE IROS. Finalist for Best Paper and Best Application awards, sharing innovations in autonomous robotics and waterjet-powered systems with the global research community.</p>
-          <div class="adventure-tags">
-            <span class="tag">Public Speaking</span>
-            <span class="tag">Research Presentation</span>
-            <span class="tag">International Travel</span>
-            <span class="tag">Networking</span>
-          </div>
+      <div class="gallery-item">
+        <img src="images/leadership.jpg" alt="Team Leadership" onerror="this.src='images/cover.jpeg'">
+        <div class="gallery-overlay">
+          <h3>🏆 Team Leadership</h3>
+          <p>Managing 650+ club members and coordinating complex logistics</p>
         </div>
       </div>
       
-      <div class="adventure-card">
-        <img src="images/racing.jpg" alt="Formula SAE Racing" class="adventure-image" onerror="this.src='images/cover.jpeg'">
-        <div class="adventure-content">
-          <h3>🏎️ Formula SAE Racing</h3>
-          <div class="adventure-meta">
-            <span>2018-2020</span>
-            <span>Auckland & Melbourne</span>
-          </div>
-          <p>Race Engineer for the University of Auckland Formula SAE Team. Led the team to 5th place overall in the electric division at FSAE Australasia in Melbourne, managing high-pressure competition environments and collaborative engineering challenges.</p>
-          <div class="adventure-tags">
-            <span class="tag">Motorsport</span>
-            <span class="tag">Competition</span>
-            <span class="tag">Engineering</span>
-            <span class="tag">Teamwork</span>
-          </div>
+      <div class="gallery-item">
+        <img src="images/conference.jpg" alt="Global Conferences" onerror="this.src='images/cover.jpeg'">
+        <div class="gallery-overlay">
+          <h3>🌍 Conference Presentations</h3>
+          <p>Presenting research at IEEE IROS and international robotics conferences</p>
         </div>
       </div>
       
-      <div class="adventure-card">
-        <img src="images/innovation.jpg" alt="Innovation Challenges" class="adventure-image" onerror="this.src='images/cover.jpeg'">
-        <div class="adventure-content">
-          <h3>💡 Innovation & Entrepreneurship</h3>
-          <div class="adventure-meta">
-            <span>2024-Present</span>
-            <span>Global</span>
-          </div>
-          <p>Contributing to groundbreaking robotics innovations at Acumino, including the first demonstration environment for AI-powered robotics in Japan. Part of bringing next-generation robot workers to address global labor shortages.</p>
-          <div class="adventure-tags">
-            <span class="tag">Innovation</span>
-            <span class="tag">Entrepreneurship</span>
-            <span class="tag">International Business</span>
-            <span class="tag">Technology Transfer</span>
-          </div>
+      <div class="gallery-item">
+        <img src="images/racing.jpg" alt="Formula SAE" onerror="this.src='images/cover.jpeg'">
+        <div class="gallery-overlay">
+          <h3>🏎️ Racing Engineering</h3>
+          <p>Formula SAE competition - achieving 5th place in electric division</p>
         </div>
       </div>
       
-      <div class="adventure-card">
-        <img src="images/research.jpg" alt="Research Adventures" class="adventure-image" onerror="this.src='images/cover.jpeg'">
-        <div class="adventure-content">
-          <h3>🔬 Research Expeditions</h3>
-          <div class="adventure-meta">
-            <span>2021-Present</span>
-            <span>Field Testing</span>
-          </div>
-          <p>Taking autonomous robotic systems into real-world environments for testing and validation. From harbors in Auckland to international waters, pushing the boundaries of what's possible with waterjet-powered autonomous vessels.</p>
-          <div class="adventure-tags">
-            <span class="tag">Field Research</span>
-            <span class="tag">Autonomous Systems</span>
-            <span class="tag">Marine Testing</span>
-            <span class="tag">Problem Solving</span>
-          </div>
+      <div class="gallery-item">
+        <img src="images/research.jpg" alt="Field Research" onerror="this.src='images/cover.jpeg'">
+        <div class="gallery-overlay">
+          <h3>🔬 Field Research</h3>
+          <p>Testing autonomous boats in real-world marine environments</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="images/travel.jpg" alt="Travel Adventures" onerror="this.src='images/cover.jpeg'">
+        <div class="gallery-overlay">
+          <h3>✈️ Global Adventures</h3>
+          <p>International travel for research collaborations and conferences</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="images/innovation.jpg" alt="Innovation Work" onerror="this.src='images/cover.jpeg'">
+        <div class="gallery-overlay">
+          <h3>💡 Innovation Labs</h3>
+          <p>Working on cutting-edge robotics and AI technologies at Acumino</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="images/teamwork.jpg" alt="Collaborative Projects" onerror="this.src='images/cover.jpeg'">
+        <div class="gallery-overlay">
+          <h3>🤝 Collaboration</h3>
+          <p>Building cross-functional teams for complex engineering challenges</p>
         </div>
       </div>
     </div>
