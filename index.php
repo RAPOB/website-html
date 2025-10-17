@@ -64,7 +64,37 @@
   </script>
   
   <style>
- :root { --bg: #0f1426; --panel: #1E2C69; --text: #FFFFFF; --muted: #a8b3d9; --border: #2a3b7a; --accent: #F5E21D; --accent-2: #8E5EB3; --link: #F5E21D; --card: #152041; --navy: #1E2C69; --yellow: #F5E21D; --purple: #8E5EB3; --white: #FFFFFF; --black: #000000; } @media (prefers-color-scheme: light) { :root { --bg: #f8fafc; --panel: #FFFFFF; --text: #1E2C69; --muted: #475569; --border: #e2e8f0; --accent: #1E2C69; --accent-2: #8E5EB3; --link: #1E2C69; --card: #FFFFFF; } } * { box-sizing: border-box; } html, body { margin: 0; padding: 0; } body { background: linear-gradient(135deg, var(--bg), #0a0f1e 50%, var(--bg)); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; } a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; } .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; } header.site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); backdrop-filter: blur(6px); border-radius: 14px; padding: 14px 16px; margin-bottom: 24px; } .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.2px; } .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--accent); } nav a { margin-left: 16px; padding: 8px 10px; border-radius: 8px; border: 1px solid transparent; white-space: nowrap; } nav a:hover { text-decoration: none; border-color: var(--border); background: rgba(255,255,255,0.03); }
+ :root { 
+   --bg: #0f0a14; 
+   --panel: #640D5F; 
+   --text: #FFFFFF; 
+   --muted: #d9a8c7; 
+   --border: #7a2d6a; 
+   --accent: #FFB200; 
+   --accent-2: #EB5B00; 
+   --link: #FFB200; 
+   --card: #4a0a41; 
+   --orange: #FFB200;
+   --red-orange: #EB5B00;
+   --magenta: #D91656;
+   --purple: #640D5F;
+   --white: #FFFFFF;
+   --black: #000000;
+ } 
+ @media (prefers-color-scheme: light) { 
+   :root { 
+     --bg: #fdf8fc; 
+     --panel: #FFFFFF; 
+     --text: #640D5F; 
+     --muted: #8b4a7a; 
+     --border: #e8d5e3; 
+     --accent: #D91656; 
+     --accent-2: #EB5B00; 
+     --link: #D91656; 
+     --card: #FFFFFF; 
+   } 
+ }
+ * { box-sizing: border-box; } html, body { margin: 0; padding: 0; } body { background: linear-gradient(135deg, var(--bg), #0a0f1e 50%, var(--bg)); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; } a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; } .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; } header.site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); backdrop-filter: blur(6px); border-radius: 14px; padding: 14px 16px; margin-bottom: 24px; } .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.2px; } .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--magenta); } nav a { margin-left: 16px; padding: 8px 10px; border-radius: 8px; border: 1px solid transparent; white-space: nowrap; } nav a:hover { text-decoration: none; border-color: var(--border); background: rgba(255,255,255,0.03); }
 .grid {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -274,8 +304,8 @@ html {
 
 .gallery-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(245, 226, 29, 0.2);
-  border-color: var(--yellow);
+  box-shadow: 0 20px 40px rgba(255, 178, 0, 0.2);
+  border-color: var(--orange);
 }
 
 .gallery-item img {
@@ -308,7 +338,7 @@ html {
 .gallery-overlay h4 {
   margin: 0 0 4px 0;
   font-size: 16px;
-  color: var(--yellow);
+  color: var(--orange);
 }
 
 .gallery-overlay p {
@@ -322,8 +352,8 @@ html {
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  background: linear-gradient(135deg, var(--yellow), var(--purple));
-  color: var(--navy);
+  background: linear-gradient(135deg, var(--orange), var(--magenta));
+  color: var(--white);
   text-decoration: none;
   border-radius: 25px;
   font-weight: 600;
@@ -333,7 +363,7 @@ html {
 
 .view-all-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(245, 226, 29, 0.3);
+  box-shadow: 0 10px 20px rgba(255, 178, 0, 0.3);
   text-decoration: none;
 }
 
@@ -350,7 +380,13 @@ html {
 </style>
 </head>
 <body>
-<div class="wrap"> <header class="site-header"> <div class="brand"> <div class="dot" aria-hidden="true"></div> <div>Reuben O’Brien</div> </div> <nav> <a href="#about">About</a> <a href="#projects">Projects</a> <a href="#publications">Publications</a> <a href="#contact">Contact</a> </nav> </header>
+<div class="wrap"> <header class="site-header"> <div class="brand"> <div class="dot" aria-hidden="true"></div> <div>Reuben O’Brien</div> </div> <nav class="nav">
+      <a href="#about">About</a>
+      <a href="projects.php">Projects</a>
+      <a href="adventures.php">Adventures</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav> </header>
 <div class="grid">
   <aside class="profile">
     <img src="images/cover.jpeg" alt="Profile photo" class="avatar" onerror="this.style.display='none'">
