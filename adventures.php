@@ -7,14 +7,25 @@ $images = [];
 
 if (is_dir($adventuresPath)) {
     $files = scandir($adventuresPath);
+    
+    // Debug: Show all files found
+    echo "<!-- DEBUG: All files in directory: " . implode(', ', $files) . " -->";
+    
     foreach ($files as $file) {
         if ($file !== '.' && $file !== '..' && preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $file)) {
             $images[] = $file;
+            echo "<!-- DEBUG: Added image: " . $file . " -->";
         }
     }
     
+    // Debug: Show count before and after unique
+    echo "<!-- DEBUG: Images before unique: " . count($images) . " -->";
+    
     // Remove any duplicates that might exist
     $images = array_unique($images);
+    
+    echo "<!-- DEBUG: Images after unique: " . count($images) . " -->";
+    echo "<!-- DEBUG: Final images array: " . implode(', ', $images) . " -->";
     
     // Sort images by date (most recent first)
     // Assumes format: YY_MM_description.jpg (e.g., 25_05_skiing.jpg)
@@ -48,6 +59,8 @@ if (is_dir($adventuresPath)) {
         // Fallback to alphabetical sorting if neither has date format
         return strcmp($a, $b);
     });
+} else {
+    echo "<!-- DEBUG: Directory does not exist: " . $adventuresPath . " -->";
 }
 
 // Simplified adventure descriptions - just use filename
