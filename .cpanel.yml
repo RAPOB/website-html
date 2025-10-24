@@ -3,8 +3,8 @@ deployment:
     - export DEPLOYPATH=/home/reubenob/public_html/
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp adventures.php $DEPLOYPATH
-    # - /bin/cp projects.php $DEPLOYPATH
-    # - /bin/cp conferences.php $DEPLOYPATH
+    - /bin/cp projects.php $DEPLOYPATH
+    - /bin/cp conferences.php $DEPLOYPATH
     - /bin/cp .htaccess $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
