@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Projects - Reuben O'Brien</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Projects by Reuben O'Brien - Robotics, AI, and Engineering">
+  <meta name="description" content="Projects">
   <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1">
   <style>
     :root { 

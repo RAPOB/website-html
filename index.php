@@ -382,9 +382,7 @@ html {
 <body>
 <div class="wrap"> <header class="site-header"> <div class="brand"> <div class="dot" aria-hidden="true"></div> <div>Reuben O’Brien</div> </div> <nav class="nav">
       <a href="#about">About</a>
-      <a href="/projects">Projects</a>
       <a href="/adventures">Adventures</a>
-      <a href="/conferences">Conferences</a>
       <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
     </nav> </header>
