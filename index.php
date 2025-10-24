@@ -415,10 +415,22 @@ html {
     <section id="about" class="card">
       <h2>About</h2>
       <p>
-        Reuben O'Brien is a Robotics Engineer and PhD student at the University of Glasgow, currently working as a Robotics Development Engineer at Acumino. He has previously held engineering roles at Crown Equipment Corporation, TOYOTA GAZOO Racing, and Fisher & Paykel Healthcare, contributing to autonomous robotics, onboard camera systems, and product development.
+        I'm currently a Robotics Engineer and PhD student at the University of Glasgow, working as a Robotics Development Engineer at Acumino. But let me tell you how I got here...
       </p>
       <p>
-        Reuben holds a Master of Engineering (First Class Honours) in Mechatronics, Robotics, and Automation Engineering from the University of Auckland, and is a finalist for Best Paper and Best Application at IEEE IROS. His projects include autonomous waterjet-powered robotic speedboats and Formula SAE electric race engineering. He has also served as President of the University of Auckland Snowsports Club and Race Engineer for the Formula SAE Team.
+        I started off as a wannabe Race Engineer in Formula SAE at the University of Auckland, and later became a camera specialist with Toyota GAZOO Racing (Formula Regional Oceania). This led to an opportunity with the New Zealand Rally series, with my first event being alongside the World Rally Championship - letting me work on series production cars. Formula racing is crazy, but rally is another whole level of insanity.
+      </p>
+      <p>
+        Realizing that motorsports, at the end of the day, is purely for entertainment, I tried Fisher & Paykel Healthcare as an intern working on medical devices. It was cool to see Auckland, New Zealand on the global stage for medical devices, with design and a significant portion of manufacturing occurring locally. This still didn't do it for me though.
+      </p>
+      <p>
+        In my final year at uni, I realized automation and robotics was where I wanted to be. Crown Equipment Corporation allowed me to work on autonomous lift trucks as a Systems Engineer. This provided me with the chance to work with industrial hardware, PLCs, CANBUS, and real-time control languages like C++. It gave me my first overseas work trip, having me based in New Bremen, Ohio USA for a few months. Quite the change, quite the place, what an experience... Beer league baseball, golf, and ten-pin bowling kept me busy.
+      </p>
+      <p>
+        I began to feel unfulfilled in my spare time, so I picked up a Master's thesis to finish what I started with my Honours project. This led to a year of madness - spending my evenings, weekends, and remaining sanity in the labs, muddy ponds, creeks, and the Manukau Harbour! In the middle of all this, I transitioned from Crown to Acumino, a startup co-founded by my supervisor at the time, which has led me to the craziest adventures I could never have imagined... Sneak peaks of these can be seen on the <a href="/adventures">adventures page</a>.
+      </p>
+      <p>
+        The Master's thesis resulted in two first-author publications to IROS - the first being a finalist for Best Application and the second receiving Best Paper on Search and Safety and Rescue Robotics. After partially mentally recovering from my Master's, I started my Partnership PhD with Acumino and the University of Glasgow in Biomedical Engineering. This thesis will let me close a book within my family and be the creator of many, many more adventures and chaos...
       </p>
     </section>
 
@@ -519,7 +531,7 @@ html {
     </section>
 
     <footer>
-      © <?php echo $year; ?> Reuben O’Brien • Send It
+      © <?php echo $year; ?> Reuben O’Brien • Send It...
     </footer>
   </main>
 </div>
