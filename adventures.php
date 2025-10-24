@@ -7,28 +7,34 @@ $images = [];
 
 if (is_dir($adventuresPath)) {
     $files = scandir($adventuresPath);
-    
-    // Debug: Show all files found
-    echo "<!-- DEBUG: All files in directory: " . implode(', ', $files) . " -->";
+    $seenImages = [];
     
     foreach ($files as $file) {
         if ($file !== '.' && $file !== '..' && preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $file)) {
-            $images[] = $file;
-            echo "<!-- DEBUG: Added image: " . $file . " -->";
+            
+            // Extract the core filename (remove date prefix if exists)
+            $coreFilename = preg_replace('/^\d{2}_\d{2}_/', '', $file);
+            $coreFilename = strtolower($coreFilename); // Make case-insensitive
+            
+            // If we haven't seen this core image before, add the current file
+            if (!isset($seenImages[$coreFilename])) {
+                $seenImages[$coreFilename] = $file;
+                $images[] = $file;
+            } else {
+                // If current file has date prefix and stored one doesn't, replace it
+                if (preg_match('/^\d{2}_\d{2}_/', $file) && !preg_match('/^\d{2}_\d{2}_/', $seenImages[$coreFilename])) {
+                    // Remove the old one and add the dated one
+                    $images = array_filter($images, function($img) use ($seenImages, $coreFilename) {
+                        return $img !== $seenImages[$coreFilename];
+                    });
+                    $seenImages[$coreFilename] = $file;
+                    $images[] = $file;
+                }
+            }
         }
     }
     
-    // Debug: Show count before and after unique
-    echo "<!-- DEBUG: Images before unique: " . count($images) . " -->";
-    
-    // Remove any duplicates that might exist
-    $images = array_unique($images);
-    
-    echo "<!-- DEBUG: Images after unique: " . count($images) . " -->";
-    echo "<!-- DEBUG: Final images array: " . implode(', ', $images) . " -->";
-    
     // Sort images by date (most recent first)
-    // Assumes format: YY_MM_description.jpg (e.g., 25_05_skiing.jpg)
     usort($images, function($a, $b) {
         // Extract date parts from filename
         preg_match('/^(\d{2})_(\d{2})/', $a, $matchesA);
@@ -43,20 +49,20 @@ if (is_dir($adventuresPath)) {
             
             // Sort by year first (descending), then by month (descending)
             if ($yearA !== $yearB) {
-                return $yearB - $yearA; // Most recent year first
+                return $yearB - $yearA;
             }
-            return $monthB - $monthA; // Most recent month first
+            return $monthB - $monthA;
         }
         
         // If only one has date format, prioritize it
         if (count($matchesA) >= 3 && count($matchesB) < 3) {
-            return -1; // A comes first
+            return -1;
         }
         if (count($matchesB) >= 3 && count($matchesA) < 3) {
-            return 1; // B comes first
+            return 1;
         }
         
-        // Fallback to alphabetical sorting if neither has date format
+        // Fallback to alphabetical sorting
         return strcmp($a, $b);
     });
 } else {
