@@ -13,6 +13,9 @@ if (is_dir($adventuresPath)) {
         }
     }
     
+    // Remove any duplicates that might exist
+    $images = array_unique($images);
+    
     // Sort images by date (most recent first)
     // Assumes format: YY_MM_description.jpg (e.g., 25_05_skiing.jpg)
     usort($images, function($a, $b) {
@@ -20,6 +23,7 @@ if (is_dir($adventuresPath)) {
         preg_match('/^(\d{2})_(\d{2})/', $a, $matchesA);
         preg_match('/^(\d{2})_(\d{2})/', $b, $matchesB);
         
+        // If both files have proper date format
         if (count($matchesA) >= 3 && count($matchesB) >= 3) {
             $yearA = (int)$matchesA[1];
             $monthA = (int)$matchesA[2];
@@ -33,28 +37,22 @@ if (is_dir($adventuresPath)) {
             return $monthB - $monthA; // Most recent month first
         }
         
-        // Fallback to alphabetical sorting if date format not found
-        return strcmp($b, $a); // Reverse alphabetical for newer files first
+        // If only one has date format, prioritize it
+        if (count($matchesA) >= 3 && count($matchesB) < 3) {
+            return -1; // A comes first
+        }
+        if (count($matchesB) >= 3 && count($matchesA) < 3) {
+            return 1; // B comes first
+        }
+        
+        // Fallback to alphabetical sorting if neither has date format
+        return strcmp($a, $b);
     });
 }
 
 // Fallback adventure titles and descriptions
 $adventureDescriptions = [
     // 'Mountain Adventures - Exploring peaks and conquering challenges',
-    // 'Team Leadership - Building and managing successful teams',
-    // 'Global Conferences - Presenting research worldwide',
-    // 'Racing Engineering - High-speed innovation and competition', 
-    // 'Field Research - Testing technology in real environments',
-    // 'International Travel - Collaborative research across borders',
-    // 'Innovation Labs - Developing cutting-edge solutions',
-    // 'Team Collaboration - Working together on complex projects',
-    // 'Technical Challenges - Solving complex engineering problems',
-    // 'Competition Success - Achieving excellence in motorsport',
-    // 'Research Breakthroughs - Advancing the field of robotics',
-    // 'Adventure Sports - Pushing personal limits',
-    // 'Academic Excellence - Pursuing knowledge and innovation',
-    // 'Cultural Exploration - Experiencing diverse perspectives',
-    // 'Professional Growth - Developing expertise and skills'
     ''
 ];
 ?>
