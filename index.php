@@ -384,6 +384,7 @@ html {
       <a href="#about">About</a>
       <a href="/projects">Projects</a>
       <a href="/adventures">Adventures</a>
+      <a href="/conferences">Conferences</a>
       <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
     </nav> </header>
@@ -461,7 +462,7 @@ html {
       </div>
     </section>
 
-    <section id="experience" class="card">
+    <!-- <section id="experience" class="card">
       <h2>Experience & Adventures</h2>
       <div class="list">
         <div class="item">
@@ -477,7 +478,7 @@ html {
           <p>Race Engineer for the University of Auckland Formula SAE Team. Led the team to 5th place overall in the electric division at FSAE Australasia in Melbourne.</p>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="publications" class="card">
       <h2>Publications</h2>

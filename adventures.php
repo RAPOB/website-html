@@ -66,7 +66,7 @@ if (is_dir($adventuresPath)) {
         return strcmp($a, $b);
     });
 } else {
-    echo "<!-- DEBUG: Directory does not exist: " . $adventuresPath . " -->";
+    // Directory doesn't exist - create empty array
 }
 
 // Simplified adventure descriptions - just use filename
