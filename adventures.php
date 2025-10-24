@@ -12,8 +12,30 @@ if (is_dir($adventuresPath)) {
             $images[] = $file;
         }
     }
-    // Sort images alphabetically
-    sort($images);
+    
+    // Sort images by date (most recent first)
+    // Assumes format: YY_MM_description.jpg (e.g., 25_05_skiing.jpg)
+    usort($images, function($a, $b) {
+        // Extract date parts from filename
+        preg_match('/^(\d{2})_(\d{2})/', $a, $matchesA);
+        preg_match('/^(\d{2})_(\d{2})/', $b, $matchesB);
+        
+        if (count($matchesA) >= 3 && count($matchesB) >= 3) {
+            $yearA = (int)$matchesA[1];
+            $monthA = (int)$matchesA[2];
+            $yearB = (int)$matchesB[1];
+            $monthB = (int)$matchesB[2];
+            
+            // Sort by year first (descending), then by month (descending)
+            if ($yearA !== $yearB) {
+                return $yearB - $yearA; // Most recent year first
+            }
+            return $monthB - $monthA; // Most recent month first
+        }
+        
+        // Fallback to alphabetical sorting if date format not found
+        return strcmp($b, $a); // Reverse alphabetical for newer files first
+    });
 }
 
 // Fallback adventure titles and descriptions
