@@ -50,11 +50,8 @@ if (is_dir($adventuresPath)) {
     });
 }
 
-// Fallback adventure titles and descriptions
-$adventureDescriptions = [
-    // 'Mountain Adventures - Exploring peaks and conquering challenges',
-    ''
-];
+// Simplified adventure descriptions - just use filename
+$adventureDescriptions = [''];
 ?>
 <!doctype html>
 <html lang="en">
@@ -226,8 +223,8 @@ $adventureDescriptions = [
             $imageTitle = pathinfo($image, PATHINFO_FILENAME);
             // Clean up the filename for display
             $displayTitle = ucwords(str_replace(['_', '-'], ' ', $imageTitle));
-            // Get description from array, cycle through if we have more images than descriptions
-            $description = $adventureDescriptions[$index % count($adventureDescriptions)];
+            // Simple description or empty
+            $description = '';
           ?>
           <div class="gallery-item">
             <img src="<?php echo htmlspecialchars($imagePath); ?>" 
