@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Preview B — Single Column Hero</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root {
+  --bg: #0e0b14;
+  --panel: #16111f;
+  --text: #f0eaf8;
+  --muted: #9b8db0;
+  --border: #2a1f3d;
+  --accent: #FFB200;
+  --accent-2: #EB5B00;
+  --card: #1c1528;
+  --magenta: #D91656;
+  --purple: #7c3aed;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* NAV */
+nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 0; border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+.brand { font-weight: 700; letter-spacing: -0.3px; }
+.nav-links a { margin-left: 24px; color: var(--muted); font-size: 15px; }
+.nav-links a:hover { color: var(--text); }
+
+/* HERO */
+.hero {
+  padding: 72px 0 64px;
+  border-bottom: 1px solid var(--border);
+}
+.hero-meta {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 24px;
+}
+.status-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.status-text { color: var(--muted); font-size: 14px; }
+.hero h1 {
+  font-size: 52px; font-weight: 800; margin: 0 0 12px;
+  letter-spacing: -1.5px; line-height: 1.1;
+}
+.hero h1 span { color: var(--accent); }
+.hero-sub {
+  font-size: 20px; color: var(--muted); margin: 0 0 32px;
+  max-width: 560px; line-height: 1.5;
+}
+.hero-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.hero-chip {
+  padding: 6px 14px; border-radius: 20px;
+  border: 1px solid var(--border); background: var(--card);
+  font-size: 14px; color: var(--muted);
+}
+.hero-chip.accent { border-color: rgba(255,178,0,0.4); color: var(--accent); background: rgba(255,178,0,0.06); }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  padding: 10px 20px; border-radius: 10px;
+  background: var(--accent); color: #000; font-weight: 600;
+  font-size: 15px;
+}
+.btn-secondary {
+  padding: 10px 20px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--card);
+  color: var(--text); font-size: 15px;
+}
+
+/* SECTION */
+section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+section:last-child { border-bottom: none; }
+.section-label {
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--muted); margin-bottom: 32px;
+}
+
+/* PROJECT GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.project-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 22px;
+  transition: border-color 0.2s;
+}
+.project-card:hover { border-color: var(--accent); }
+.project-card.featured {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #1c1528, #1a1030);
+  border-color: rgba(255,178,0,0.25);
+  display: grid; grid-template-columns: 1fr auto;
+  align-items: center; gap: 20px;
+}
+.project-tag {
+  display: inline-block;
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--accent);
+  margin-bottom: 10px;
+}
+.project-card h3 { margin: 0 0 8px; font-size: 17px; }
+.project-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.project-award {
+  background: rgba(255,178,0,0.1); border: 1px solid rgba(255,178,0,0.3);
+  border-radius: 8px; padding: 10px 14px; text-align: center;
+  white-space: nowrap;
+}
+.project-award .trophy { font-size: 22px; display: block; margin-bottom: 4px; }
+.project-award span { font-size: 12px; color: var(--accent); font-weight: 600; }
+
+/* PUBLICATIONS */
+.pub-list { display: grid; gap: 0; }
+.pub-row {
+  display: grid; grid-template-columns: 48px 1fr;
+  gap: 20px; padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.pub-row:last-child { border-bottom: none; }
+.pub-year { color: var(--muted); font-size: 13px; font-weight: 600; padding-top: 3px; }
+.pub-title { font-size: 15px; line-height: 1.45; margin: 0 0 4px; }
+.pub-title a { color: var(--text); }
+.pub-venue { color: var(--muted); font-size: 13px; margin: 0; }
+.pill {
+  display: inline-block; border-radius: 4px;
+  padding: 1px 8px; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin-left: 8px; vertical-align: middle;
+}
+.pill-gold { background: rgba(255,178,0,0.15); color: var(--accent); }
+.pill-grey { background: rgba(255,255,255,0.06); color: var(--muted); }
+
+/* ABOUT */
+.about-text p { color: var(--muted); line-height: 1.75; margin: 0 0 16px; max-width: 680px; }
+.about-text p:last-child { margin-bottom: 0; }
+.about-text strong { color: var(--text); }
+
+/* SOCIAL ROW */
+.social-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 40px; }
+.social-chip {
+  padding: 8px 16px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--card);
+  font-size: 14px; color: var(--muted);
+}
+.social-chip:hover { border-color: var(--accent); color: var(--text); }
+
+footer { padding: 32px 0; color: var(--muted); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <div class="brand">Reuben O'Brien</div>
+  <div class="nav-links">
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Publications</a>
+    <a href="#">Adventures</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-meta">
+    <div class="status-dot"></div>
+    <span class="status-text">PhD Student · University of Glasgow</span>
+  </div>
+  <h1>Robotics<br>Engineer<span>.</span></h1>
+  <p class="hero-sub">Building robots that learn from people. Boats, arms, gaze. Currently at Acumino and University of Glasgow.</p>
+  <div class="hero-chips">
+    <span class="hero-chip accent">IROS 2025 Best Paper</span>
+    <span class="hero-chip">ROS 2</span>
+    <span class="hero-chip">Imitation Learning</span>
+    <span class="hero-chip">Computer Vision</span>
+    <span class="hero-chip">C++</span>
+  </div>
+  <div class="hero-actions">
+    <a class="btn-primary" href="#">Publications</a>
+    <a class="btn-secondary" href="#">Adventures</a>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section>
+  <div class="section-label">Projects</div>
+  <div class="project-grid">
+    <div class="project-card featured">
+      <div>
+        <div class="project-tag">IROS 2025</div>
+        <h3>AeroBuoy</h3>
+        <p>Drone-deployable, 3D printed autonomous buoy for environmental inspection in remote and hazardous river systems.</p>
+      </div>
+      <div class="project-award">
+        <span class="trophy">🏆</span>
+        <span>Best Paper</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">IROS 2024</div>
+      <h3>Autonomous Trimaran</h3>
+      <p>3D printed, waterjet-powered autonomous boat. Open-source. Muddy ponds, creeks, and the Manukau Harbour.</p>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Acumino</div>
+      <h3>Vision-to-Action Manipulation</h3>
+      <p>Vision-to-action models across UR, Mitsubishi, ABB, Open ARM. Bimanual configs, imitation learning pipelines. Europe, USA, Japan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section>
+  <div class="section-label">Publications</div>
+  <div class="pub-list">
+    <div class="pub-row">
+      <div class="pub-year">2025</div>
+      <div>
+        <p class="pub-title">AeroBuoy: A Drone Deployable, 3D Printed, Autonomous Robotic Buoy for Environmental Inspection <span class="pill pill-gold">Best Paper</span></p>
+        <p class="pub-venue">IEEE IROS · Reuben O'Brien et al.</p>
+      </div>
+    </div>
+    <div class="pub-row">
+      <div class="pub-year">2024</div>
+      <div>
+        <p class="pub-title"><a href="#">An Autonomous, 3D Printed, Waterjet-Powered, Open-Source Robotic Trimaran for Environmental Inspection and Monitoring</a> <span class="pill pill-grey">Best Application Finalist</span></p>
+        <p class="pub-venue">IEEE IROS · Reuben O'Brien et al.</p>
+      </div>
+    </div>
+    <div class="pub-row">
+      <div class="pub-year">2022</div>
+      <div>
+        <p class="pub-title"><a href="#">On the Development of Waterjet-Powered Robotic Speedboats</a></p>
+        <p class="pub-venue">IEEE SSRR · Reuben O'Brien et al.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <div class="section-label">About</div>
+  <div class="about-text">
+    <p>Started off as a wannabe Race Engineer in Formula SAE at Auckland, then camera specialist with <strong>Toyota GAZOO Racing</strong>. That led to the NZ Rally series — first event alongside the World Rally Championship. Formula racing is crazy, but rally is another level of insanity.</p>
+    <p>After a stint at <strong>Fisher &amp; Paykel Healthcare</strong> and deciding medical devices wasn't it, I found autonomous robotics at <strong>Crown Equipment Corporation</strong> — working on LiDAR obstacle detection for autonomous forklifts in C++, based out of New Bremen, Ohio.</p>
+    <p>A Master's thesis followed: a year of madness in the labs, muddy ponds, creeks, and the Manukau Harbour. Two IROS papers. First class. Then a Partnership PhD with <strong>Acumino</strong> and the <strong>University of Glasgow</strong> in Biomedical Engineering. More adventures incoming.</p>
+  </div>
+  <div class="social-row">
+    <a class="social-chip" href="#">GitHub</a>
+    <a class="social-chip" href="#">LinkedIn</a>
+    <a class="social-chip" href="#">Google Scholar</a>
+    <a class="social-chip" href="#">ResearchGate</a>
+  </div>
+</section>
+
+<footer>© 2025 Reuben O'Brien · Send It...</footer>
+
+</div>
+</body>
+</html>

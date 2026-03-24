@@ -11,24 +11,19 @@
   <link rel="shortcut icon" href="images/cover.jpeg?v=1">
   <link rel="apple-touch-icon" href="images/cover.jpeg?v=1">
   <link rel="apple-touch-icon" sizes="180x180" href="images/cover.jpeg?v=1">
-  
-  <!-- Enhanced Open Graph meta tags -->
+
   <meta property="og:title" content="Reuben O'Brien - Robotics Engineer & PhD Student">
-  <meta property="og:description" content="Robotics Engineer at Acumino and PhD Student at University of Glasgow. Research in autonomous robotics and AI.">
+  <meta property="og:description" content="Robotics Engineer at Acumino and PhD Student at University of Glasgow.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://reubenobrien.com/">
   <meta property="og:image" content="https://reubenobrien.com/images/cover.jpeg">
   <meta property="og:site_name" content="Reuben O'Brien">
-  
-  <!-- Twitter Card meta tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Reuben O'Brien - Robotics Engineer & PhD Student">
   <meta name="twitter:description" content="Robotics Engineer at Acumino and PhD Student at University of Glasgow.">
   <meta name="twitter:image" content="https://reubenobrien.com/images/cover.jpeg">
-  
-  <meta name="theme-color" content="#1E2C69">
-  
-  <!-- Structured Data for SEO -->
+  <meta name="theme-color" content="#640D5F">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,22 +31,10 @@
     "name": "Reuben O'Brien",
     "jobTitle": "Robotics Development Engineer",
     "affiliation": [
-      {
-        "@type": "Organization",
-        "name": "Acumino",
-        "url": "https://acumino.ai/"
-      },
-      {
-        "@type": "Organization",
-        "name": "University of Glasgow",
-        "url": "https://www.gla.ac.uk/"
-      }
+      { "@type": "Organization", "name": "Acumino", "url": "https://acumino.ai/" },
+      { "@type": "Organization", "name": "University of Glasgow", "url": "https://www.gla.ac.uk/" }
     ],
-    "alumniOf": {
-      "@type": "Organization",
-      "name": "University of Auckland",
-      "url": "https://www.auckland.ac.nz/"
-    },
+    "alumniOf": { "@type": "Organization", "name": "University of Auckland", "url": "https://www.auckland.ac.nz/" },
     "url": "https://reubenobrien.com/",
     "image": "https://reubenobrien.com/images/cover.jpeg",
     "sameAs": [
@@ -62,478 +45,375 @@
     ]
   }
   </script>
-  
+
   <style>
- :root { 
-   --bg: #2a1810; 
-   --panel: #640D5F; 
-   --text: #FFFFFF; 
-   --muted: #d9a8c7; 
-   --border: #7a2d6a; 
-   --accent: #FFB200; 
-   --accent-2: #EB5B00; 
-   --link: #FFB200; 
-   --card: #4a0a41; 
-   --orange: #FFB200;
-   --red-orange: #EB5B00;
-   --magenta: #D91656;
-   --purple: #640D5F;
-   --white: #FFFFFF;
-   --black: #000000;
- } 
- @media (prefers-color-scheme: light) { 
-   :root { 
-     --bg: #fdf8fc; 
-     --panel: #FFFFFF; 
-     --text: #640D5F; 
-     --muted: #8b4a7a; 
-     --border: #e8d5e3; 
-     --accent: #D91656; 
-     --accent-2: #EB5B00; 
-     --link: #D91656; 
-     --card: #FFFFFF; 
-   } 
- }
- * { box-sizing: border-box; } html, body { margin: 0; padding: 0; } body { background: linear-gradient(135deg, var(--bg) 0%, #3d2518 25%, #4a1a2e 50%, #2d1b69 75%, var(--bg) 100%); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; } a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; } .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; } header.site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); backdrop-filter: blur(6px); border-radius: 14px; padding: 14px 16px; margin-bottom: 24px; } .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.2px; } .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--magenta); } nav a { margin-left: 16px; padding: 8px 10px; border-radius: 8px; border: 1px solid transparent; white-space: nowrap; } nav a:hover { text-decoration: none; border-color: var(--border); background: rgba(255,255,255,0.03); }
-.grid {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 24px;
-}
-@media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr; }
-  aside.profile {
-    position: static; /* Remove sticky behavior on tablets too */
-    top: auto;
+  :root {
+    --bg:       #2a1810;
+    --panel:    #3d1a38;
+    --card:     #4a0a41;
+    --text:     #FFFFFF;
+    --muted:    #d9a8c7;
+    --border:   #7a2d6a;
+    --accent:   #FFB200;
+    --accent-2: #EB5B00;
+    --magenta:  #D91656;
+    --purple:   #640D5F;
   }
-}
-
-aside.profile {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 22px;
-  position: sticky;
-  top: 20px;
-  height: fit-content;
-}
-
-/* Force non-sticky behavior on mobile and tablet */
-@media (max-width: 900px) {
-  aside.profile {
-    position: static !important;
-    top: auto !important;
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg:     #fdf8fc;
+      --panel:  #fff0fb;
+      --card:   #FFFFFF;
+      --text:   #2a0a28;
+      --muted:  #8b4a7a;
+      --border: #e0c0d8;
+      --accent: #D91656;
+      --accent-2: #EB5B00;
+      --magenta: #D91656;
+      --purple: #640D5F;
+    }
   }
-}
 
-.avatar {
-  width: 120px; height: 120px; border-radius: 50%;
-  background: #0b1020 center/cover no-repeat;
-  border: 2px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-.profile h1 {
-  font-size: 26px; margin: 16px 0 6px;
-}
-.profile .role { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
-.profile .bio { color: var(--text); opacity: 0.9; margin: 12px 0 18px; }
-.social {
-  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;
-}
-.chip {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 8px 10px; border-radius: 10px;
-  border: 1px solid var(--border); background: rgba(255,255,255,0.03);
-}
-.chip svg { width: 16px; height: 16px; }
-.chip:hover { text-decoration: none; border-color: var(--accent); }
-
-main.content {
-  display: grid; gap: 24px;
-}
-section.card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 22px;
-}
-.card h2 { margin: 0 0 10px; }
-.muted { color: var(--muted); }
-.list {
-  display: grid; gap: 12px; margin: 14px 0 0;
-}
-.item {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 14px;
-}
-.item h3 { margin: 0 0 6px; font-size: 18px; }
-.item p { margin: 6px 0 0; color: var(--muted); }
-.link-row { margin-top: 10px; display: flex; gap: 12px; flex-wrap: wrap; }
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border);
-  color: var(--text); text-decoration: none;
-  background: linear-gradient(135deg, rgba(96,165,250,0.08), rgba(34,211,238,0.06));
-}
-.btn:hover { border-color: var(--accent); text-decoration: none; }
-footer {
-  margin-top: 28px; color: var(--muted); font-size: 14px; text-align: center;
-}
-.tagline {
-  font-size: 15px; color: var(--muted);
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  padding: 10px 12px; border-radius: 10px; display: inline-block;
-}
-
-/* Enhanced mobile responsiveness */
-@media (max-width: 640px) {
-  .wrap { padding: 20px 16px 60px; }
-  header.site-header { 
-    flex-direction: column; 
-    align-items: flex-start; 
-    gap: 16px; 
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: linear-gradient(135deg, var(--bg) 0%, #3d2518 25%, #4a1a2e 50%, #2d1b69 75%, var(--bg) 100%);
+    background-attachment: fixed;
+    color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, Segoe UI, sans-serif;
+    min-height: 100vh;
   }
-  nav { 
-    display: flex; 
-    gap: 8px; 
-    flex-wrap: wrap; 
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ── NAV ── */
+  nav.site-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 0; border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
   }
-  nav a { 
-    margin-left: 0; 
-    padding: 6px 8px; 
-    font-size: 14px; 
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 0 14px var(--magenta);
   }
-  .profile { 
-    padding: 18px;
-    position: static; /* Remove sticky behavior on mobile */
-    top: auto;
+  .nav-links a {
+    margin-left: 20px; color: var(--muted); font-size: 15px;
+    padding: 6px 0; border-bottom: 2px solid transparent;
   }
-  .avatar { 
-    width: 100px; 
-    height: 100px; 
+  .nav-links a:hover { color: var(--text); text-decoration: none; border-bottom-color: var(--accent); }
+
+  /* ── HERO ── */
+  .hero { padding: 68px 0 60px; border-bottom: 1px solid var(--border); }
+  .hero-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+  .status-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #22c55e; box-shadow: 0 0 8px #22c55e;
+    animation: pulse 2.4s ease-in-out infinite;
   }
-  .profile h1 { 
-    font-size: 22px; 
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+  .status-text { color: var(--muted); font-size: 14px; }
+  .hero h1 {
+    font-size: 56px; font-weight: 800; margin: 0 0 14px;
+    letter-spacing: -2px; line-height: 1.05;
   }
-  .card { 
-    padding: 18px; 
+  .hero h1 .punct { color: var(--magenta); }
+  .hero-sub {
+    font-size: 19px; color: var(--muted); margin: 0 0 30px;
+    max-width: 560px; line-height: 1.55;
   }
-  .item { 
-    padding: 12px; 
+  .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+  .chip {
+    padding: 5px 13px; border-radius: 20px;
+    border: 1px solid var(--border); background: rgba(255,255,255,0.04);
+    font-size: 13px; color: var(--muted);
   }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Loading animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  .chip.gold {
+    border-color: rgba(255,178,0,0.45); color: var(--accent);
+    background: rgba(255,178,0,0.08);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary {
+    padding: 10px 22px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #000; font-weight: 700; font-size: 15px;
+    border: none; cursor: pointer;
   }
-}
-
-.card {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.card:nth-child(2) { animation-delay: 0.1s; }
-.card:nth-child(3) { animation-delay: 0.2s; }
-.card:nth-child(4) { animation-delay: 0.3s; }
-.card:nth-child(5) { animation-delay: 0.4s; }
-
-.profile {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Project images */
-.project-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  border: 1px solid var(--border);
-}
-
-@media (max-width: 640px) {
-  .project-image {
-    height: 150px;
+  .btn-primary:hover { text-decoration: none; filter: brightness(1.1); }
+  .btn-secondary {
+    padding: 10px 22px; border-radius: 10px;
+    border: 1px solid var(--border); background: rgba(255,255,255,0.04);
+    color: var(--text); font-size: 15px;
   }
-}
+  .btn-secondary:hover { text-decoration: none; border-color: var(--accent); }
 
-/* Enhanced hover effects */
-.item:hover {
-  transform: translateY(-2px);
-  transition: transform 0.2s ease;
-  border-color: var(--accent);
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-  transition: transform 0.2s ease;
-}
-
-/* Gallery styles */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  margin: 16px 0;
-}
-
-.gallery-item {
-  position: relative;
-  aspect-ratio: 4/3;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid var(--border);
-}
-
-.gallery-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(255, 178, 0, 0.2);
-  border-color: var(--orange);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: scale 0.3s ease;
-}
-
-.gallery-item:hover img {
-  scale: 1.05;
-}
-
-.gallery-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(30, 44, 105, 0.9));
-  color: var(--white);
-  padding: 16px;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover .gallery-overlay {
-  transform: translateY(0);
-}
-
-.gallery-overlay h4 {
-  margin: 0 0 4px 0;
-  font-size: 16px;
-  color: var(--orange);
-}
-
-.gallery-overlay p {
-  margin: 0;
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-.view-all-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  background: linear-gradient(135deg, var(--orange), var(--magenta));
-  color: var(--white);
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 600;
-  margin-top: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.view-all-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 178, 0, 0.3);
-  text-decoration: none;
-}
-
-@media (max-width: 640px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
+  /* ── SECTIONS ── */
+  section { padding: 52px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  .section-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.14em; color: var(--muted); margin-bottom: 28px;
   }
-  
-  .gallery-overlay {
-    padding: 12px;
+
+  /* ── PROJECT GRID ── */
+  .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .project-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 20px;
+    transition: border-color 0.2s, transform 0.2s;
   }
-}
-</style>
+  .project-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .project-card.featured {
+    grid-column: span 2;
+    background: linear-gradient(135deg, var(--card), #3a0a55);
+    border-color: rgba(255,178,0,0.3);
+    display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;
+  }
+  .project-tag {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--accent); margin-bottom: 8px;
+  }
+  .project-card h3 { margin: 0 0 8px; font-size: 17px; }
+  .project-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+  .project-card .item-link { display: inline-block; margin-top: 10px; font-size: 13px; }
+  .award-badge {
+    background: rgba(255,178,0,0.1); border: 1px solid rgba(255,178,0,0.35);
+    border-radius: 10px; padding: 12px 16px; text-align: center; white-space: nowrap;
+  }
+  .award-badge .trophy { font-size: 24px; display: block; margin-bottom: 4px; }
+  .award-badge span { font-size: 12px; color: var(--accent); font-weight: 700; }
+
+  /* ── PUBLICATIONS ── */
+  .pub-list { display: grid; }
+  .pub-row {
+    display: grid; grid-template-columns: 44px 1fr;
+    gap: 20px; padding: 18px 0;
+    border-bottom: 1px solid var(--border); align-items: start;
+  }
+  .pub-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .pub-year { color: var(--muted); font-size: 13px; font-weight: 600; padding-top: 2px; }
+  .pub-title { font-size: 15px; line-height: 1.45; margin: 0 0 4px; }
+  .pub-title a { color: var(--text); }
+  .pub-venue { color: var(--muted); font-size: 13px; margin: 0; }
+  .pill {
+    display: inline-block; border-radius: 4px;
+    padding: 1px 8px; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    margin-left: 8px; vertical-align: middle;
+  }
+  .pill-gold { background: rgba(255,178,0,0.15); color: var(--accent); }
+  .pill-muted { background: rgba(255,255,255,0.06); color: var(--muted); }
+
+  /* ── ABOUT ── */
+  .about-text p { color: var(--muted); line-height: 1.75; margin: 0 0 16px; max-width: 680px; }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-text strong { color: var(--text); font-weight: 600; }
+
+  /* ── AFFILIATIONS ── */
+  .affil-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .affil-item {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px;
+  }
+  .affil-item h3 { margin: 0 0 4px; font-size: 15px; }
+  .affil-item p { margin: 0; color: var(--muted); font-size: 13px; }
+
+  /* ── SOCIAL ── */
+  .social-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 36px; }
+  .social-chip {
+    padding: 8px 16px; border-radius: 10px;
+    border: 1px solid var(--border); background: rgba(255,255,255,0.03);
+    font-size: 14px; color: var(--muted);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .social-chip:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
+
+  /* ── CONTACT ── */
+  .contact-text { color: var(--muted); font-size: 16px; }
+  .contact-text a { color: var(--accent); }
+
+  /* ── FOOTER ── */
+  footer { padding: 32px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px 60px; }
+    .hero h1 { font-size: 38px; letter-spacing: -1px; }
+    .hero-sub { font-size: 17px; }
+    .project-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .award-badge { display: none; }
+    .affil-grid { grid-template-columns: 1fr; }
+    .nav-links a { margin-left: 12px; font-size: 14px; }
+  }
+  </style>
 </head>
 <body>
-<div class="wrap"> <header class="site-header"> <div class="brand"> <div class="dot" aria-hidden="true"></div> <div>Reuben O’Brien</div> </div> <nav class="nav">
+<div class="wrap">
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="brand">
+      <div class="dot" aria-hidden="true"></div>
+      Reuben O'Brien
+    </div>
+    <div class="nav-links">
       <a href="#about">About</a>
       <a href="/adventures">Adventures</a>
       <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
-    </nav> </header>
-<div class="grid">
-  <aside class="profile">
-    <img src="images/cover.jpeg" alt="Profile photo" class="avatar" onerror="this.style.display='none'">
-    <h1>Reuben O’Brien</h1>
-    <div class="role">Robotics Development Engineer &amp; PhD Student</div>
-    <div style="margin-bottom: 18px;"><a href="https://acumino.ai/" target="_blank" rel="noopener" style="margin-right: 10px;">Acumino</a><a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a></div>
-    <div style="margin-bottom: 18px;"></div>
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid var(--border); padding: 12px 10px; display: flex; flex-direction: column; gap: 10px;">
-      <a class="chip" href="https://github.com/rapob" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A12 12 0 0 0 0 12.6c0 5.34 3.44 9.86 8.2 11.46.6.12.82-.26.82-.58 0-.28-.01-1.03-.02-2.02-3.34.75-4.04-1.64-4.04-1.64-.55-1.43-1.35-1.81-1.35-1.81-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.27 1.86 1.27 1.08 1.91 2.84 1.36 3.53 1.04.11-.8.42-1.35.76-1.66-2.67-.31-5.48-1.38-5.48-6.14 0-1.36.46-2.47 1.23-3.34-.12-.31-.53-1.56.12-3.25 0 0 1.01-.33 3.3 1.27a11.2 11.2 0 0 1 6 0c2.3-1.6 3.3-1.27 3.3-1.27.66 1.69.24 2.94.12 3.25.77.87 1.23 1.98 1.23 3.34 0 4.78-2.81 5.82-5.49 6.13.43.37.81 1.1.81 2.23 0 1.61-.02 2.9-.02 3.29 0 .32.21.7.83.58A12 12 0 0 0 24 12.6 12 12 0 0 0 12 .5Z"/></svg>
-        <span>GitHub</span>
-      </a>
-      <a class="chip" href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <span>LinkedIn</span>
-      </a>
-      <a class="chip" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
-        <span>Google Scholar</span>
-      </a>
-      <a class="chip" href="https://www.researchgate.net/profile/Reuben-Obrien" target="_blank" rel="noopener" aria-label="ResearchGate">
-        <span>ResearchGate</span>
-      </a>
     </div>
-  </aside>
+  </nav>
 
-  <main class="content">
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p>
-        I'm currently a Robotics Engineer at Acumino and a PhD student at the University of Glasgow.
-      </p>
-      <p>
-        I started off as a wannabe Race Engineer in Formula SAE at the University of Auckland, and later became a camera specialist with Toyota GAZOO Racing (Formula Regional Oceania). This led to an opportunity with the New Zealand Rally series, with my first event being alongside the World Rally Championship. Formula racing is crazy, but rally is another whole level of insanity.
-      </p>
-      <p>
-        Realizing that motorsports, at the end of the day, is for entertainment, I tried Fisher & Paykel Healthcare as an intern working on medical devices. It was cool to see Auckland, New Zealand on the global stage for medical devices, with design and a significant portion of manufacturing occurring locally. This still didn't do it for me though.
-      </p>
-      <p>
-        In my final year at uni, I realized automation and robotics was where I wanted to be. Crown Equipment Corporation allowed me to work on autonomous lift trucks as a Systems Engineer. This provided me with the chance to work with industrial hardware, PLCs, and real-time control languages like C++. It gave me my first overseas work trip, having me based in New Bremen, Ohio USA for a few months. Quite the change, quite the place, what an experience... Beer league baseball, golf, and ten-pin bowling kept me busy.
-      </p>
-      <p>
-        I began to feel unfulfilled in my spare time, so I picked up a Master's thesis to finish what I started with my Honours project. This led to a year of madness - spending my evenings, weekends, and remaining sanity in the labs, muddy ponds, creeks, and the Manukau Harbour! In the middle of all this, I transitioned from Crown to Acumino, a startup co-founded by my supervisor at the time, which has led me to the craziest adventures I could never have imagined... Sneak peaks of these can be seen on the <a href="/adventures">adventures page</a>.
-      </p>
-      <p>
-        The Master's thesis resulted in two first-author publications to IROS - the first being a finalist for Best Application and the second receiving Best Paper Safety, Security and Rescue Robotics in Memory of Motohiro Kisoi. After partially mentally recovering from my Master's, I started my Partnership PhD with Acumino and the University of Glasgow in Biomedical Engineering. This thesis will let me close a book within my family and be the creator of many, many more adventures and chaos...
-      </p>
-    </section>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-meta">
+      <div class="status-dot"></div>
+      <span class="status-text">PhD Student &middot; University of Glasgow &middot; Acumino</span>
+    </div>
+    <h1>Robotics<br>Engineer<span class="punct">.</span></h1>
+    <p class="hero-sub">Building robots that learn from people. Boats, arms, gaze. Currently at <a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a> and the <a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a>.</p>
+    <div class="hero-chips">
+      <span class="chip gold">IROS 2025 Best Paper</span>
+      <span class="chip">ROS 2</span>
+      <span class="chip">Imitation Learning</span>
+      <span class="chip">Computer Vision</span>
+      <span class="chip">C++</span>
+      <span class="chip">PyTorch</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#publications">Publications</a>
+      <a class="btn-secondary" href="/adventures">Adventures</a>
+    </div>
+  </div>
 
-    <section id="projects" class="card">
-      <h2>Projects</h2>
-      <div class="list">
-        <div class="item">
-          <h3>Autonomous Robotic Trimaran</h3>
-          <p>A 3D printed, waterjet-powered autonomous boat designed for environmental inspection and monitoring. This open-source platform combines advanced navigation systems with environmental sensors for marine research applications.</p>
-          <div class="link-row">
-            <a class="btn" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">Research Paper</a>
-          </div>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">Projects</div>
+    <div class="project-grid">
+      <div class="project-card featured">
+        <div>
+          <div class="project-tag">IROS 2025</div>
+          <h3>AeroBuoy</h3>
+          <p>Drone-deployable, 3D printed autonomous buoy for environmental inspection in remote and hazardous river systems.</p>
+          <a class="item-link" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Research Paper &rarr;</a>
         </div>
-        <div class="item">
-          <h3>Formula SAE Electric Racing</h3>
-          <p>Race Engineer for the University of Auckland Formula SAE Team, developing high-performance electric race cars. Achieved 5th place overall in the electric division at FSAE Australasia in Melbourne.</p>
-          <div class="link-row">
-            <a class="btn" href="https://www.fsae.co.nz/" target="_blank" rel="noopener">FSAE NZ</a>
-          </div>
-        </div>
-        <div class="item">
-          <h3>AI-Powered Robotics Research</h3>
-          <p>Development of dexterous manipulation systems and humanoid robotics at Acumino. Working on next-generation AI-powered robot workers for addressing labor and skill shortages in various industries.</p>
-          <div class="link-row">
-            <a class="btn" href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a>
-          </div>
+        <div class="award-badge">
+          <span class="trophy">🏆</span>
+          <span>Best Paper</span>
         </div>
       </div>
-    </section>
+      <div class="project-card">
+        <div class="project-tag">IROS 2024</div>
+        <h3>Autonomous Trimaran</h3>
+        <p>3D printed, waterjet-powered autonomous boat for environmental inspection. Open-source. Muddy ponds, creeks, and the Manukau Harbour.</p>
+        <a class="item-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">Research Paper &rarr;</a>
+      </div>
+      <div class="project-card">
+        <div class="project-tag">Acumino</div>
+        <h3>Vision-to-Action Manipulation</h3>
+        <p>Vision-to-action models across UR, Mitsubishi, ABB, and Open ARM. Bimanual configs, 6-DoF pose estimation, imitation learning pipelines. Deployed across Europe, USA, Japan.</p>
+        <a class="item-link" href="https://acumino.ai/" target="_blank" rel="noopener">Acumino &rarr;</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- <section id="experience" class="card">
-      <h2>Experience & Adventures</h2>
-      <div class="list">
-        <div class="item">
-          <h3>🏆 Leadership & Team Building</h3>
-          <p>Served as President of the University of Auckland Snowsports Club with 650+ members and managed a $1.65 million club-owned lodge on Mt Ruapehu. Coordinated multi-week ski trips and handled complex logistics.</p>
-        </div>
-        <div class="item">
-          <h3>🌍 Global Conference Circuit</h3>
-          <p>Presenting research at prestigious international conferences including IEEE IROS. Finalist for Best Paper and Best Application awards, sharing innovations in autonomous robotics with the global research community.</p>
-        </div>
-        <div class="item">
-          <h3>🏎️ Formula SAE Racing</h3>
-          <p>Race Engineer for the University of Auckland Formula SAE Team. Led the team to 5th place overall in the electric division at FSAE Australasia in Melbourne.</p>
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="section-label">Publications</div>
+    <div class="pub-list">
+      <div class="pub-row">
+        <div class="pub-year">2025</div>
+        <div>
+          <p class="pub-title">AeroBuoy: A Drone Deployable, 3D Printed, Autonomous Robotic Buoy for Environmental Inspection in Remote and Hazardous River Systems <span class="pill pill-gold">Best Paper</span></p>
+          <p class="pub-venue">Reuben O'Brien et al. &mdash; IEEE/RSJ IROS</p>
         </div>
       </div>
-    </section> -->
-
-    <section id="publications" class="card">
-      <h2>Publications</h2>
-      <div class="list">
-        <div class="item">
-          <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">An Autonomous, 3D Printed, Waterjet-Powered, Open-Source Robotic Trimaran for Environmental Inspection and Monitoring</a> (2024)</h3>
-          <p class="muted">Reuben O'Brien, et al. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).</p>
-        </div>
-        <div class="item">
-          <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">On the Development of Waterjet-Powered Robotic Speedboats: An Open-Source, Low-Cost Platform for Education and Research</a> (2022)</h3>
-          <p class="muted">Reuben O'Brien, et al. IEEE International Symposium on Safety, Security, and Rescue Robotics.</p>
-        </div>
-        <div class="item">
-          <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">Other publications</a></h3>
-          <p class="muted">See full list on <a href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+      <div class="pub-row">
+        <div class="pub-year">2024</div>
+        <div>
+          <p class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">An Autonomous, 3D Printed, Waterjet-Powered, Open-Source Robotic Trimaran for Environmental Inspection and Monitoring</a> <span class="pill pill-muted">Best Application Finalist</span></p>
+          <p class="pub-venue">Reuben O'Brien et al. &mdash; IEEE/RSJ IROS</p>
         </div>
       </div>
-    </section>
-
-    <section id="teams" class="card">
-      <h2>Teams & Affiliations</h2>
-      <div class="list">
-        <div class="item">
-          <h3><a href="https://newdexterity.org/" target="_blank" rel="noopener">New Dexterity</a></h3>
-          <p class="muted">Research group focused on robotics and dexterous manipulation.</p>
-        </div>
-        <div class="item">
-          <h3><a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a></h3>
-          <p class="muted">Company specializing in AI-powered robotics and automation.</p>
-        </div>
-        <div class="item">
-          <h3><a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a></h3>
-          <p class="muted">PhD Student, Biomedical Engineering.</p>
-        </div>
-        <div class="item">
-          <h3><a href="https://www.auckland.ac.nz/" target="_blank" rel="noopener">University of Auckland</a></h3>
-          <p class="muted">MEng, Mechatronics, Robotics, and Automation Engineering.</p>
-        </div>
-        <div class="item">
-          <h3><a href="https://www.araralab.uk/" target="_blank" rel="noopener">AraraLab</a></h3>
-          <p class="muted">Research group focused on robotics and artificial intelligence.</p>
+      <div class="pub-row">
+        <div class="pub-year">2022</div>
+        <div>
+          <p class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">On the Development of Waterjet-Powered Robotic Speedboats</a></p>
+          <p class="pub-venue">Reuben O'Brien et al. &mdash; IEEE SSRR</p>
         </div>
       </div>
-    </section>
+      <div class="pub-row">
+        <div class="pub-year"></div>
+        <div>
+          <p class="pub-venue">Full list on <a href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>
-        The easiest way to contact me is via <a href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener">LinkedIn</a>.
-      </p>
-    </section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">About</div>
+    <div class="about-text">
+      <p>Started off as a wannabe Race Engineer in Formula SAE at the University of Auckland, then camera specialist with <strong>Toyota GAZOO Racing</strong> (Formula Regional Oceania). That led to the NZ Rally series — first event alongside the World Rally Championship, letting me work on series 2 cars. Formula racing is crazy, but rally is another whole level of insanity.</p>
+      <p>Realizing that motorsports is for entertainment, I tried <strong>Fisher &amp; Paykel Healthcare</strong> as an intern working on medical devices. Cool to see Auckland on the global stage, but this still didn't do it for me.</p>
+      <p>Final year at uni I found robotics. <strong>Crown Equipment Corporation</strong> let me work on autonomous lift trucks as a Systems Engineer — industrial hardware, PLCs, real-time C++. First overseas work trip, based in New Bremen, Ohio for a few months. Beer league baseball, golf, and ten-pin bowling.</p>
+      <p>Picked up a Master's thesis to finish what I started with my Honours project. A year of madness — evenings, weekends, and remaining sanity in the labs, muddy ponds, creeks, and the Manukau Harbour. Transitioned to <strong>Acumino</strong> mid-thesis. Two IROS papers, first class. Then a Partnership PhD with Acumino and the <strong>University of Glasgow</strong> in Biomedical Engineering. This thesis will let me close a book within my family, and be the creator of many more adventures and chaos...</p>
+    </div>
+    <div class="social-row">
+      <a class="social-chip" href="https://github.com/rapob" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.6c0 5.34 3.44 9.86 8.2 11.46.6.12.82-.26.82-.58 0-.28-.01-1.03-.02-2.02-3.34.75-4.04-1.64-4.04-1.64-.55-1.43-1.35-1.81-1.35-1.81-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.27 1.86 1.27 1.08 1.91 2.84 1.36 3.53 1.04.11-.8.42-1.35.76-1.66-2.67-.31-5.48-1.38-5.48-6.14 0-1.36.46-2.47 1.23-3.34-.12-.31-.53-1.56.12-3.25 0 0 1.01-.33 3.3 1.27a11.2 11.2 0 0 1 6 0c2.3-1.6 3.3-1.27 3.3-1.27.66 1.69.24 2.94.12 3.25.77.87 1.23 1.98 1.23 3.34 0 4.78-2.81 5.82-5.49 6.13.43.37.81 1.1.81 2.23 0 1.61-.02 2.9-.02 3.29 0 .32.21.7.83.58A12 12 0 0 0 24 12.6 12 12 0 0 0 12 .5Z"/></svg>
+        GitHub
+      </a>
+      <a class="social-chip" href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="social-chip" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="social-chip" href="https://www.researchgate.net/profile/Reuben-Obrien" target="_blank" rel="noopener">ResearchGate</a>
+    </div>
+  </section>
 
-    <footer>
-      © <?php echo $year; ?> Reuben O’Brien • Send It...
-    </footer>
-  </main>
+  <!-- AFFILIATIONS -->
+  <section id="teams">
+    <div class="section-label">Teams &amp; Affiliations</div>
+    <div class="affil-grid">
+      <div class="affil-item">
+        <h3><a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a></h3>
+        <p>Robotics Development Engineer &mdash; May 2024 &ndash; present</p>
+      </div>
+      <div class="affil-item">
+        <h3><a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a></h3>
+        <p>PhD Student, Biomedical Engineering &mdash; 2025 &ndash; present</p>
+      </div>
+      <div class="affil-item">
+        <h3><a href="https://www.araralab.uk/" target="_blank" rel="noopener">AraraLab</a></h3>
+        <p>University of Glasgow robotics lab &mdash; PhD supervision</p>
+      </div>
+      <div class="affil-item">
+        <h3><a href="https://newdexterity.org/" target="_blank" rel="noopener">New Dexterity</a></h3>
+        <p>University of Auckland robotics lab &mdash; where the boats were built</p>
+      </div>
+      <div class="affil-item">
+        <h3><a href="https://www.auckland.ac.nz/" target="_blank" rel="noopener">University of Auckland</a></h3>
+        <p>MEng Mechatronics, Nov 2023 &ndash; Nov 2024 &mdash; BE Mechatronics, Feb 2018 &ndash; Nov 2021</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Contact</div>
+    <p class="contact-text">The easiest way to reach me is via <a href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener">LinkedIn</a>.</p>
+  </section>
+
+  <footer>
+    &copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...
+  </footer>
+
 </div>
-</div> 
 </body>
 </html>
