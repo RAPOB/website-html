@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Preview A — Cleaned Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root {
+  --bg: #2a1810;
+  --panel: #640D5F;
+  --text: #FFFFFF;
+  --muted: #d9a8c7;
+  --border: #7a2d6a;
+  --accent: #FFB200;
+  --accent-2: #EB5B00;
+  --card: #4a0a41;
+  --magenta: #D91656;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: linear-gradient(135deg, var(--bg) 0%, #3d2518 25%, #4a1a2e 50%, #2d1b69 75%, var(--bg) 100%);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; }
+
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255,255,255,0.02); border: 1px solid var(--border);
+  backdrop-filter: blur(6px); border-radius: 14px;
+  padding: 14px 20px; margin-bottom: 28px;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--magenta); }
+nav a { margin-left: 16px; padding: 6px 10px; border-radius: 8px; border: 1px solid transparent; font-size: 15px; }
+nav a:hover { border-color: var(--border); }
+
+.grid { display: grid; grid-template-columns: 300px 1fr; gap: 24px; }
+
+aside {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 16px; padding: 22px;
+  position: sticky; top: 20px; height: fit-content;
+}
+.avatar { width: 100px; height: 100px; border-radius: 50%; background: #3a1a30 center/cover no-repeat; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 36px; }
+aside h1 { font-size: 22px; margin: 14px 0 4px; }
+.role { color: var(--muted); font-size: 14px; margin-bottom: 6px; }
+.tagline {
+  font-size: 13px; color: var(--muted);
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  padding: 8px 10px; border-radius: 8px; margin: 12px 0 16px;
+  font-style: italic;
+}
+.links { display: flex; flex-direction: column; gap: 8px; }
+.chip {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px; border-radius: 9px;
+  border: 1px solid var(--border); background: rgba(255,255,255,0.03);
+  font-size: 14px; color: var(--text);
+}
+.chip:hover { border-color: var(--accent); }
+
+main { display: grid; gap: 24px; }
+
+.card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 16px; padding: 22px;
+}
+.card h2 { margin: 0 0 16px; font-size: 18px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+
+/* Project items with left accent */
+.item {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 14px 14px 14px 18px;
+  border-left: 3px solid var(--accent-2);
+  margin-bottom: 10px;
+}
+.item:last-child { margin-bottom: 0; }
+.item h3 { margin: 0 0 4px; font-size: 16px; }
+.item p { margin: 4px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.item-link { font-size: 13px; margin-top: 8px; display: inline-block; color: var(--accent); }
+
+/* Publication items */
+.pub-item {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 14px;
+  margin-bottom: 10px; display: flex; gap: 14px; align-items: flex-start;
+}
+.pub-item:last-child { margin-bottom: 0; }
+.year-badge {
+  background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+  border-radius: 8px; padding: 4px 8px; font-size: 13px;
+  color: var(--muted); white-space: nowrap; flex-shrink: 0;
+  margin-top: 2px;
+}
+.pub-body h3 { margin: 0 0 4px; font-size: 15px; line-height: 1.4; }
+.pub-body h3 a { color: var(--text); }
+.pub-body p { margin: 0; color: var(--muted); font-size: 13px; }
+
+/* Award badges */
+.badge-gold {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: rgba(255,178,0,0.15); border: 1px solid rgba(255,178,0,0.4);
+  color: var(--accent); border-radius: 20px;
+  padding: 2px 10px; font-size: 12px; font-weight: 600;
+  margin-left: 8px; vertical-align: middle;
+}
+.badge-silver {
+  display: inline-flex; align-items: center;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2);
+  color: var(--muted); border-radius: 20px;
+  padding: 2px 10px; font-size: 12px;
+  margin-left: 8px; vertical-align: middle;
+}
+
+footer { margin-top: 20px; color: var(--muted); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand"><div class="dot"></div> Reuben O'Brien</div>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Adventures</a>
+    <a href="#">Publications</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<div class="grid">
+  <aside>
+    <div class="avatar">👤</div>
+    <h1>Reuben O'Brien</h1>
+    <div class="role">Robotics Development Engineer &amp; PhD Student</div>
+    <div class="tagline">Boats, arms, gaze. Send it.</div>
+    <div class="links">
+      <a class="chip" href="#">⌥ GitHub</a>
+      <a class="chip" href="#">in LinkedIn</a>
+      <a class="chip" href="#">scholar Google Scholar</a>
+      <a class="chip" href="#">▣ ResearchGate</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="card">
+      <h2>About</h2>
+      <p>I started off as a wannabe Race Engineer in Formula SAE at the University of Auckland, then camera specialist with Toyota GAZOO Racing (Formula Regional Oceania). That led to the New Zealand Rally series, first event alongside the World Rally Championship, letting me work on series 2 cars. Formula racing is crazy, but rally is another whole level of insanity.</p>
+      <p style="margin-top:12px">Realizing that motorsports is for entertainment, I tried Fisher &amp; Paykel Healthcare as an intern. Cool to see Auckland on the global stage for medical devices, but this still didn't do it for me.</p>
+      <p style="margin-top:12px">Final year at uni I found robotics. Crown Equipment Corporation, autonomous lift trucks, New Bremen Ohio for a few months. Beer league baseball, golf, ten-pin bowling. Then a Master's — evenings, weekends, and remaining sanity in the labs, muddy ponds, creeks, and the Manukau Harbour. Two IROS papers. A PhD. More chaos incoming.</p>
+    </section>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="item" style="border-left-color: var(--accent)">
+        <h3>AeroBuoy</h3>
+        <p>Drone-deployable, 3D printed autonomous buoy for environmental inspection in remote and hazardous river systems.</p>
+        <a class="item-link" href="#">Research Paper →</a>
+      </div>
+      <div class="item">
+        <h3>Autonomous Robotic Trimaran</h3>
+        <p>3D printed, waterjet-powered autonomous boat for environmental inspection. Open-source. Took it into muddy ponds, creeks, and the Manukau Harbour.</p>
+        <a class="item-link" href="#">Research Paper →</a>
+      </div>
+      <div class="item">
+        <h3>Vision-to-Action Manipulation</h3>
+        <p>Vision-to-action models for UR, Mitsubishi, ABB, and Open ARM platforms. Bimanual configs, 6-DoF pose estimation, imitation learning. Deployed across Europe, USA, Japan.</p>
+        <a class="item-link" href="#">Acumino →</a>
+      </div>
+      <div class="item">
+        <h3>Formula SAE Electric Racing</h3>
+        <p>Race Engineer, University of Auckland. 5th overall, electric division, FSAE Australasia in Melbourne.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Publications</h2>
+      <div class="pub-item">
+        <div class="year-badge">2025</div>
+        <div class="pub-body">
+          <h3>AeroBuoy: A Drone Deployable, 3D Printed, Autonomous Robotic Buoy for Environmental Inspection in Remote and Hazardous River Systems <span class="badge-gold">Best Paper</span></h3>
+          <p>Reuben O'Brien et al. — IEEE IROS</p>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="year-badge">2024</div>
+        <div class="pub-body">
+          <h3><a href="#">An Autonomous, 3D Printed, Waterjet-Powered, Open-Source Robotic Trimaran for Environmental Inspection and Monitoring</a> <span class="badge-silver">Best Application Finalist</span></h3>
+          <p>Reuben O'Brien et al. — IEEE IROS</p>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="year-badge">2022</div>
+        <div class="pub-body">
+          <h3><a href="#">On the Development of Waterjet-Powered Robotic Speedboats</a></h3>
+          <p>Reuben O'Brien et al. — IEEE SSRR</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2025 Reuben O'Brien · Send It...</footer>
+  </main>
+</div>
+
+</div>
+</body>
+</html>
