@@ -14,5 +14,5 @@ jobs:
           curl -s \
             -H "Authorization: cpanel REDACTED:${{ secrets.CPANEL_API_TOKEN }}" \
             -X POST \
-            "https://REDACTED-HOST/execute/VersionControl/create_deployment" \
+            "https://REDACTED-HOST/execute/VersionControlDeployment/create" \
             -d "repository_root=/home/REDACTED/repositories/website-html"
