@@ -14,5 +14,5 @@ jobs:
           curl -s \
             -H "Authorization: cpanel reubenob:${{ secrets.CPANEL_API_TOKEN }}" \
             -X POST \
-            "https://zoe.whsl206.com:2083/execute/VersionControl/create_deployment" \
+            "https://zoe.whsl206.com:2083/execute/VersionControlDeployment/create" \
             -d "repository_root=/home/reubenob/repositories/website-html"
