@@ -390,7 +390,7 @@
       <div class="pub-row has-photo">
         <div class="pub-year">2025</div>
         <div>
-          <p class="pub-title">AeroBuoy: A Drone Deployable, 3D Printed, Autonomous Robotic Buoy for Environmental Inspection in Remote and Hazardous River Systems <span class="pill pill-gold">Best Paper</span></p>
+          <p class="pub-title"><a href="https://www.researchgate.net/publication/397081148_AeroBuoy_A_Drone_Deployable_3D_Printed_Autonomous_Robotic_Buoy_for_Environmental_Inspection_in_Remote_and_Hazardous_River_Systems" target="_blank" rel="noopener">AeroBuoy: A Drone Deployable, 3D Printed, Autonomous Robotic Buoy for Environmental Inspection in Remote and Hazardous River Systems</a> <span class="pill pill-gold">Best Paper</span></p>
           <p class="pub-venue">Reuben O'Brien et al. · IEEE/RSJ IROS</p>
         </div>
         <img src="images/conferences/iros_2025_award.jpg" alt="IROS 2025 Best Paper Award ceremony" class="pub-photo">
@@ -464,7 +464,7 @@
         <p>MEng Mechatronics, Nov 2023 to Nov 2024. BE Mechatronics, Feb 2018 to Nov 2021.</p>
       </div>
       <div class="affil-item">
-        <h3>UoA Snowsports Club</h3>
+        <h3><a href="https://uasc.co.nz/" target="_blank" rel="noopener">UoA Snowsports Club</a></h3>
         <p>President, 2021 to 2023. 650+ members. Managed a $1.65M club-owned lodge on Mt Ruapehu.</p>
       </div>
     </div>
