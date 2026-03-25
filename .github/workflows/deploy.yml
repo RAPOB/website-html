@@ -9,7 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger cPanel Git deployment
+      - name: Pull latest commits on server
+        run: |
+          curl -s \
+            -H "Authorization: cpanel REDACTED:${{ secrets.CPANEL_API_TOKEN }}" \
+            -X POST \
+            "https://REDACTED-HOST/execute/VersionControl/update" \
+            -d "repository_root=/home/REDACTED/repositories/website-html"
+
+      - name: Deploy via cpanel.yml
         run: |
           curl -s \
             -H "Authorization: cpanel REDACTED:${{ secrets.CPANEL_API_TOKEN }}" \
