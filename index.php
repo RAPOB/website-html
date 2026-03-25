@@ -150,6 +150,19 @@
     background: rgba(255,178,0,0.08);
   }
   .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-pages { display: none; }
+  @media (max-width: 640px) {
+    .hero-pages {
+      display: flex; gap: 10px; margin-top: 24px;
+    }
+    .hero-pages a {
+      flex: 1; text-align: center;
+      padding: 10px 0; border-radius: 10px;
+      border: 1px solid var(--border); color: var(--text);
+      font-size: 15px; font-weight: 600; text-decoration: none;
+    }
+    .hero-pages a:hover { border-color: var(--accent); color: var(--accent); }
+  }
   .btn-primary {
     padding: 10px 22px; border-radius: 10px;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
@@ -291,6 +304,8 @@
     .pub-photo { display: none; }
     .affil-grid { grid-template-columns: 1fr; }
     .nav-links a { margin-left: 12px; font-size: 14px; }
+    .nav-links a:not(.nav-page) { display: none; }
+    .nav-sep { display: none; }
   }
   </style>
 </head>
@@ -328,6 +343,10 @@
       <span class="chip">Computer Vision</span>
       <span class="chip">C++</span>
       <span class="chip">PyTorch</span>
+    </div>
+    <div class="hero-pages">
+      <a href="/adventures">Adventures</a>
+      <a href="/conferences">Conferences</a>
     </div>
   </div>
 
