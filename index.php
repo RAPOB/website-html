@@ -284,6 +284,29 @@
   }
   .social-chip:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
 
+  /* ── CONFERENCES ── */
+  .conf-row {
+    display: flex; align-items: baseline; gap: 20px;
+    padding: 13px 0; border-bottom: 1px solid var(--border);
+  }
+  .conf-row:last-child { border-bottom: none; }
+  .conf-date { color: var(--muted); font-size: 13px; font-weight: 600; min-width: 90px; flex-shrink: 0; }
+  .conf-name { font-size: 15px; flex: 1; }
+  .conf-name a { color: var(--text); }
+
+  /* ── ADVENTURES ── */
+  .adv-strip { display: flex; gap: 8px; margin-bottom: 22px; }
+  .adv-thumb { flex: 1; height: 150px; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); }
+  .adv-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--magenta));
+    color: #fff; font-weight: 800; font-size: 18px; letter-spacing: -0.3px;
+    padding: 14px 40px; border-radius: 12px; text-decoration: none;
+    box-shadow: 0 4px 24px rgba(235,91,0,0.35);
+    transition: transform 0.18s, box-shadow 0.18s;
+  }
+  .adv-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(235,91,0,0.55); text-decoration: none; color: #fff; }
+
   /* ── CONTACT ── */
   .contact-text { color: var(--muted); font-size: 16px; }
   .contact-text a { color: var(--accent); }
@@ -306,6 +329,8 @@
     .nav-links a { margin-left: 12px; font-size: 14px; }
     .nav-links a:not(.nav-page) { display: none; }
     .nav-sep { display: none; }
+    .adv-thumb:nth-child(n+4) { display: none; }
+    .adv-thumb { height: 110px; }
   }
   </style>
 </head>
@@ -324,7 +349,6 @@
       <a href="#contact">Contact</a>
       <div class="nav-sep" aria-hidden="true"></div>
       <a href="/adventures" class="nav-page">Adventures</a>
-      <a href="/conferences" class="nav-page">Conferences</a>
     </div>
   </nav>
 
@@ -346,7 +370,6 @@
     </div>
     <div class="hero-pages">
       <a href="/adventures">Adventures</a>
-      <a href="/conferences">Conferences</a>
     </div>
   </div>
 
@@ -485,6 +508,46 @@
         <p>President, 2021 to 2023. 650+ members. Managed a $1.65M club-owned lodge on Mt Ruapehu.</p>
       </div>
     </div>
+  </section>
+
+  <!-- CONFERENCES -->
+  <section id="conferences">
+    <div class="section-label">Conferences &amp; Events</div>
+    <div>
+      <div class="conf-row"><span class="conf-date">Oct 2025</span><span class="conf-name">IEEE IROS 2025 &middot; Hangzhou <span class="pill pill-gold">Best Paper</span></span></div>
+      <div class="conf-row"><span class="conf-date">Sep 2025</span><span class="conf-name">Startup Autobahn Expo 12 &middot; Stuttgart <span class="pill pill-gold">Innovation Award</span></span></div>
+      <div class="conf-row"><span class="conf-date">Aug 2025</span><span class="conf-name">Humanoid Olympiad &middot; Olympia, Greece</span></div>
+      <div class="conf-row"><span class="conf-date">Jun 2025</span><span class="conf-name">VivaTech &middot; Paris</span></div>
+      <div class="conf-row"><span class="conf-date">May 2025</span><span class="conf-name">GITEX Europe &middot; Berlin</span></div>
+      <div class="conf-row"><span class="conf-date">Mar 2025</span><span class="conf-name">NVIDIA GTC &middot; San Jose</span></div>
+      <div class="conf-row"><span class="conf-date">2025</span><span class="conf-name">Startup Autobahn Expo 11 &middot; Stuttgart</span></div>
+      <div class="conf-row"><span class="conf-date">Oct 2024</span><span class="conf-name">IEEE IROS 2024 &middot; Abu Dhabi <span class="pill pill-muted">Best Application Finalist</span></span></div>
+      <div class="conf-row"><span class="conf-date">Nov 2022</span><span class="conf-name">IEEE SSRR 2022 &middot; Sevilla</span></div>
+    </div>
+  </section>
+
+  <!-- ADVENTURES -->
+  <section id="adventures-teaser">
+    <div class="section-label">Adventures</div>
+    <?php
+    $advPath = 'images/adventures/';
+    $advAll = array_filter(scandir($advPath) ?: [], fn($f) => preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $f));
+    usort($advAll, function($a, $b) {
+      preg_match('/^(\d{2})_(\d{2})/', $a, $mA);
+      preg_match('/^(\d{2})_(\d{2})/', $b, $mB);
+      if (count($mA) >= 3 && count($mB) >= 3) return $mA[1] !== $mB[1] ? $mB[1] - $mA[1] : $mB[2] - $mA[2];
+      return strcmp($a, $b);
+    });
+    $recent = array_slice(array_values($advAll), 0, 4);
+    ?>
+    <?php if ($recent): ?>
+    <div class="adv-strip">
+      <?php foreach ($recent as $img): ?>
+      <img src="<?php echo htmlspecialchars($advPath . $img); ?>" alt="Adventure" class="adv-thumb" loading="lazy">
+      <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
+    <a href="/adventures" class="adv-cta">Send It &rarr;</a>
   </section>
 
   <!-- CONTACT -->
