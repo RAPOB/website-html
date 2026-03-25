@@ -78,7 +78,12 @@
   html { scroll-behavior: smooth; }
   html, body { margin: 0; padding: 0; }
   body {
-    background: linear-gradient(135deg, var(--bg) 0%, #3d2518 25%, #4a1a2e 50%, #2d1b69 75%, var(--bg) 100%);
+    background-color: #1a0d1a;
+    background-image:
+      linear-gradient(135deg, rgba(42,24,16,0.82) 0%, rgba(61,37,24,0.78) 25%, rgba(74,26,46,0.80) 50%, rgba(45,27,105,0.78) 75%, rgba(42,24,16,0.82) 100%),
+      url('images/ruapehu.jpg');
+    background-size: cover;
+    background-position: center 40%;
     background-attachment: fixed;
     color: var(--text);
     font: 16px/1.65 system-ui, -apple-system, Segoe UI, sans-serif;
@@ -159,6 +164,13 @@
     letter-spacing: 0.14em; color: var(--muted); margin-bottom: 28px;
   }
 
+  /* ── HERO PHOTO ── */
+  .hero-photo {
+    width: 72px; height: 72px; border-radius: 50%;
+    object-fit: cover; border: 2px solid var(--border);
+    margin-bottom: 20px; display: block;
+  }
+
   /* ── PROJECT GRID ── */
   .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .project-card {
@@ -171,7 +183,20 @@
     grid-column: span 2;
     background: linear-gradient(135deg, var(--card), #3a0a55);
     border-color: rgba(255,178,0,0.3);
-    display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;
+    padding: 0; overflow: hidden;
+  }
+  .featured-inner {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 20px; align-items: center; padding: 20px;
+  }
+  .project-img {
+    width: 100%; height: 180px; object-fit: cover;
+    border-radius: 8px; margin-bottom: 14px;
+    border: 1px solid var(--border); display: block;
+  }
+  .project-card.featured .project-img {
+    height: 240px; border-radius: 0; margin-bottom: 0; border: none;
+    border-bottom: 1px solid var(--border);
   }
   .project-tag {
     display: inline-block; font-size: 11px; font-weight: 700;
@@ -195,11 +220,16 @@
     gap: 20px; padding: 18px 0;
     border-bottom: 1px solid var(--border); align-items: start;
   }
+  .pub-row.has-photo { grid-template-columns: 44px 1fr auto; }
   .pub-row:last-child { border-bottom: none; padding-bottom: 0; }
   .pub-year { color: var(--muted); font-size: 13px; font-weight: 600; padding-top: 2px; }
   .pub-title { font-size: 15px; line-height: 1.45; margin: 0 0 4px; }
   .pub-title a { color: var(--text); }
   .pub-venue { color: var(--muted); font-size: 13px; margin: 0; }
+  .pub-photo {
+    width: 130px; height: 86px; object-fit: cover;
+    border-radius: 8px; border: 1px solid var(--border); flex-shrink: 0;
+  }
   .pill {
     display: inline-block; border-radius: 4px;
     padding: 1px 8px; font-size: 11px; font-weight: 700;
@@ -246,8 +276,11 @@
     .hero h1 { font-size: 38px; letter-spacing: -1px; }
     .hero-sub { font-size: 17px; }
     .project-grid { grid-template-columns: 1fr; }
-    .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; }
+    .featured-inner { grid-template-columns: 1fr; }
     .award-badge { display: none; }
+    .pub-row.has-photo { grid-template-columns: 44px 1fr; }
+    .pub-photo { display: none; }
     .affil-grid { grid-template-columns: 1fr; }
     .nav-links a { margin-left: 12px; font-size: 14px; }
   }
@@ -263,15 +296,18 @@
       Reuben O'Brien
     </div>
     <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
       <a href="#about">About</a>
       <a href="/adventures">Adventures</a>
-      <a href="#publications">Publications</a>
+      <a href="/conferences">Conferences</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <div class="hero">
+    <img src="images/me.jpeg" alt="Reuben O'Brien" class="hero-photo">
     <div class="hero-meta">
       <div class="status-dot"></div>
       <span class="status-text">PhD Student &middot; University of Glasgow &middot; Acumino</span>
@@ -297,24 +333,43 @@
     <div class="section-label">Projects</div>
     <div class="project-grid">
       <div class="project-card featured">
-        <div>
-          <div class="project-tag">IROS 2025</div>
-          <h3>AeroBuoy</h3>
-          <p>Drone-deployable, 3D printed autonomous buoy for environmental inspection in remote and hazardous river systems.</p>
-          <a class="item-link" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Research Paper &rarr;</a>
-        </div>
-        <div class="award-badge">
-          <span class="trophy">🏆</span>
-          <span>Best Paper</span>
+        <img src="images/projects/aerobuoy/aerobuoy_team.jpg" alt="AeroBuoy drone and buoy" class="project-img">
+        <div class="featured-inner">
+          <div>
+            <div class="project-tag">IROS 2025</div>
+            <h3>AeroBuoy</h3>
+            <p>Drone-deployable, 3D printed autonomous buoy for environmental inspection in remote and hazardous river systems.</p>
+            <a class="item-link" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Research Paper &rarr;</a>
+          </div>
+          <div class="award-badge">
+            <span class="trophy">🏆</span>
+            <span>Best Paper</span>
+          </div>
         </div>
       </div>
       <div class="project-card">
+        <img src="images/projects/aquatri/trimaran_water.jpeg" alt="Autonomous Trimaran" class="project-img">
         <div class="project-tag">IROS 2024</div>
         <h3>Autonomous Trimaran</h3>
         <p>3D printed, waterjet-powered autonomous boat for environmental inspection. Open-source. Muddy ponds, creeks, and the Manukau Harbour.</p>
         <a class="item-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">Research Paper &rarr;</a>
       </div>
       <div class="project-card">
+        <img src="images/projects/aquatri/speed_boat_rear.jpeg" alt="Waterjet-powered robotic speedboat" class="project-img">
+        <div class="project-tag">SSRR 2022</div>
+        <h3>Waterjet-Powered Robotic Speedboats</h3>
+        <p>Open-source, low-cost waterjet-powered robotic speedboats. Honours project that kicked off the whole aquatic robotics line.</p>
+        <a class="item-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">Research Paper &rarr;</a>
+      </div>
+      <div class="project-card">
+        <img src="images/projects/fsae/fsae_2018_race.jpeg" alt="University of Auckland Formula SAE electric car" class="project-img">
+        <div class="project-tag">FSAE 2018 &ndash; 2019</div>
+        <h3>Formula SAE Electric Racing</h3>
+        <p>Race Engineer for the University of Auckland Formula SAE team. 5th overall in the electric division at FSAE Australasia in Melbourne.</p>
+        <a class="item-link" href="https://www.fsae.co.nz/" target="_blank" rel="noopener">FSAE NZ &rarr;</a>
+      </div>
+      <div class="project-card">
+        <img src="images/projects/acumino/megachips_japan.jpg" alt="Acumino bimanual robot demo at MegaChips Japan" class="project-img">
         <div class="project-tag">Acumino</div>
         <h3>Vision-to-Action Manipulation</h3>
         <p>Vision-to-action models across UR, Mitsubishi, ABB, and Open ARM. Bimanual configs, 6-DoF pose estimation, imitation learning pipelines. Deployed across Europe, USA, Japan.</p>
@@ -327,25 +382,26 @@
   <section id="publications">
     <div class="section-label">Publications</div>
     <div class="pub-list">
-      <div class="pub-row">
+      <div class="pub-row has-photo">
         <div class="pub-year">2025</div>
         <div>
           <p class="pub-title">AeroBuoy: A Drone Deployable, 3D Printed, Autonomous Robotic Buoy for Environmental Inspection in Remote and Hazardous River Systems <span class="pill pill-gold">Best Paper</span></p>
-          <p class="pub-venue">Reuben O'Brien et al. &mdash; IEEE/RSJ IROS</p>
+          <p class="pub-venue">Reuben O'Brien et al. · IEEE/RSJ IROS</p>
         </div>
+        <img src="images/conferences/iros_2025_award.jpg" alt="IROS 2025 Best Paper Award ceremony" class="pub-photo">
       </div>
       <div class="pub-row">
         <div class="pub-year">2024</div>
         <div>
           <p class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">An Autonomous, 3D Printed, Waterjet-Powered, Open-Source Robotic Trimaran for Environmental Inspection and Monitoring</a> <span class="pill pill-muted">Best Application Finalist</span></p>
-          <p class="pub-venue">Reuben O'Brien et al. &mdash; IEEE/RSJ IROS</p>
+          <p class="pub-venue">Reuben O'Brien et al. · IEEE/RSJ IROS</p>
         </div>
       </div>
       <div class="pub-row">
         <div class="pub-year">2022</div>
         <div>
           <p class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">On the Development of Waterjet-Powered Robotic Speedboats</a></p>
-          <p class="pub-venue">Reuben O'Brien et al. &mdash; IEEE SSRR</p>
+          <p class="pub-venue">Reuben O'Brien et al. · IEEE SSRR</p>
         </div>
       </div>
       <div class="pub-row">
@@ -361,10 +417,10 @@
   <section id="about">
     <div class="section-label">About</div>
     <div class="about-text">
-      <p>Started off as a wannabe Race Engineer in Formula SAE at the University of Auckland, then camera specialist with <strong>Toyota GAZOO Racing</strong> (Formula Regional Oceania). That led to the NZ Rally series — first event alongside the World Rally Championship, letting me work on series 2 cars. Formula racing is crazy, but rally is another whole level of insanity.</p>
+      <p>Started off as a wannabe Race Engineer in Formula SAE at the University of Auckland, then camera specialist with <strong>Toyota GAZOO Racing</strong> (Formula Regional Oceania). That led to the NZ Rally series, first event alongside the World Rally Championship, letting me work on series 2 cars. Formula racing is crazy, but rally is another whole level of insanity.</p>
       <p>Realizing that motorsports is for entertainment, I tried <strong>Fisher &amp; Paykel Healthcare</strong> as an intern working on medical devices. Cool to see Auckland on the global stage, but this still didn't do it for me.</p>
-      <p>Final year at uni I found robotics. <strong>Crown Equipment Corporation</strong> let me work on autonomous lift trucks as a Systems Engineer — industrial hardware, PLCs, real-time C++. First overseas work trip, based in New Bremen, Ohio for a few months. Beer league baseball, golf, and ten-pin bowling.</p>
-      <p>Picked up a Master's thesis to finish what I started with my Honours project. A year of madness — evenings, weekends, and remaining sanity in the labs, muddy ponds, creeks, and the Manukau Harbour. Transitioned to <strong>Acumino</strong> mid-thesis. Two IROS papers, first class. Then a Partnership PhD with Acumino and the <strong>University of Glasgow</strong> in Biomedical Engineering. This thesis will let me close a book within my family, and be the creator of many more adventures and chaos...</p>
+      <p>Final year at uni I found robotics. <strong>Crown Equipment Corporation</strong> let me work on autonomous lift trucks as a Systems Engineer: industrial hardware, PLCs, real-time C++. First overseas work trip, based in New Bremen, Ohio for a few months. Beer league baseball, golf, and ten-pin bowling.</p>
+      <p>Picked up a Master's thesis to finish what I started with my Honours project. A year of madness: evenings, weekends, and remaining sanity in the labs, muddy ponds, creeks, and the Manukau Harbour. Transitioned to <strong>Acumino</strong> mid-thesis. Two IROS papers, first class. Then a Partnership PhD with Acumino and the <strong>University of Glasgow</strong> in Biomedical Engineering. This thesis will let me close a book within my family, and be the creator of many more adventures and chaos...</p>
     </div>
     <div class="social-row">
       <a class="social-chip" href="https://github.com/rapob" target="_blank" rel="noopener">
@@ -383,23 +439,27 @@
     <div class="affil-grid">
       <div class="affil-item">
         <h3><a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a></h3>
-        <p>Robotics Development Engineer &mdash; May 2024 &ndash; present</p>
+        <p>Robotics Development Engineer, May 2024 to present</p>
       </div>
       <div class="affil-item">
         <h3><a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a></h3>
-        <p>PhD Student, Biomedical Engineering &mdash; 2025 &ndash; present</p>
+        <p>PhD Student, Biomedical Engineering, 2025 to present</p>
       </div>
       <div class="affil-item">
         <h3><a href="https://www.araralab.uk/" target="_blank" rel="noopener">AraraLab</a></h3>
-        <p>University of Glasgow robotics lab &mdash; PhD supervision</p>
+        <p>University of Glasgow robotics lab, PhD supervision</p>
       </div>
       <div class="affil-item">
         <h3><a href="https://newdexterity.org/" target="_blank" rel="noopener">New Dexterity</a></h3>
-        <p>University of Auckland robotics lab &mdash; where the boats were built</p>
+        <p>University of Auckland robotics lab, where the boats were built</p>
       </div>
       <div class="affil-item">
         <h3><a href="https://www.auckland.ac.nz/" target="_blank" rel="noopener">University of Auckland</a></h3>
-        <p>MEng Mechatronics, Nov 2023 &ndash; Nov 2024 &mdash; BE Mechatronics, Feb 2018 &ndash; Nov 2021</p>
+        <p>MEng Mechatronics, Nov 2023 to Nov 2024. BE Mechatronics, Feb 2018 to Nov 2021.</p>
+      </div>
+      <div class="affil-item">
+        <h3>UoA Snowsports Club</h3>
+        <p>President, 2021 to 2023. 650+ members. Managed a $1.65M club-owned lodge on Mt Ruapehu.</p>
       </div>
     </div>
   </section>
@@ -407,7 +467,7 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-label">Contact</div>
-    <p class="contact-text">The easiest way to reach me is via <a href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener">LinkedIn</a>.</p>
+    <p class="contact-text">Best reached via <a href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener">LinkedIn</a>. For research or collaboration enquiries, find me through the <a href="https://www.araralab.uk/" target="_blank" rel="noopener">AraraLab</a> or <a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a>.</p>
   </section>
 
   <footer>
