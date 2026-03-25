@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Trigger cPanel Git deployment
         run: |
-          curl -s -o /dev/null -w "%{http_code}" \
+          curl -s \
             -H "Authorization: cpanel REDACTED:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://REDACTED-HOST/execute/VersionControl/create_deployment?repository_root=%2Fhome%2FREDACTED%2Frepositories%2Fwebsite-html"
+            -X POST \
+            "https://REDACTED-HOST/execute/VersionControl/create_deployment" \
+            -d "repository_root=/home/REDACTED/repositories/website-html"
