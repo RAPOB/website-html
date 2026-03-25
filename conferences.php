@@ -109,6 +109,8 @@
     .event { grid-template-columns: 1fr; }
     .event-photo { width: 100%; height: 180px; }
     .nav-links a { margin-left: 12px; font-size: 14px; }
+    .nav-links a:not(.nav-page) { display: none; }
+    .nav-sep { display: none; }
   }
   </style>
 </head>

@@ -152,6 +152,8 @@ if (is_dir($adventuresPath)) {
     .gallery { columns: 1; }
     .page-header h1 { font-size: 28px; }
     .nav-links a { margin-left: 12px; font-size: 14px; }
+    .nav-links a:not(.nav-page) { display: none; }
+    .nav-sep { display: none; }
   }
   </style>
 </head>
