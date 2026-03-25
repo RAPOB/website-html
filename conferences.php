@@ -185,7 +185,7 @@
           <p class="event-desc">The Acumino x Schaeffler x DXC collaboration received the Global Plug and Play Innovation Award at Startup Autobahn Expo 12.</p>
           <span class="pill pill-gold">Innovation Award</span>
         </div>
-        <img src="images/conferences/startup_autobahn.jpeg" alt="Startup Autobahn Expo 12" class="event-photo">
+        <img src="images/projects/acumino/plug_and_play.jpeg" alt="Startup Autobahn Innovation Award" class="event-photo">
       </div>
 
       <div class="event">
