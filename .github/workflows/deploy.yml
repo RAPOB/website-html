@@ -17,6 +17,9 @@ jobs:
             "https://REDACTED-HOST/execute/VersionControl/update" \
             -d "repository_root=/home/REDACTED/repositories/website-html"
 
+      - name: Wait for pull to complete
+        run: sleep 15
+
       - name: Deploy via cpanel.yml
         run: |
           curl -s \
