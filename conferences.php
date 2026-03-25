@@ -55,6 +55,7 @@
     padding: 6px 0; border-bottom: 2px solid transparent;
   }
   .nav-links a:hover { color: var(--text); text-decoration: none; border-bottom-color: var(--accent); }
+  .nav-links a.active { color: var(--text); border-bottom-color: var(--accent); }
   .nav-sep { width: 1px; height: 16px; background: var(--border); margin: 0 8px; }
   .nav-links a.nav-page {
     margin-left: 0; padding: 5px 12px;
@@ -121,6 +122,7 @@
     </div>
     <div class="nav-links">
       <a href="/#projects">Projects</a>
+      <a href="/#publications">Publications</a>
       <a href="/#about">About</a>
       <a href="/#contact">Contact</a>
       <div class="nav-sep" aria-hidden="true"></div>
@@ -156,10 +158,7 @@
           <p class="event-desc">Presented the Autonomous Robotic Trimaran at IEEE/RSJ IROS 2024.</p>
           <span class="pill pill-muted">Best Application Paper Finalist</span>
         </div>
-        <div style="display:flex; gap:8px; flex-shrink:0;">
-          <img src="images/conferences/iros_2024_abu.jpeg" alt="IROS 2024 Abu Dhabi finalist" class="event-photo">
-          <img src="images/conferences/iros_2024_finalists.jpg" alt="IROS 2024 Best Application Paper Finalists" class="event-photo">
-        </div>
+        <img src="images/conferences/iros_2024_abu.jpeg" alt="IROS 2024 Abu Dhabi finalist" class="event-photo">
       </div>
 
       <div class="event">
@@ -199,38 +198,38 @@
 
       <div class="event">
         <div class="event-body">
-          <h2>NVIDIA GTC &middot; San Jose</h2>
-          <p class="event-meta">March 2025</p>
-          <p class="event-desc">Demonstrated Acumino's bimanual assembly system at NVIDIA GTC 2025 as part of the Teradyne Robotics AI Accelerator launch. UR5e cobots doing cable handling.</p>
+          <h2>Humanoid Olympiad &middot; Olympia, Greece</h2>
+          <p class="event-meta">August 2025</p>
+          <p class="event-desc">Attended the Humanoid Olympiad at the birthplace of the Olympics.</p>
         </div>
-        <img src="images/conferences/gtc.jpeg" alt="NVIDIA GTC 2025" class="event-photo">
+        <img src="images/conferences/humanoid_olympiad_2025.jpeg" alt="Humanoid Olympiad, Olympia Greece" class="event-photo">
       </div>
 
       <div class="event">
         <div class="event-body">
           <h2>VivaTech &middot; Paris</h2>
-          <p class="event-meta">2025</p>
+          <p class="event-meta">June 2025</p>
           <p class="event-desc">Represented Acumino at Viva Technology, Europe's biggest startup and tech event.</p>
         </div>
-        <img src="images/conferences/vivatech_paris.jpeg" alt="VivaTech Paris 2024" class="event-photo">
+        <img src="images/conferences/vivatech_paris.jpeg" alt="VivaTech Paris 2025" class="event-photo">
       </div>
 
       <div class="event">
         <div class="event-body">
           <h2>GITEX &middot; Berlin</h2>
-          <p class="event-meta">2025</p>
+          <p class="event-meta">May 2025</p>
           <p class="event-desc">Represented Acumino at GITEX Europe.</p>
         </div>
-        <img src="images/conferences/gitex.jpeg" alt="GITEX Berlin 2024" class="event-photo">
+        <img src="images/conferences/gitex.jpeg" alt="GITEX Berlin 2025" class="event-photo">
       </div>
 
       <div class="event">
         <div class="event-body">
-          <h2>Humanoid Olympiad &middot; Olympia, Greece</h2>
-          <p class="event-meta">2025</p>
-          <p class="event-desc">Attended the Humanoid Olympiad at the birthplace of the Olympics.</p>
+          <h2>NVIDIA GTC &middot; San Jose</h2>
+          <p class="event-meta">March 2025</p>
+          <p class="event-desc">Demonstrated Acumino's bimanual assembly system at NVIDIA GTC 2025 as part of the Teradyne Robotics AI Accelerator launch. UR5e cobots doing cable handling.</p>
         </div>
-        <img src="images/conferences/humanoid_olympiad.jpg" alt="Humanoid Olympiad, Olympia Greece" class="event-photo">
+        <img src="images/conferences/gtc.jpeg" alt="NVIDIA GTC 2025" class="event-photo">
       </div>
 
     </div>

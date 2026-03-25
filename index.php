@@ -305,6 +305,7 @@
     </div>
     <div class="nav-links">
       <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <div class="nav-sep" aria-hidden="true"></div>
@@ -329,10 +330,6 @@
       <span class="chip">Computer Vision</span>
       <span class="chip">C++</span>
       <span class="chip">PyTorch</span>
-    </div>
-    <div class="hero-actions">
-      <a class="btn-primary" href="#publications">Publications</a>
-      <a class="btn-secondary" href="/adventures">Adventures</a>
     </div>
   </div>
 
