@@ -1,0 +1,16 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger cPanel Git deployment
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: cpanel reubenob:${{ secrets.CPANEL_API_TOKEN }}" \
+            "https://zoe.whsl206.com:2083/execute/VersionControl/create_deployment?repository_root=%2Fhome%2Freubenob%2Frepositories%2Fwebsite-html"
