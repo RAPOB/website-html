@@ -114,11 +114,13 @@
   .nav-links a:hover { color: var(--text); text-decoration: none; border-bottom-color: var(--accent); }
   .nav-sep { width: 1px; height: 16px; background: var(--border); margin: 0 8px; }
   .nav-links a.nav-page {
-    margin-left: 0; padding: 5px 12px;
-    border: 1px solid var(--border); border-radius: 20px;
-    color: var(--text); font-size: 14px; border-bottom: 1px solid var(--border);
+    margin-left: 0; padding: 5px 14px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--magenta));
+    border-radius: 20px; color: #fff; font-size: 14px; font-weight: 700;
+    border-bottom: none; box-shadow: 0 2px 12px rgba(235,91,0,0.3);
+    transition: box-shadow 0.18s, transform 0.18s;
   }
-  .nav-links a.nav-page:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+  .nav-links a.nav-page:hover { text-decoration: none; color: #fff; box-shadow: 0 4px 20px rgba(235,91,0,0.5); transform: translateY(-1px); }
 
   /* ── HERO ── */
   .hero { padding: 68px 0 60px; border-bottom: 1px solid var(--border); }
@@ -157,11 +159,12 @@
     }
     .hero-pages a {
       flex: 1; text-align: center;
-      padding: 10px 0; border-radius: 10px;
-      border: 1px solid var(--border); color: var(--text);
-      font-size: 15px; font-weight: 600; text-decoration: none;
+      padding: 12px 0; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--magenta));
+      color: #fff; font-size: 16px; font-weight: 800; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(235,91,0,0.35);
     }
-    .hero-pages a:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-pages a:hover { text-decoration: none; color: #fff; }
   }
   .btn-primary {
     padding: 10px 22px; border-radius: 10px;
@@ -524,6 +527,7 @@
       <div class="conf-row"><span class="conf-date">Oct 2024</span><span class="conf-name">IEEE IROS 2024 &middot; Abu Dhabi <span class="pill pill-muted">Best Application Finalist</span></span></div>
       <div class="conf-row"><span class="conf-date">Nov 2022</span><span class="conf-name">IEEE SSRR 2022 &middot; Sevilla</span></div>
     </div>
+    <a class="item-link" href="/conferences" style="display:inline-block; margin-top:16px;">View photos &rarr;</a>
   </section>
 
   <!-- ADVENTURES -->
