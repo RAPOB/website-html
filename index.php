@@ -371,9 +371,6 @@
       <span class="chip">C++</span>
       <span class="chip">PyTorch</span>
     </div>
-    <div class="hero-pages">
-      <a href="/adventures">Adventures</a>
-    </div>
   </div>
 
   <!-- PROJECTS -->
