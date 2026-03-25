@@ -128,7 +128,6 @@
       <a href="/#contact">Contact</a>
       <div class="nav-sep" aria-hidden="true"></div>
       <a href="/adventures" class="nav-page">Adventures</a>
-      <a href="/conferences" class="nav-page active">Conferences</a>
     </div>
   </nav>
 

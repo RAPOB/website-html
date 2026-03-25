@@ -171,7 +171,6 @@ if (is_dir($adventuresPath)) {
       <a href="/#contact">Contact</a>
       <div class="nav-sep" aria-hidden="true"></div>
       <a href="/adventures" class="nav-page active">Adventures</a>
-      <a href="/conferences" class="nav-page">Conferences</a>
     </div>
   </nav>
 
