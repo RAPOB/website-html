@@ -106,11 +106,19 @@
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
     box-shadow: 0 0 14px var(--magenta);
   }
+  .nav-links { display: flex; align-items: center; gap: 4px; }
   .nav-links a {
-    margin-left: 20px; color: var(--muted); font-size: 15px;
+    margin-left: 16px; color: var(--muted); font-size: 15px;
     padding: 6px 0; border-bottom: 2px solid transparent;
   }
   .nav-links a:hover { color: var(--text); text-decoration: none; border-bottom-color: var(--accent); }
+  .nav-sep { width: 1px; height: 16px; background: var(--border); margin: 0 8px; }
+  .nav-links a.nav-page {
+    margin-left: 0; padding: 5px 12px;
+    border: 1px solid var(--border); border-radius: 20px;
+    color: var(--text); font-size: 14px; border-bottom: 1px solid var(--border);
+  }
+  .nav-links a.nav-page:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
   /* ── HERO ── */
   .hero { padding: 68px 0 60px; border-bottom: 1px solid var(--border); }
@@ -297,11 +305,11 @@
     </div>
     <div class="nav-links">
       <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
       <a href="#about">About</a>
-      <a href="/adventures">Adventures</a>
-      <a href="/conferences">Conferences</a>
       <a href="#contact">Contact</a>
+      <div class="nav-sep" aria-hidden="true"></div>
+      <a href="/adventures" class="nav-page">Adventures</a>
+      <a href="/conferences" class="nav-page">Conferences</a>
     </div>
   </nav>
 
