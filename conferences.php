@@ -177,12 +177,20 @@
 
       <div class="event">
         <div class="event-body">
-          <h2>Startup Autobahn &middot; Stuttgart</h2>
-          <p class="event-meta">2024 &ndash; 2025</p>
-          <p class="event-desc">Acumino participated in multiple Startup Autobahn Expo cohorts. The Acumino x Schaeffler x DXC collaboration received the 2025 Global Plug and Play Innovation Award.</p>
-          <span class="pill pill-gold">Innovation Award 2025</span>
+          <h2>Startup Autobahn Expo 12 &middot; Stuttgart</h2>
+          <p class="event-meta">2025</p>
+          <p class="event-desc">The Acumino x Schaeffler x DXC collaboration received the Global Plug and Play Innovation Award at Startup Autobahn Expo 12.</p>
+          <span class="pill pill-gold">Innovation Award</span>
         </div>
-        <img src="images/conferences/startup_autobahn.jpeg" alt="Startup Autobahn" class="event-photo">
+        <img src="images/conferences/startup_autobahn.jpeg" alt="Startup Autobahn Expo 12" class="event-photo">
+      </div>
+
+      <div class="event">
+        <div class="event-body">
+          <h2>Startup Autobahn Expo 11 &middot; Stuttgart</h2>
+          <p class="event-meta">2024</p>
+          <p class="event-desc">Acumino's first Startup Autobahn cohort, demonstrating dexterous robotic assembly at the Porsche Museum.</p>
+        </div>
       </div>
 
       <div class="event">
@@ -195,19 +203,27 @@
 
       <div class="event">
         <div class="event-body">
-          <h2>GITEX &middot; Dubai</h2>
+          <h2>VivaTech &middot; Paris</h2>
           <p class="event-meta">2024</p>
-          <p class="event-desc">Represented Acumino at GITEX Global, one of the world's largest tech events.</p>
+          <p class="event-desc">Represented Acumino at Viva Technology, Europe's biggest startup and tech event.</p>
         </div>
       </div>
 
       <div class="event">
         <div class="event-body">
-          <h2>Humanoid Olympiad &middot; Paris</h2>
+          <h2>GITEX &middot; Berlin</h2>
           <p class="event-meta">2024</p>
-          <p class="event-desc">Attended the Humanoid Olympiad in Paris.</p>
+          <p class="event-desc">Represented Acumino at GITEX Europe.</p>
         </div>
-        <img src="images/conferences/humanoid_olympiad.jpg" alt="Humanoid Olympiad Paris" class="event-photo">
+      </div>
+
+      <div class="event">
+        <div class="event-body">
+          <h2>Humanoid Olympiad &middot; Olympia, Greece</h2>
+          <p class="event-meta">2024</p>
+          <p class="event-desc">Attended the Humanoid Olympiad at the birthplace of the Olympics.</p>
+        </div>
+        <img src="images/conferences/humanoid_olympiad.jpg" alt="Humanoid Olympiad, Olympia Greece" class="event-photo">
       </div>
 
     </div>
