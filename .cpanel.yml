@@ -1,6 +1,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/reubenob/public_html/
+    - git fetch origin
+    - git reset --hard origin/main
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp adventures.php $DEPLOYPATH
     - /bin/cp projects.php $DEPLOYPATH
