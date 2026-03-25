@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Trigger cPanel Git deployment
         run: |
-          curl -s -o /dev/null -w "%{http_code}" \
+          curl -s \
             -H "Authorization: cpanel reubenob:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://zoe.whsl206.com:2083/execute/VersionControl/create_deployment?repository_root=%2Fhome%2Freubenob%2Frepositories%2Fwebsite-html"
+            -X POST \
+            "https://zoe.whsl206.com:2083/execute/VersionControl/create_deployment" \
+            -d "repository_root=/home/reubenob/repositories/website-html"
