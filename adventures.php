@@ -37,7 +37,7 @@ if (is_dir($adventuresPath)) {
   <meta charset="utf-8">
   <title>Adventures - Reuben O'Brien</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Adventures by Reuben O'Brien.">
+  <meta name="description" content="Adventures by Reuben O'Brien. Planned chaos.">
   <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1">
   <style>
   :root {
