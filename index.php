@@ -398,12 +398,13 @@
         </div>
         <img src="images/conferences/iros_2025_award.jpg" alt="IROS 2025 Best Paper Award ceremony" class="pub-photo">
       </div>
-      <div class="pub-row">
+      <div class="pub-row has-photo">
         <div class="pub-year">2024</div>
         <div>
           <p class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">An Autonomous, 3D Printed, Waterjet-Powered, Open-Source Robotic Trimaran for Environmental Inspection and Monitoring</a> <span class="pill pill-muted">Best Application Finalist</span></p>
           <p class="pub-venue">Reuben O'Brien et al. · IEEE/RSJ IROS</p>
         </div>
+        <img src="images/conferences/iros_2024_finalists.jpg" alt="IROS 2024 Best Application Paper Finalists" class="pub-photo">
       </div>
       <div class="pub-row">
         <div class="pub-year">2022</div>
