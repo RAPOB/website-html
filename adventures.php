@@ -90,12 +90,14 @@ if (is_dir($adventuresPath)) {
   .nav-links a.active { color: var(--text); border-bottom-color: var(--accent); }
   .nav-sep { width: 1px; height: 16px; background: var(--border); margin: 0 8px; }
   .nav-links a.nav-page {
-    margin-left: 0; padding: 5px 12px;
-    border: 1px solid var(--border); border-radius: 20px;
-    color: var(--text); font-size: 14px; border-bottom: 1px solid var(--border);
+    margin-left: 0; padding: 5px 14px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--magenta));
+    border-radius: 20px; color: #fff; font-size: 14px; font-weight: 700;
+    border-bottom: none; box-shadow: 0 2px 12px rgba(235,91,0,0.3);
+    transition: box-shadow 0.18s, transform 0.18s;
   }
-  .nav-links a.nav-page:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-  .nav-links a.nav-page.active { border-color: var(--accent); color: var(--accent); }
+  .nav-links a.nav-page:hover { text-decoration: none; color: #fff; box-shadow: 0 4px 20px rgba(235,91,0,0.5); transform: translateY(-1px); }
+  .nav-links a.nav-page.active { box-shadow: 0 4px 20px rgba(235,91,0,0.5); }
 
   .page-header { padding: 52px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
   .page-header h1 { font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin: 0 0 10px; }
