@@ -338,7 +338,7 @@
     <div class="section-label">Projects</div>
     <div class="project-grid">
       <div class="project-card featured">
-        <img src="images/projects/aerobuoy/aerobuoy_team.jpg" alt="AeroBuoy drone and buoy" class="project-img">
+        <img src="images/projects/aerobuoy/aerobuoy_team.jpg" alt="AeroBuoy drone and buoy" class="project-img" style="object-position: center 30%;">
         <div class="featured-inner">
           <div>
             <div class="project-tag">IROS 2025</div>
