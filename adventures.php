@@ -1,76 +1,35 @@
-<?php 
-$year = date('Y'); 
-
-// Get all images from the adventures folder
+<?php
+$year = date('Y');
 $adventuresPath = 'images/adventures/';
 $images = [];
 
 if (is_dir($adventuresPath)) {
     $files = scandir($adventuresPath);
     $seenImages = [];
-    
     foreach ($files as $file) {
         if ($file !== '.' && $file !== '..' && preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $file)) {
-            
-            // Extract the core filename (remove date prefix if exists)
-            $coreFilename = preg_replace('/^\d{2}_\d{2}_/', '', $file);
-            $coreFilename = strtolower($coreFilename); // Make case-insensitive
-            
-            // If we haven't seen this core image before, add the current file
+            $coreFilename = strtolower(preg_replace('/^\d{2}_\d{2}_/', '', $file));
             if (!isset($seenImages[$coreFilename])) {
                 $seenImages[$coreFilename] = $file;
                 $images[] = $file;
-            } else {
-                // If current file has date prefix and stored one doesn't, replace it
-                if (preg_match('/^\d{2}_\d{2}_/', $file) && !preg_match('/^\d{2}_\d{2}_/', $seenImages[$coreFilename])) {
-                    // Remove the old one and add the dated one
-                    $images = array_filter($images, function($img) use ($seenImages, $coreFilename) {
-                        return $img !== $seenImages[$coreFilename];
-                    });
-                    $seenImages[$coreFilename] = $file;
-                    $images[] = $file;
-                }
+            } elseif (preg_match('/^\d{2}_\d{2}_/', $file) && !preg_match('/^\d{2}_\d{2}_/', $seenImages[$coreFilename])) {
+                $images = array_filter($images, fn($img) => $img !== $seenImages[$coreFilename]);
+                $seenImages[$coreFilename] = $file;
+                $images[] = $file;
             }
         }
     }
-    
-    // Sort images by date (most recent first)
     usort($images, function($a, $b) {
-        // Extract date parts from filename
-        preg_match('/^(\d{2})_(\d{2})/', $a, $matchesA);
-        preg_match('/^(\d{2})_(\d{2})/', $b, $matchesB);
-        
-        // If both files have proper date format
-        if (count($matchesA) >= 3 && count($matchesB) >= 3) {
-            $yearA = (int)$matchesA[1];
-            $monthA = (int)$matchesA[2];
-            $yearB = (int)$matchesB[1];
-            $monthB = (int)$matchesB[2];
-            
-            // Sort by year first (descending), then by month (descending)
-            if ($yearA !== $yearB) {
-                return $yearB - $yearA;
-            }
-            return $monthB - $monthA;
+        preg_match('/^(\d{2})_(\d{2})/', $a, $mA);
+        preg_match('/^(\d{2})_(\d{2})/', $b, $mB);
+        if (count($mA) >= 3 && count($mB) >= 3) {
+            return $mA[1] !== $mB[1] ? $mB[1] - $mA[1] : $mB[2] - $mA[2];
         }
-        
-        // If only one has date format, prioritize it
-        if (count($matchesA) >= 3 && count($matchesB) < 3) {
-            return -1;
-        }
-        if (count($matchesB) >= 3 && count($matchesA) < 3) {
-            return 1;
-        }
-        
-        // Fallback to alphabetical sorting
+        if (count($mA) >= 3) return -1;
+        if (count($mB) >= 3) return 1;
         return strcmp($a, $b);
     });
-} else {
-    // Directory doesn't exist - create empty array
 }
-
-// Simplified adventure descriptions - just use filename
-$adventureDescriptions = [''];
 ?>
 <!doctype html>
 <html lang="en">
@@ -78,194 +37,176 @@ $adventureDescriptions = [''];
   <meta charset="utf-8">
   <title>Adventures - Reuben O'Brien</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Adventures and experiences by Reuben O'Brien - Leadership, Travel, and Personal Growth">
+  <meta name="description" content="Adventures by Reuben O'Brien.">
   <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1">
   <style>
-    :root { 
-      --bg: #2a1810; 
-      --panel: #640D5F; 
-      --text: #FFFFFF; 
-      --muted: #d9a8c7; 
-      --border: #7a2d6a; 
-      --accent: #FFB200; 
-      --accent-2: #EB5B00; 
-      --link: #FFB200; 
-      --card: #4a0a41; 
-      --orange: #FFB200;
-      --red-orange: #EB5B00;
-      --magenta: #D91656;
-      --purple: #640D5F;
-      --white: #FFFFFF;
-      --black: #000000;
-    }
-    
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
-    body { 
-      background: linear-gradient(135deg, var(--bg) 0%, #3d2518 25%, #4a1a2e 50%, #2d1b69 75%, var(--bg) 100%); 
-      color: var(--text); 
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-    
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 32px 20px 80px; }
-    
-    .header { 
-      text-align: center; 
-      margin-bottom: 48px; 
-      padding: 40px 20px;
-      background: linear-gradient(135deg, var(--purple), var(--magenta));
-      border-radius: 20px;
-      border: 2px solid var(--orange);
-    }
-    
-    .header h1 { 
-      font-size: 3em; 
-      margin: 0 0 16px 0; 
-      color: var(--orange);
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    .header p { 
-      font-size: 1.2em; 
-      margin: 0; 
-      opacity: 0.9; 
-    }
-    
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      background: var(--orange);
-      color: var(--purple);
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: 600;
-      margin-bottom: 32px;
-      transition: transform 0.2s ease;
-    }
-    
-    .back-btn:hover {
-      transform: translateY(-2px);
-      text-decoration: none;
-    }
-    
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      margin: 32px 0;
-    }
-    
-    .gallery-item {
-      position: relative;
-      aspect-ratio: 4/3;
-      border-radius: 16px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 2px solid var(--border);
-      background: var(--panel);
-    }
-    
-    .gallery-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(255, 178, 0, 0.3);
-      border-color: var(--orange);
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: scale 0.3s ease;
-    }
-    
-    .gallery-item:hover img {
-      scale: 1.05;
-    }
-    
-    .gallery-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(transparent, rgba(100, 13, 95, 0.95));
-      color: var(--white);
-      padding: 20px;
-      transform: translateY(100%);
-      transition: transform 0.3s ease;
-    }
-    
-    .gallery-item:hover .gallery-overlay {
-      transform: translateY(0);
-    }
-    
-    .gallery-overlay h3 {
-      margin: 0 0 8px 0;
-      font-size: 1.2em;
-      color: var(--orange);
-    }
-    
-    .gallery-overlay p {
-      margin: 0;
-      font-size: 0.9em;
-      opacity: 0.9;
-    }
-    
-    @media (max-width: 768px) {
-      .header h1 { font-size: 2em; }
-      .gallery { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
-      .wrap { padding: 20px 16px 60px; }
-    }
+  :root {
+    --bg:       #2a1810;
+    --panel:    #3d1a38;
+    --card:     #4a0a41;
+    --text:     #FFFFFF;
+    --muted:    #d9a8c7;
+    --border:   #7a2d6a;
+    --accent:   #FFB200;
+    --accent-2: #EB5B00;
+    --magenta:  #D91656;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background-color: #1a0d1a;
+    background-image:
+      linear-gradient(135deg, rgba(42,24,16,0.82) 0%, rgba(61,37,24,0.78) 25%, rgba(74,26,46,0.80) 50%, rgba(45,27,105,0.78) 75%, rgba(42,24,16,0.82) 100%),
+      url('images/ruapehu.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: fixed;
+    color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, Segoe UI, sans-serif;
+    min-height: 100vh;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
+
+  nav.site-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 0; border-bottom: 1px solid var(--border);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 0 14px var(--magenta);
+  }
+  .nav-links a {
+    margin-left: 20px; color: var(--muted); font-size: 15px;
+    padding: 6px 0; border-bottom: 2px solid transparent;
+  }
+  .nav-links a:hover { color: var(--text); text-decoration: none; border-bottom-color: var(--accent); }
+  .nav-links a.active { color: var(--text); border-bottom-color: var(--accent); }
+
+  .page-header { padding: 52px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
+  .page-header h1 { font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin: 0 0 10px; }
+  .page-header p { color: var(--muted); font-size: 17px; margin: 0; }
+
+  .gallery {
+    columns: 3;
+    column-gap: 16px;
+  }
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    position: relative;
+    cursor: pointer;
+    display: block;
+  }
+  .gallery-item img {
+    width: 100%; display: block;
+    transition: transform 0.3s ease;
+  }
+  .gallery-item:hover img { transform: scale(1.03); }
+  .gallery-item:hover { border-color: var(--accent); }
+
+  .empty {
+    color: var(--muted); text-align: center; padding: 60px 0;
+    font-size: 16px;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.92); z-index: 999;
+    align-items: center; justify-content: center;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 92vw; max-height: 92vh;
+    border-radius: 8px; object-fit: contain;
+  }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 28px;
+    color: #fff; font-size: 32px; cursor: pointer; line-height: 1;
+    background: none; border: none;
+  }
+
+  footer { padding: 40px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
+
+  @media (max-width: 900px) { .gallery { columns: 2; } }
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px 60px; }
+    .gallery { columns: 1; }
+    .page-header h1 { font-size: 28px; }
+    .nav-links a { margin-left: 12px; font-size: 14px; }
+  }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <a href="/" class="back-btn">← Back to Home</a>
-    
-    <div class="header">
-      <h1>Adventures</h1>
-      <p>Capturing moments of planned chaos</p>
-      <?php if (count($images) > 0): ?>
-        <p style="font-size: 0.9em; opacity: 0.8; margin-top: 12px;">
-          <?php echo count($images); ?> adventures captured
-        </p>
-      <?php endif; ?>
+<div class="wrap">
+
+  <nav class="site-nav">
+    <div class="brand">
+      <div class="dot" aria-hidden="true"></div>
+      <a href="/" style="color: var(--text);">Reuben O'Brien</a>
     </div>
-    
-    <div class="gallery">
-      <?php if (count($images) > 0): ?>
-        <?php foreach ($images as $index => $image): ?>
-          <?php 
-            $imagePath = $adventuresPath . $image;
-            $imageTitle = pathinfo($image, PATHINFO_FILENAME);
-            // Clean up the filename for display
-            $displayTitle = ucwords(str_replace(['_', '-'], ' ', $imageTitle));
-            // Simple description or empty
-            $description = '';
-          ?>
-          <div class="gallery-item">
-            <img src="<?php echo htmlspecialchars($imagePath); ?>" 
-                 alt="<?php echo htmlspecialchars($displayTitle); ?>" 
-                 loading="lazy"
-                 onerror="this.src='images/cover.jpeg'">
-            <div class="gallery-overlay">
-              <h3><?php echo htmlspecialchars($displayTitle); ?></h3>
-              <p><?php echo htmlspecialchars($description); ?></p>
-            </div>
-          </div>
-        <?php endforeach; ?>
-      <?php else: ?>
-        <!-- Fallback content when no images are found -->
-        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
-          <h3 style="color: var(--orange); margin-bottom: 16px;">No Adventures Yet</h3>
-          <p style="color: var(--muted);">
-            Upload images to the <code>images/adventures/</code> folder to see them here automatically!
-          </p>
-        </div>
-      <?php endif; ?>
+    <div class="nav-links">
+      <a href="/#projects">Projects</a>
+      <a href="/#publications">Publications</a>
+      <a href="/#about">About</a>
+      <a href="/adventures" class="active">Adventures</a>
+      <a href="/conferences">Conferences</a>
+      <a href="/#contact">Contact</a>
     </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Adventures</h1>
+    <p>Planned chaos<?php if (count($images) > 0): ?> &middot; <?php echo count($images); ?> captured<?php endif; ?></p>
   </div>
+
+  <?php if (count($images) > 0): ?>
+    <div class="gallery">
+      <?php foreach ($images as $image): ?>
+        <?php
+          $path = $adventuresPath . $image;
+          $label = ucwords(str_replace(['_', '-'], ' ', preg_replace('/^\d{2}_\d{2}_/', '', pathinfo($image, PATHINFO_FILENAME))));
+        ?>
+        <div class="gallery-item" onclick="openLightbox('<?php echo htmlspecialchars($path); ?>')">
+          <img src="<?php echo htmlspecialchars($path); ?>"
+               alt="<?php echo htmlspecialchars($label); ?>"
+               loading="lazy"
+               onerror="this.closest('.gallery-item').style.display='none'">
+        </div>
+      <?php endforeach; ?>
+    </div>
+  <?php else: ?>
+    <p class="empty">No photos yet. Drop images into <code>images/adventures/</code> named <code>YY_MM_description.jpg</code>.</p>
+  <?php endif; ?>
+
+  <footer>&copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...</footer>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightbox-img').src = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
 </body>
 </html>
