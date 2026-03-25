@@ -87,6 +87,7 @@ if (is_dir($adventuresPath)) {
     padding: 6px 0; border-bottom: 2px solid transparent;
   }
   .nav-links a:hover { color: var(--text); text-decoration: none; border-bottom-color: var(--accent); }
+  .nav-links a.active { color: var(--text); border-bottom-color: var(--accent); }
   .nav-sep { width: 1px; height: 16px; background: var(--border); margin: 0 8px; }
   .nav-links a.nav-page {
     margin-left: 0; padding: 5px 12px;
@@ -164,6 +165,7 @@ if (is_dir($adventuresPath)) {
     </div>
     <div class="nav-links">
       <a href="/#projects">Projects</a>
+      <a href="/#publications">Publications</a>
       <a href="/#about">About</a>
       <a href="/#contact">Contact</a>
       <div class="nav-sep" aria-hidden="true"></div>
