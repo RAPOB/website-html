@@ -300,7 +300,6 @@
   <!-- NAV -->
   <nav class="site-nav">
     <div class="brand">
-      <div class="dot" aria-hidden="true"></div>
       Reuben O'Brien
     </div>
     <div class="nav-links">
@@ -318,7 +317,6 @@
   <div class="hero">
     <img src="images/me.jpeg" alt="Reuben O'Brien" class="hero-photo">
     <div class="hero-meta">
-      <div class="status-dot"></div>
       <span class="status-text">PhD Student &middot; University of Glasgow &middot; Acumino</span>
     </div>
     <h1>Robotics<br>Engineer<span class="punct">.</span></h1>

@@ -160,7 +160,6 @@ if (is_dir($adventuresPath)) {
 
   <nav class="site-nav">
     <div class="brand">
-      <div class="dot" aria-hidden="true"></div>
       <a href="/" style="color: var(--text);">Reuben O'Brien</a>
     </div>
     <div class="nav-links">
