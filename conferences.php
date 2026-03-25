@@ -156,7 +156,10 @@
           <p class="event-desc">Presented the Autonomous Robotic Trimaran at IEEE/RSJ IROS 2024.</p>
           <span class="pill pill-muted">Best Application Paper Finalist</span>
         </div>
-        <img src="images/conferences/iros_2024_finalists.jpg" alt="IROS 2024 Best Application Paper Finalists" class="event-photo">
+        <div style="display:flex; gap:8px; flex-shrink:0;">
+          <img src="images/conferences/iros_2024_abu.jpeg" alt="IROS 2024 Abu Dhabi finalist" class="event-photo">
+          <img src="images/conferences/iros_2024_finalists.jpg" alt="IROS 2024 Best Application Paper Finalists" class="event-photo">
+        </div>
       </div>
 
       <div class="event">
@@ -188,8 +191,8 @@
       <div class="event">
         <div class="event-body">
           <h2>Startup Autobahn Expo 11 &middot; Stuttgart</h2>
-          <p class="event-meta">2024</p>
-          <p class="event-desc">Acumino's first Startup Autobahn cohort, demonstrating dexterous robotic assembly at the Porsche Museum.</p>
+          <p class="event-meta">2025 &middot; DXC Technology</p>
+          <p class="event-desc">Acumino's first Startup Autobahn cohort, demonstrating dexterous robotic assembly at DXC Technology.</p>
         </div>
         <img src="images/conferences/startup_autobahn_expo11.jpeg" alt="Startup Autobahn Expo 11" class="event-photo">
       </div>
@@ -206,7 +209,7 @@
       <div class="event">
         <div class="event-body">
           <h2>VivaTech &middot; Paris</h2>
-          <p class="event-meta">2024</p>
+          <p class="event-meta">2025</p>
           <p class="event-desc">Represented Acumino at Viva Technology, Europe's biggest startup and tech event.</p>
         </div>
         <img src="images/conferences/vivatech_paris.jpeg" alt="VivaTech Paris 2024" class="event-photo">
@@ -215,7 +218,7 @@
       <div class="event">
         <div class="event-body">
           <h2>GITEX &middot; Berlin</h2>
-          <p class="event-meta">2024</p>
+          <p class="event-meta">2025</p>
           <p class="event-desc">Represented Acumino at GITEX Europe.</p>
         </div>
         <img src="images/conferences/gitex.jpeg" alt="GITEX Berlin 2024" class="event-photo">
@@ -224,7 +227,7 @@
       <div class="event">
         <div class="event-body">
           <h2>Humanoid Olympiad &middot; Olympia, Greece</h2>
-          <p class="event-meta">2024</p>
+          <p class="event-meta">2025</p>
           <p class="event-desc">Attended the Humanoid Olympiad at the birthplace of the Olympics.</p>
         </div>
         <img src="images/conferences/humanoid_olympiad.jpg" alt="Humanoid Olympiad, Olympia Greece" class="event-photo">
