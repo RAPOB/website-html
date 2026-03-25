@@ -191,6 +191,7 @@
           <p class="event-meta">2024</p>
           <p class="event-desc">Acumino's first Startup Autobahn cohort, demonstrating dexterous robotic assembly at the Porsche Museum.</p>
         </div>
+        <img src="images/conferences/startup_autobahn_expo11.jpeg" alt="Startup Autobahn Expo 11" class="event-photo">
       </div>
 
       <div class="event">
@@ -199,6 +200,7 @@
           <p class="event-meta">March 2025</p>
           <p class="event-desc">Demonstrated Acumino's bimanual assembly system at NVIDIA GTC 2025 as part of the Teradyne Robotics AI Accelerator launch. UR5e cobots doing cable handling.</p>
         </div>
+        <img src="images/conferences/gtc.jpeg" alt="NVIDIA GTC 2025" class="event-photo">
       </div>
 
       <div class="event">
@@ -207,6 +209,7 @@
           <p class="event-meta">2024</p>
           <p class="event-desc">Represented Acumino at Viva Technology, Europe's biggest startup and tech event.</p>
         </div>
+        <img src="images/conferences/vivatech_paris.jpeg" alt="VivaTech Paris 2024" class="event-photo">
       </div>
 
       <div class="event">
@@ -215,6 +218,7 @@
           <p class="event-meta">2024</p>
           <p class="event-desc">Represented Acumino at GITEX Europe.</p>
         </div>
+        <img src="images/conferences/gitex.jpeg" alt="GITEX Berlin 2024" class="event-photo">
       </div>
 
       <div class="event">
