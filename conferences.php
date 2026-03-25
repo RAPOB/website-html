@@ -5,387 +5,210 @@
   <meta charset="utf-8">
   <title>Conferences & Events - Reuben O'Brien</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Conferences and Events by Reuben O'Brien - Research Presentations and Professional Networking">
+  <meta name="description" content="Conferences and events attended by Reuben O'Brien.">
   <link rel="icon" type="image/jpeg" href="images/cover.jpeg?v=1">
   <style>
-    :root { 
-      --bg: #2a1810; 
-      --panel: #640D5F; 
-      --text: #FFFFFF; 
-      --muted: #d9a8c7; 
-      --border: #7a2d6a; 
-      --accent: #FFB200; 
-      --accent-2: #EB5B00; 
-      --link: #FFB200; 
-      --card: #4a0a41; 
-      --orange: #FFB200;
-      --red-orange: #EB5B00;
-      --magenta: #D91656;
-      --purple: #640D5F;
-      --white: #FFFFFF;
-      --black: #000000;
-    }
-    
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
-    body { 
-      background: linear-gradient(135deg, var(--bg) 0%, #3d2518 25%, #4a1a2e 50%, #2d1b69 75%, var(--bg) 100%); 
-      color: var(--text); 
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-    
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 32px 20px 80px; }
-    
-    .header { 
-      text-align: center; 
-      margin-bottom: 48px; 
-      padding: 40px 20px;
-      background: linear-gradient(135deg, var(--purple), var(--magenta));
-      border-radius: 20px;
-      border: 2px solid var(--orange);
-    }
-    
-    .header h1 { 
-      font-size: 3em; 
-      margin: 0 0 16px 0; 
-      color: var(--orange);
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    .header p { 
-      font-size: 1.2em; 
-      margin: 0; 
-      opacity: 0.9; 
-    }
-    
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      background: var(--orange);
-      color: var(--purple);
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: 600;
-      margin-bottom: 32px;
-      transition: transform 0.2s ease;
-    }
-    
-    .back-btn:hover {
-      transform: translateY(-2px);
-      text-decoration: none;
-    }
-    
-    .conference-section {
-      background: var(--panel);
-      border: 2px solid var(--border);
-      border-radius: 20px;
-      padding: 32px;
-      margin-bottom: 40px;
-      transition: border-color 0.3s ease;
-    }
-    
-    .conference-section:hover {
-      border-color: var(--orange);
-    }
-    
-    .conference-header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    
-    .conference-header h2 {
-      font-size: 2.2em;
-      margin: 0 0 16px 0;
-      color: var(--orange);
-    }
-    
-    .conference-header p {
-      font-size: 1.1em;
-      color: var(--muted);
-      max-width: 800px;
-      margin: 0 auto 20px auto;
-    }
-    
-    .conference-links {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 16px;
-    }
-    
-    .conference-btn {
-      padding: 8px 16px;
-      background: var(--orange);
-      color: var(--purple);
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 600;
-      transition: transform 0.2s ease;
-    }
-    
-    .conference-btn:hover {
-      transform: translateY(-1px);
-      text-decoration: none;
-    }
-    
-    .conference-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin: 24px 0;
-    }
-    
-    .gallery-item {
-      position: relative;
-      aspect-ratio: 4/3;
-      border-radius: 12px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 2px solid var(--border);
-      background: var(--card);
-    }
-    
-    .gallery-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 30px rgba(255, 178, 0, 0.2);
-      border-color: var(--orange);
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: scale 0.3s ease;
-    }
-    
-    .gallery-item:hover img {
-      scale: 1.05;
-    }
-    
-    .gallery-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(transparent, rgba(100, 13, 95, 0.95));
-      color: var(--white);
-      padding: 16px;
-      transform: translateY(100%);
-      transition: transform 0.3s ease;
-    }
-    
-    .gallery-item:hover .gallery-overlay {
-      transform: translateY(0);
-    }
-    
-    .gallery-overlay h4 {
-      margin: 0 0 4px 0;
-      font-size: 1em;
-      color: var(--orange);
-    }
-    
-    .gallery-overlay p {
-      margin: 0;
-      font-size: 0.85em;
-      opacity: 0.9;
-    }
-    
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 16px 0;
-      justify-content: center;
-    }
-    
-    .tag {
-      background: var(--red-orange);
-      color: var(--white);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.8em;
-      font-weight: 500;
-    }
-    
-    @media (max-width: 768px) {
-      .header h1 { font-size: 2em; }
-      .conference-header h2 { font-size: 1.8em; }
-      .conference-section { padding: 24px 20px; margin-bottom: 32px; }
-      .conference-gallery { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-      .wrap { padding: 20px 16px 60px; }
-    }
+  :root {
+    --bg:       #2a1810;
+    --panel:    #3d1a38;
+    --card:     #4a0a41;
+    --text:     #FFFFFF;
+    --muted:    #d9a8c7;
+    --border:   #7a2d6a;
+    --accent:   #FFB200;
+    --accent-2: #EB5B00;
+    --magenta:  #D91656;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background-color: #1a0d1a;
+    background-image:
+      linear-gradient(135deg, rgba(42,24,16,0.82) 0%, rgba(61,37,24,0.78) 25%, rgba(74,26,46,0.80) 50%, rgba(45,27,105,0.78) 75%, rgba(42,24,16,0.82) 100%),
+      url('images/ruapehu.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: fixed;
+    color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, Segoe UI, sans-serif;
+    min-height: 100vh;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+
+  nav.site-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 0; border-bottom: 1px solid var(--border);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 0 14px var(--magenta);
+  }
+  .nav-links a {
+    margin-left: 20px; color: var(--muted); font-size: 15px;
+    padding: 6px 0; border-bottom: 2px solid transparent;
+  }
+  .nav-links a:hover { color: var(--text); text-decoration: none; border-bottom-color: var(--accent); }
+  .nav-links a.active { color: var(--text); border-bottom-color: var(--accent); }
+
+  .page-header { padding: 52px 0 40px; border-bottom: 1px solid var(--border); }
+  .page-header h1 { font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin: 0 0 10px; }
+  .page-header p { color: var(--muted); font-size: 17px; margin: 0; }
+
+  .section-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.14em; color: var(--muted); margin-bottom: 24px;
+  }
+
+  .event-list { display: grid; gap: 0; }
+  .event {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 24px; padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+  }
+  .event:last-child { border-bottom: none; }
+  .event-body h2 { font-size: 20px; margin: 0 0 4px; }
+  .event-meta { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
+  .event-desc { color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0 0 12px; max-width: 560px; }
+  .pill {
+    display: inline-block; border-radius: 4px;
+    padding: 1px 8px; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em; margin-right: 6px;
+  }
+  .pill-gold { background: rgba(255,178,0,0.15); color: var(--accent); }
+  .pill-muted { background: rgba(255,255,255,0.06); color: var(--muted); }
+
+  .event-photo {
+    width: 200px; height: 134px; object-fit: cover;
+    border-radius: 10px; border: 1px solid var(--border); flex-shrink: 0;
+  }
+
+  section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+
+  footer { padding: 32px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px 60px; }
+    .page-header h1 { font-size: 28px; }
+    .event { grid-template-columns: 1fr; }
+    .event-photo { width: 100%; height: 180px; }
+    .nav-links a { margin-left: 12px; font-size: 14px; }
+  }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <a href="/" class="back-btn">← Back to Home</a>
-    
-    <div class="header">
-      <h1>Conferences & Events</h1>
-      <p>Sharing research, building networks, and advancing the field of robotics</p>
-    </div>
-    
-    <!-- IEEE IROS 2024 -->
-    <div class="conference-section">
-      <div class="conference-header">
-        <h2>IEEE IROS 2024 - Abu Dhabi</h2>
-        <p>Presented research on autonomous robotic trimaran at the premier international conference on intelligent robots and systems. Paper selected as finalist for Best Application Paper award.</p>
-        <div class="tags">
-          <span class="tag">Best Paper Finalist</span>
-          <span class="tag">Autonomous Robotics</span>
-          <span class="tag">Marine Systems</span>
-          <span class="tag">Abu Dhabi</span>
-        </div>
-        <div class="conference-links">
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" class="conference-btn" target="_blank">Research Paper</a>
-        </div>
-      </div>
-      
-      <div class="conference-gallery">
-        <div class="gallery-item">
-          <img src="images/iros2024-presentation.jpg" alt="IROS 2024 Presentation" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Research Presentation</h4>
-            <p>Presenting autonomous trimaran research to international audience</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/iros2024-poster.jpg" alt="IROS 2024 Poster" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Poster Session</h4>
-            <p>Interactive discussions during the poster presentation</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/iros2024-networking.jpg" alt="IROS 2024 Networking" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Academic Networking</h4>
-            <p>Building connections with leading robotics researchers</p>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="wrap">
 
-    <!-- SSRR 2022 -->
-    <div class="conference-section">
-      <div class="conference-header">
-        <h2>IEEE SSRR 2022 - Sevilla</h2>
-        <p>Received Best Paper Award on Search and Safety and Rescue Robotics for work on waterjet-powered robotic speedboats. Recognition for innovative approach to marine rescue applications.</p>
-        <div class="tags">
-          <span class="tag">Best Paper Award</span>
-          <span class="tag">Search & Rescue</span>
-          <span class="tag">Marine Robotics</span>
-          <span class="tag">Spain</span>
-        </div>
-        <div class="conference-links">
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:u5HHmVD_uO8C" class="conference-btn" target="_blank">Award Paper</a>
-        </div>
-      </div>
-      
-      <div class="conference-gallery">
-        <div class="gallery-item">
-          <img src="images/ssrr2022-award.jpg" alt="SSRR 2022 Award" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Best Paper Award</h4>
-            <p>Receiving recognition for search and rescue robotics research</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/ssrr2022-demo.jpg" alt="SSRR 2022 Demo" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Live Demonstration</h4>
-            <p>Showcasing waterjet-powered robot capabilities</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/ssrr2022-conference.jpg" alt="SSRR 2022 Conference" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Conference Venue</h4>
-            <p>IEEE SSRR 2022 conference in beautiful Sevilla, Spain</p>
-          </div>
-        </div>
-      </div>
+  <nav class="site-nav">
+    <div class="brand">
+      <div class="dot" aria-hidden="true"></div>
+      <a href="/" style="color: var(--text);">Reuben O'Brien</a>
     </div>
+    <div class="nav-links">
+      <a href="/#projects">Projects</a>
+      <a href="/#publications">Publications</a>
+      <a href="/#about">About</a>
+      <a href="/adventures">Adventures</a>
+      <a href="/conferences" class="active">Conferences</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
 
-    <!-- University Events -->
-    <div class="conference-section">
-      <div class="conference-header">
-        <h2>University Research Events</h2>
-        <p>Presenting research at various university symposiums, graduate showcases, and academic events. Sharing progress and findings with the local academic community.</p>
-        <div class="tags">
-          <span class="tag">Graduate Research</span>
-          <span class="tag">University Events</span>
-          <span class="tag">Academic Presentations</span>
-          <span class="tag">Research Showcase</span>
-        </div>
-      </div>
-      
-      <div class="conference-gallery">
-        <div class="gallery-item">
-          <img src="images/uni-symposium.jpg" alt="University Symposium" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Research Symposium</h4>
-            <p>Annual university research presentation and networking</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/thesis-defense.jpg" alt="Thesis Defense" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Masters Thesis Defense</h4>
-            <p>Successfully defending Masters thesis with First Class Honours</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/grad-showcase.jpg" alt="Graduate Showcase" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Graduate Showcase</h4>
-            <p>Demonstrating research to industry and academic visitors</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Industry Events -->
-    <div class="conference-section">
-      <div class="conference-header">
-        <h2>Industry Events & Networking</h2>
-        <p>Participating in industry conferences, tech meetups, and professional networking events. Building connections between academia and industry applications.</p>
-        <div class="tags">
-          <span class="tag">Industry Networking</span>
-          <span class="tag">Tech Meetups</span>
-          <span class="tag">Professional Events</span>
-          <span class="tag">Innovation Showcases</span>
-        </div>
-      </div>
-      
-      <div class="conference-gallery">
-        <div class="gallery-item">
-          <img src="images/tech-meetup.jpg" alt="Tech Meetup" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Robotics Meetup</h4>
-            <p>Sharing insights at local robotics and AI meetups</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/industry-panel.jpg" alt="Industry Panel" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Industry Panel</h4>
-            <p>Participating in discussions on future of robotics</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/innovation-expo.jpg" alt="Innovation Expo" onerror="this.src='images/cover.jpeg'">
-          <div class="gallery-overlay">
-            <h4>Innovation Expo</h4>
-            <p>Showcasing Acumino's robotics technology to industry</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="page-header">
+    <h1>Conferences &amp; Events</h1>
+    <p>Research presentations, industry demos, and startup events.</p>
   </div>
+
+  <!-- RESEARCH CONFERENCES -->
+  <section>
+    <div class="section-label">Research Conferences</div>
+    <div class="event-list">
+
+      <div class="event">
+        <div class="event-body">
+          <h2>IEEE IROS 2025 &middot; Hangzhou</h2>
+          <p class="event-meta">October 2025</p>
+          <p class="event-desc">Presented AeroBuoy at the 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems.</p>
+          <span class="pill pill-gold">Best Paper Award</span>
+        </div>
+        <img src="images/conferences/iros_2025_award.jpg" alt="IROS 2025 Best Paper Award ceremony" class="event-photo">
+      </div>
+
+      <div class="event">
+        <div class="event-body">
+          <h2>IEEE IROS 2024 &middot; Abu Dhabi</h2>
+          <p class="event-meta">October 2024</p>
+          <p class="event-desc">Presented the Autonomous Robotic Trimaran at IEEE/RSJ IROS 2024.</p>
+          <span class="pill pill-muted">Best Application Paper Finalist</span>
+        </div>
+        <img src="images/conferences/iros_2024_finalists.jpg" alt="IROS 2024 Best Application Paper Finalists" class="event-photo">
+      </div>
+
+      <div class="event">
+        <div class="event-body">
+          <h2>IEEE SSRR 2022 &middot; Sevilla</h2>
+          <p class="event-meta">November 2022</p>
+          <p class="event-desc">Presented research on waterjet-powered robotic speedboats at the IEEE International Symposium on Safety, Security, and Rescue Robotics.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INDUSTRY EVENTS -->
+  <section>
+    <div class="section-label">Industry Events</div>
+    <div class="event-list">
+
+      <div class="event">
+        <div class="event-body">
+          <h2>Startup Autobahn &middot; Stuttgart</h2>
+          <p class="event-meta">2024 &ndash; 2025</p>
+          <p class="event-desc">Acumino participated in multiple Startup Autobahn Expo cohorts. The Acumino x Schaeffler x DXC collaboration received the 2025 Global Plug and Play Innovation Award.</p>
+          <span class="pill pill-gold">Innovation Award 2025</span>
+        </div>
+        <img src="images/conferences/startup_autobahn.jpeg" alt="Startup Autobahn" class="event-photo">
+      </div>
+
+      <div class="event">
+        <div class="event-body">
+          <h2>NVIDIA GTC &middot; San Jose</h2>
+          <p class="event-meta">March 2025</p>
+          <p class="event-desc">Demonstrated Acumino's bimanual assembly system at NVIDIA GTC 2025 as part of the Teradyne Robotics AI Accelerator launch. UR5e cobots doing cable handling.</p>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="event-body">
+          <h2>GITEX &middot; Dubai</h2>
+          <p class="event-meta">2024</p>
+          <p class="event-desc">Represented Acumino at GITEX Global, one of the world's largest tech events.</p>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="event-body">
+          <h2>Humanoid Olympiad &middot; Paris</h2>
+          <p class="event-meta">2024</p>
+          <p class="event-desc">Attended the Humanoid Olympiad in Paris.</p>
+        </div>
+        <img src="images/conferences/humanoid_olympiad.jpg" alt="Humanoid Olympiad Paris" class="event-photo">
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...
+  </footer>
+
+</div>
 </body>
 </html>
