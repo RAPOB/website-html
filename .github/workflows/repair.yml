@@ -15,8 +15,8 @@ jobs:
             "https://${{ secrets.CPANEL_HOST }}/execute/VersionControl/create" \
             --data-urlencode "repository_root=${{ secrets.CPANEL_REPO_ROOT }}-2" \
             --data-urlencode "name=website-html-2" \
-            --data-urlencode "type=clone" \
-            --data-urlencode "clone_url=https://github.com/RAPOB/website-html.git" \
+            --data-urlencode "type=git" \
+            --data-urlencode 'source_repository={"remote_name":"origin","url":"https://github.com/RAPOB/website-html.git"}' \
             --data-urlencode "branch=main")
           echo "$resp" | jq .
           [ "$(echo "$resp" | jq -r '.status')" = "1" ]
