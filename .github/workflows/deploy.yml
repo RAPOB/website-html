@@ -12,20 +12,38 @@ jobs:
     steps:
       - name: Update cPanel repo from GitHub
         run: |
-          resp=$(curl -sS --fail \
-            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
-            -X POST \
-            "https://${{ secrets.CPANEL_HOST }}/execute/VersionControl/update" \
-            -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}&branch=main")
-          echo "$resp" | jq .
-          [ "$(echo "$resp" | jq -r '.status')" = "1" ]
+          for attempt in 1 2 3 4 5; do
+            resp=$(curl -sS \
+              -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
+              -H "Content-Type: application/x-www-form-urlencoded" \
+              -X POST \
+              "https://${{ secrets.CPANEL_HOST }}/execute/VersionControl/update" \
+              -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}&branch=main") || true
+            if [ "$(echo "$resp" | jq -r '.status' 2>/dev/null)" = "1" ]; then
+              echo "$resp" | jq .
+              exit 0
+            fi
+            echo "attempt $attempt failed: ${resp:-<no response>}"
+            sleep 10
+          done
+          echo "cPanel repo update failed after 5 attempts"
+          exit 1
 
       - name: Deploy HEAD commit
         run: |
-          resp=$(curl -sS --fail \
-            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
-            -X POST \
-            "https://${{ secrets.CPANEL_HOST }}/execute/VersionControlDeployment/create" \
-            -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}")
-          echo "$resp" | jq .
-          [ "$(echo "$resp" | jq -r '.status')" = "1" ]
+          for attempt in 1 2 3 4 5; do
+            resp=$(curl -sS \
+              -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
+              -H "Content-Type: application/x-www-form-urlencoded" \
+              -X POST \
+              "https://${{ secrets.CPANEL_HOST }}/execute/VersionControlDeployment/create" \
+              -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}") || true
+            if [ "$(echo "$resp" | jq -r '.status' 2>/dev/null)" = "1" ]; then
+              echo "$resp" | jq .
+              exit 0
+            fi
+            echo "attempt $attempt failed: ${resp:-<no response>}"
+            sleep 10
+          done
+          echo "cPanel deployment failed after 5 attempts"
+          exit 1
