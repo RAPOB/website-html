@@ -44,11 +44,6 @@
     padding: 20px 0; border-bottom: 1px solid var(--border);
   }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
-  .dot {
-    width: 10px; height: 10px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    box-shadow: 0 0 14px var(--magenta);
-  }
   .nav-links { display: flex; align-items: center; gap: 4px; }
   .nav-links a {
     margin-left: 16px; color: var(--muted); font-size: 15px;
@@ -138,6 +133,24 @@
     <p>Research presentations, industry demos, and startup events.</p>
   </div>
 
+  <!-- PROGRAMS -->
+  <section>
+    <div class="section-label">Programs</div>
+    <div class="event-list">
+
+      <div class="event">
+        <div class="event-body">
+          <h2>Google DeepMind Robotics Accelerator &middot; London</h2>
+          <p class="event-meta">June 2026 &ndash; September 2026</p>
+          <p class="event-desc">Acumino was picked for Google DeepMind's first European robotics accelerator, one of 15 startups across the continent and the only one from Greece. Gemini robotics models, DeepMind mentorship, Demo Day in London.</p>
+          <span class="pill pill-gold">1 of 15 in Europe</span>
+        </div>
+        <img src="images/conferences/deepmind_accelerator_2026.jpg" alt="Google DeepMind Robotics Accelerator cohort group photo, London 2026" class="event-photo">
+      </div>
+
+    </div>
+  </section>
+
   <!-- RESEARCH CONFERENCES -->
   <section>
     <div class="section-label">Research Conferences</div>
@@ -178,6 +191,14 @@
   <section>
     <div class="section-label">Industry Events</div>
     <div class="event-list">
+
+      <div class="event">
+        <div class="event-body">
+          <h2>SNF Nostos 2026 &middot; Athens</h2>
+          <p class="event-meta">June 2026</p>
+          <p class="event-desc">Ran the Acumino booth at SNF Nostos at the Stavros Niarchos Foundation Cultural Center, showing our robots to the home crowd.</p>
+        </div>
+      </div>
 
       <div class="event">
         <div class="event-body">

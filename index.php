@@ -101,11 +101,6 @@
     margin-bottom: 0;
   }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
-  .dot {
-    width: 10px; height: 10px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    box-shadow: 0 0 14px var(--magenta);
-  }
   .nav-links { display: flex; align-items: center; gap: 4px; }
   .nav-links a {
     margin-left: 16px; color: var(--muted); font-size: 15px;
@@ -125,12 +120,6 @@
   /* ── HERO ── */
   .hero { padding: 68px 0 60px; border-bottom: 1px solid var(--border); }
   .hero-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
-  .status-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: #22c55e; box-shadow: 0 0 8px #22c55e;
-    animation: pulse 2.4s ease-in-out infinite;
-  }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
   .status-text { color: var(--muted); font-size: 14px; }
   .hero h1 {
     font-size: 56px; font-weight: 800; margin: 0 0 14px;
@@ -234,7 +223,6 @@
     background: rgba(255,178,0,0.1); border: 1px solid rgba(255,178,0,0.35);
     border-radius: 10px; padding: 12px 16px; text-align: center; white-space: nowrap;
   }
-  .award-badge .trophy { font-size: 24px; display: block; margin-bottom: 4px; }
   .award-badge span { font-size: 12px; color: var(--accent); font-weight: 700; }
 
   /* ── PUBLICATIONS ── */
@@ -250,6 +238,7 @@
   .pub-title { font-size: 15px; line-height: 1.45; margin: 0 0 4px; }
   .pub-title a { color: var(--text); }
   .pub-venue { color: var(--muted); font-size: 13px; margin: 0; }
+  .pub-venue strong { color: var(--text); font-weight: 600; }
   .pub-photo {
     width: 130px; height: 86px; object-fit: cover;
     border-radius: 8px; border: 1px solid var(--border); flex-shrink: 0;
@@ -362,14 +351,9 @@
       <span class="status-text">PhD Student &middot; University of Glasgow &middot; Acumino</span>
     </div>
     <h1>Robotics<br>Engineer<span class="punct">.</span></h1>
-    <p class="hero-sub">Building robots that learn from people. Boats, arms, gaze. Currently at <a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a> and the <a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a>.</p>
+    <p class="hero-sub">Building robots that learn from people. Boats, arms, gaze. Mostly ROS 2, C++ and PyTorch these days. Currently at <a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a> and the <a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a>.</p>
     <div class="hero-chips">
       <span class="chip gold">IROS 2025 Best Paper</span>
-      <span class="chip">ROS 2</span>
-      <span class="chip">Imitation Learning</span>
-      <span class="chip">Computer Vision</span>
-      <span class="chip">C++</span>
-      <span class="chip">PyTorch</span>
     </div>
   </div>
 
@@ -384,11 +368,10 @@
             <div class="project-tag">IROS 2025</div>
             <h3>AeroBuoy</h3>
             <p>Drone-deployable, 3D printed autonomous buoy for environmental inspection in remote and hazardous river systems.</p>
-            <a class="item-link" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Research Paper &rarr;</a>
+            <a class="item-link" href="https://www.researchgate.net/publication/397081148_AeroBuoy_A_Drone_Deployable_3D_Printed_Autonomous_Robotic_Buoy_for_Environmental_Inspection_in_Remote_and_Hazardous_River_Systems" target="_blank" rel="noopener">Research Paper &rarr;</a>
           </div>
           <div class="award-badge">
-            <span class="trophy">🏆</span>
-            <span>Best Paper</span>
+            <span>Best Paper Award</span>
           </div>
         </div>
       </div>
@@ -397,14 +380,14 @@
         <div class="project-tag">IROS 2024</div>
         <h3>Autonomous Trimaran</h3>
         <p>3D printed, waterjet-powered autonomous boat for environmental inspection. Open-source. Muddy ponds, creeks, and the Manukau Harbour.</p>
-        <a class="item-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">Research Paper &rarr;</a>
+        <a class="item-link" href="https://www.researchgate.net/publication/387427288_An_Autonomous_3D_Printed_Waterjet-Powered_Open-Source_Robotic_Trimaran_for_Environmental_Inspection_and_Monitoring" target="_blank" rel="noopener">Research Paper &rarr;</a>
       </div>
       <div class="project-card">
         <img src="images/projects/aquatri/speed_boat_rear.jpeg" alt="Waterjet-powered robotic speedboat" class="project-img">
         <div class="project-tag">SSRR 2022</div>
         <h3>Waterjet-Powered Robotic Speedboats</h3>
         <p>Open-source, low-cost waterjet-powered robotic speedboats. Honours project that kicked off the whole aquatic robotics line.</p>
-        <a class="item-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">Research Paper &rarr;</a>
+        <a class="item-link" href="https://www.researchgate.net/publication/365172412_On_the_Development_of_Waterjet-Powered_Robotic_Speedboats_An_Open-Source_Low-Cost_Platform_for_Education_and_Research" target="_blank" rel="noopener">Research Paper &rarr;</a>
       </div>
       <div class="project-card">
         <img src="images/projects/fsae/fsae_2018_race.jpeg" alt="University of Auckland Formula SAE electric car" class="project-img">
@@ -431,23 +414,23 @@
         <div class="pub-year">2025</div>
         <div>
           <p class="pub-title"><a href="https://www.researchgate.net/publication/397081148_AeroBuoy_A_Drone_Deployable_3D_Printed_Autonomous_Robotic_Buoy_for_Environmental_Inspection_in_Remote_and_Hazardous_River_Systems" target="_blank" rel="noopener">AeroBuoy: A Drone Deployable, 3D Printed, Autonomous Robotic Buoy for Environmental Inspection in Remote and Hazardous River Systems</a> <span class="pill pill-gold">Best Paper</span></p>
-          <p class="pub-venue">Reuben O'Brien et al. · IEEE/RSJ IROS</p>
+          <p class="pub-venue"><strong>Reuben O'Brien</strong>, Angus Lynch, Minas Liarokapis · IEEE/RSJ IROS</p>
         </div>
         <img src="images/conferences/iros_2025_award.jpg" alt="IROS 2025 Best Paper Award ceremony" class="pub-photo">
       </div>
       <div class="pub-row has-photo">
         <div class="pub-year">2024</div>
         <div>
-          <p class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener">An Autonomous, 3D Printed, Waterjet-Powered, Open-Source Robotic Trimaran for Environmental Inspection and Monitoring</a> <span class="pill pill-muted">Best Application Finalist</span></p>
-          <p class="pub-venue">Reuben O'Brien et al. · IEEE/RSJ IROS</p>
+          <p class="pub-title"><a href="https://www.researchgate.net/publication/387427288_An_Autonomous_3D_Printed_Waterjet-Powered_Open-Source_Robotic_Trimaran_for_Environmental_Inspection_and_Monitoring" target="_blank" rel="noopener">An Autonomous, 3D Printed, Waterjet-Powered, Open-Source Robotic Trimaran for Environmental Inspection and Monitoring</a> <span class="pill pill-muted">Best Application Finalist</span></p>
+          <p class="pub-venue"><strong>Reuben O'Brien</strong>, Martin Lambrechtse-Reid, Minas Liarokapis · IEEE/RSJ IROS</p>
         </div>
         <img src="images/conferences/iros_2024_finalists.jpg" alt="IROS 2024 Best Application Paper Finalists" class="pub-photo">
       </div>
       <div class="pub-row">
         <div class="pub-year">2022</div>
         <div>
-          <p class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ajSv8AAAAJ&citation_for_view=A0ajSv8AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener">On the Development of Waterjet-Powered Robotic Speedboats</a></p>
-          <p class="pub-venue">Reuben O'Brien et al. · IEEE SSRR</p>
+          <p class="pub-title"><a href="https://www.researchgate.net/publication/365172412_On_the_Development_of_Waterjet-Powered_Robotic_Speedboats_An_Open-Source_Low-Cost_Platform_for_Education_and_Research" target="_blank" rel="noopener">On the Development of Waterjet-Powered Robotic Speedboats</a></p>
+          <p class="pub-venue">Peter Mitchell, <strong>Reuben O'Brien</strong>, Minas V. Liarokapis · IEEE SSRR</p>
         </div>
       </div>
       <div class="pub-row">
@@ -457,6 +440,25 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- CONFERENCES -->
+  <section id="conferences">
+    <div class="section-label">Conferences &amp; Events</div>
+    <div>
+      <div class="conf-row"><span class="conf-date">Jun 2026</span><span class="conf-name">Google DeepMind Robotics Accelerator &middot; London <span class="pill pill-gold">1 of 15 in Europe</span></span></div>
+      <div class="conf-row"><span class="conf-date">Jun 2026</span><span class="conf-name">SNF Nostos 2026 &middot; Athens</span></div>
+      <div class="conf-row"><span class="conf-date">Oct 2025</span><span class="conf-name">IEEE IROS 2025 &middot; Hangzhou <span class="pill pill-gold">Best Paper</span></span></div>
+      <div class="conf-row"><span class="conf-date">Sep 2025</span><span class="conf-name">Startup Autobahn Expo 12 &middot; Stuttgart <span class="pill pill-gold">Innovation Award</span></span></div>
+      <div class="conf-row"><span class="conf-date">Aug 2025</span><span class="conf-name">Humanoid Olympiad &middot; Olympia, Greece</span></div>
+      <div class="conf-row"><span class="conf-date">Jun 2025</span><span class="conf-name">VivaTech &middot; Paris</span></div>
+      <div class="conf-row"><span class="conf-date">May 2025</span><span class="conf-name">GITEX Europe &middot; Berlin</span></div>
+      <div class="conf-row"><span class="conf-date">Mar 2025</span><span class="conf-name">NVIDIA GTC &middot; San Jose</span></div>
+      <div class="conf-row"><span class="conf-date">2025</span><span class="conf-name">Startup Autobahn Expo 11 &middot; Stuttgart</span></div>
+      <div class="conf-row"><span class="conf-date">Oct 2024</span><span class="conf-name">IEEE IROS 2024 &middot; Abu Dhabi <span class="pill pill-muted">Best Application Finalist</span></span></div>
+      <div class="conf-row"><span class="conf-date">Nov 2022</span><span class="conf-name">IEEE SSRR 2022 &middot; Sevilla</span></div>
+    </div>
+    <a class="item-link" href="/conferences" style="display:inline-block; margin-top:16px;">View photos &rarr;</a>
   </section>
 
   <!-- ABOUT -->
@@ -477,6 +479,30 @@
       <a class="social-chip" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
       <a class="social-chip" href="https://www.researchgate.net/profile/Reuben-Obrien" target="_blank" rel="noopener">ResearchGate</a>
     </div>
+  </section>
+
+  <!-- ADVENTURES -->
+  <section id="adventures-teaser">
+    <div class="section-label">Adventures</div>
+    <?php
+    $advPath = 'images/adventures/';
+    $advAll = array_filter(scandir($advPath) ?: [], fn($f) => preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $f));
+    usort($advAll, function($a, $b) {
+      preg_match('/^(\d{2})_(\d{2})/', $a, $mA);
+      preg_match('/^(\d{2})_(\d{2})/', $b, $mB);
+      if (count($mA) >= 3 && count($mB) >= 3) return $mA[1] !== $mB[1] ? $mB[1] - $mA[1] : $mB[2] - $mA[2];
+      return strcmp($a, $b);
+    });
+    $recent = array_slice(array_values($advAll), 0, 4);
+    ?>
+    <?php if ($recent): ?>
+    <div class="adv-strip">
+      <?php foreach ($recent as $img): ?>
+      <img src="<?php echo htmlspecialchars($advPath . $img); ?>" alt="Adventure" class="adv-thumb" loading="lazy">
+      <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
+    <a href="/adventures" class="adv-cta">Send It &rarr;</a>
   </section>
 
   <!-- AFFILIATIONS -->
@@ -510,47 +536,6 @@
     </div>
   </section>
 
-  <!-- CONFERENCES -->
-  <section id="conferences">
-    <div class="section-label">Conferences &amp; Events</div>
-    <div>
-      <div class="conf-row"><span class="conf-date">Oct 2025</span><span class="conf-name">IEEE IROS 2025 &middot; Hangzhou <span class="pill pill-gold">Best Paper</span></span></div>
-      <div class="conf-row"><span class="conf-date">Sep 2025</span><span class="conf-name">Startup Autobahn Expo 12 &middot; Stuttgart <span class="pill pill-gold">Innovation Award</span></span></div>
-      <div class="conf-row"><span class="conf-date">Aug 2025</span><span class="conf-name">Humanoid Olympiad &middot; Olympia, Greece</span></div>
-      <div class="conf-row"><span class="conf-date">Jun 2025</span><span class="conf-name">VivaTech &middot; Paris</span></div>
-      <div class="conf-row"><span class="conf-date">May 2025</span><span class="conf-name">GITEX Europe &middot; Berlin</span></div>
-      <div class="conf-row"><span class="conf-date">Mar 2025</span><span class="conf-name">NVIDIA GTC &middot; San Jose</span></div>
-      <div class="conf-row"><span class="conf-date">2025</span><span class="conf-name">Startup Autobahn Expo 11 &middot; Stuttgart</span></div>
-      <div class="conf-row"><span class="conf-date">Oct 2024</span><span class="conf-name">IEEE IROS 2024 &middot; Abu Dhabi <span class="pill pill-muted">Best Application Finalist</span></span></div>
-      <div class="conf-row"><span class="conf-date">Nov 2022</span><span class="conf-name">IEEE SSRR 2022 &middot; Sevilla</span></div>
-    </div>
-    <a class="item-link" href="/conferences" style="display:inline-block; margin-top:16px;">View photos &rarr;</a>
-  </section>
-
-  <!-- ADVENTURES -->
-  <section id="adventures-teaser">
-    <div class="section-label">Adventures</div>
-    <?php
-    $advPath = 'images/adventures/';
-    $advAll = array_filter(scandir($advPath) ?: [], fn($f) => preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $f));
-    usort($advAll, function($a, $b) {
-      preg_match('/^(\d{2})_(\d{2})/', $a, $mA);
-      preg_match('/^(\d{2})_(\d{2})/', $b, $mB);
-      if (count($mA) >= 3 && count($mB) >= 3) return $mA[1] !== $mB[1] ? $mB[1] - $mA[1] : $mB[2] - $mA[2];
-      return strcmp($a, $b);
-    });
-    $recent = array_slice(array_values($advAll), 0, 4);
-    ?>
-    <?php if ($recent): ?>
-    <div class="adv-strip">
-      <?php foreach ($recent as $img): ?>
-      <img src="<?php echo htmlspecialchars($advPath . $img); ?>" alt="Adventure" class="adv-thumb" loading="lazy">
-      <?php endforeach; ?>
-    </div>
-    <?php endif; ?>
-    <a href="/adventures" class="adv-cta">Send It &rarr;</a>
-  </section>
-
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-label">Contact</div>
@@ -558,7 +543,8 @@
   </section>
 
   <footer>
-    &copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...
+    &copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...<br>
+    Background: Mt Ruapehu, home of the UASC lodge I looked after from 2021 to 2023.
   </footer>
 
 </div>
