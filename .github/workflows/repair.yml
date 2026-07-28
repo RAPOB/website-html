@@ -7,14 +7,6 @@ jobs:
   repair:
     runs-on: ubuntu-latest
     steps:
-      - name: Show current repo config
-        run: |
-          resp=$(curl -sS --fail -G \
-            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://${{ secrets.CPANEL_HOST }}/execute/VersionControl/retrieve" \
-            --data-urlencode "fields=name,clone_urls,branch,last_update")
-          echo "$resp" | jq .
-
       - name: Fresh clone into new repository root
         run: |
           resp=$(curl -sS --fail \
