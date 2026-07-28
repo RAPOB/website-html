@@ -9,3 +9,5 @@ deployment:
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
+    # cp never deletes, so purge files that must not be public
+    - /bin/rm -f $DEPLOYPATH/README.md $DEPLOYPATH/router.php $DEPLOYPATH/images/reuben_linkedin_profile_images.html $DEPLOYPATH/images/IMG_3604.HEIC $DEPLOYPATH/images/Cover_photo.jpg
