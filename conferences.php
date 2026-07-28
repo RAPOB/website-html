@@ -259,7 +259,8 @@
   </section>
 
   <footer>
-    &copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...
+    &copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...<br>
+    Background: Mt Ruapehu, home of UASC. Photo by Geoff McKay, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>, colour overlay added.
   </footer>
 
 </div>

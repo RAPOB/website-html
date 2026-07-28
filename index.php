@@ -258,13 +258,13 @@
   .about-text strong { color: var(--text); font-weight: 600; }
 
   /* ── AFFILIATIONS ── */
-  .affil-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .affil-item {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 16px;
+  .affil-group {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.14em; color: var(--muted); margin: 30px 0 2px;
   }
-  .affil-item h3 { margin: 0 0 4px; font-size: 15px; }
-  .affil-item p { margin: 0; color: var(--muted); font-size: 13px; }
+  .affil-group:first-of-type { margin-top: 0; }
+  .affil-list:last-of-type .affil-row:last-child { border-bottom: none; }
+  .affil-role { color: var(--muted); }
 
   /* ── SOCIAL ── */
   .social-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 36px; }
@@ -277,14 +277,14 @@
   .social-chip:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
 
   /* ── CONFERENCES ── */
-  .conf-row {
+  .conf-row, .affil-row {
     display: flex; align-items: baseline; gap: 20px;
     padding: 13px 0; border-bottom: 1px solid var(--border);
   }
   .conf-row:last-child { border-bottom: none; }
-  .conf-date { color: var(--muted); font-size: 13px; font-weight: 600; min-width: 90px; flex-shrink: 0; }
-  .conf-name { font-size: 15px; flex: 1; }
-  .conf-name a { color: var(--text); }
+  .conf-date, .affil-date { color: var(--muted); font-size: 13px; font-weight: 600; min-width: 90px; flex-shrink: 0; }
+  .conf-name, .affil-name { font-size: 15px; flex: 1; }
+  .conf-name a, .affil-name a { color: var(--text); }
 
   /* ── ADVENTURES ── */
   .adv-strip { display: flex; gap: 8px; margin-bottom: 22px; }
@@ -317,7 +317,7 @@
     .award-badge { display: none; }
     .pub-row.has-photo { grid-template-columns: 44px 1fr; }
     .pub-photo { display: none; }
-    .affil-grid { grid-template-columns: 1fr; }
+    .affil-row { flex-direction: column; gap: 2px; }
     .nav-links a { margin-left: 12px; font-size: 14px; }
     .nav-links a:not(.nav-page) { display: none; }
     .nav-sep { display: none; }
@@ -508,30 +508,35 @@
   <!-- AFFILIATIONS -->
   <section id="teams">
     <div class="section-label">Teams &amp; Affiliations</div>
-    <div class="affil-grid">
-      <div class="affil-item">
-        <h3><a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a></h3>
-        <p>Robotics Development Engineer, May 2024 to present</p>
+    <div class="affil-group">Now</div>
+    <div class="affil-list">
+      <div class="affil-row">
+        <span class="affil-date">2024 &ndash;</span>
+        <span class="affil-name"><a href="https://acumino.ai/" target="_blank" rel="noopener">Acumino</a> <span class="affil-role">&middot; Robotics Development Engineer</span></span>
       </div>
-      <div class="affil-item">
-        <h3><a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a></h3>
-        <p>PhD Student, Biomedical Engineering, 2025 to present</p>
+      <div class="affil-row">
+        <span class="affil-date">2025 &ndash;</span>
+        <span class="affil-name"><a href="https://www.gla.ac.uk/" target="_blank" rel="noopener">University of Glasgow</a> <span class="affil-role">&middot; PhD, Biomedical Engineering</span></span>
       </div>
-      <div class="affil-item">
-        <h3><a href="https://www.araralab.uk/" target="_blank" rel="noopener">AraraLab</a></h3>
-        <p>University of Glasgow robotics lab, PhD supervision</p>
+      <div class="affil-row">
+        <span class="affil-date">2025 &ndash;</span>
+        <span class="affil-name"><a href="https://www.araralab.uk/" target="_blank" rel="noopener">AraraLab</a> <span class="affil-role">&middot; Glasgow robotics lab, where the PhD lives</span></span>
       </div>
-      <div class="affil-item">
-        <h3><a href="https://newdexterity.org/" target="_blank" rel="noopener">New Dexterity</a></h3>
-        <p>University of Auckland robotics lab, where the boats were built</p>
+    </div>
+
+    <div class="affil-group">Previously</div>
+    <div class="affil-list">
+      <div class="affil-row">
+        <span class="affil-date">2018 &ndash; 2024</span>
+        <span class="affil-name"><a href="https://www.auckland.ac.nz/" target="_blank" rel="noopener">University of Auckland</a> <span class="affil-role">&middot; MEng Mechatronics 2023&ndash;24, BE Mechatronics 2018&ndash;21</span></span>
       </div>
-      <div class="affil-item">
-        <h3><a href="https://www.auckland.ac.nz/" target="_blank" rel="noopener">University of Auckland</a></h3>
-        <p>MEng Mechatronics, Nov 2023 to Nov 2024. BE Mechatronics, Feb 2018 to Nov 2021.</p>
+      <div class="affil-row">
+        <span class="affil-date"></span>
+        <span class="affil-name"><a href="https://newdexterity.org/" target="_blank" rel="noopener">New Dexterity</a> <span class="affil-role">&middot; Auckland robotics lab, where the boats were built</span></span>
       </div>
-      <div class="affil-item">
-        <h3><a href="https://uasc.co.nz/" target="_blank" rel="noopener">UoA Snowsports Club</a></h3>
-        <p>President, 2021 to 2023. 650+ members. Managed a $1.65M club-owned lodge on Mt Ruapehu.</p>
+      <div class="affil-row">
+        <span class="affil-date">2021</span>
+        <span class="affil-name"><a href="https://uasc.co.nz/" target="_blank" rel="noopener">UoA Snowsports Club</a> <span class="affil-role">&middot; President. 650+ members, and a $1.65M club-owned lodge on Mt Ruapehu</span></span>
       </div>
     </div>
   </section>
@@ -544,7 +549,7 @@
 
   <footer>
     &copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...<br>
-    Background: Mt Ruapehu, home of the UASC lodge I looked after from 2021 to 2023.
+    Background: Mt Ruapehu, home of UASC. Photo by Geoff McKay, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>, colour overlay added.
   </footer>
 
 </div>

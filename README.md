@@ -19,7 +19,7 @@ Personal website for Reuben O'Brien. PHP, HTML, CSS. No frameworks.
 
 | File | URL | Notes |
 |---|---|---|
-| `index.php` | `/` | Hero, Projects, Publications, About, Affiliations, Contact |
+| `index.php` | `/` | Hero, Projects, Publications, Conferences, About, Adventures, Affiliations, Contact |
 | `adventures.php` | `/adventures` | Auto-loads images from `images/adventures/`, masonry gallery with lightbox |
 | `conferences.php` | `/conferences` | Manually maintained list of research + industry events |
 | `router.php` | — | Local dev only, maps clean URLs to .php files |

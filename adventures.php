@@ -200,7 +200,10 @@ if (is_dir($adventuresPath)) {
     <p class="empty">No photos yet. Drop images into <code>images/adventures/</code> named <code>YY_MM_description.jpg</code>.</p>
   <?php endif; ?>
 
-  <footer>&copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...</footer>
+  <footer>
+    &copy; <?php echo $year; ?> Reuben O'Brien &middot; Send It...<br>
+    Background: Mt Ruapehu, home of UASC. Photo by Geoff McKay, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>, colour overlay added.
+  </footer>
 </div>
 
 <!-- Lightbox -->
