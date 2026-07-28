@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -11,16 +12,20 @@ jobs:
     steps:
       - name: Update cPanel repo from GitHub
         run: |
-          curl -sS --fail \
+          resp=$(curl -sS --fail \
             -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
             -X POST \
             "https://${{ secrets.CPANEL_HOST }}/execute/VersionControl/update" \
-            -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}&branch=main"
+            -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}&branch=main")
+          echo "$resp" | jq .
+          [ "$(echo "$resp" | jq -r '.status')" = "1" ]
 
       - name: Deploy HEAD commit
         run: |
-          curl -sS --fail \
+          resp=$(curl -sS --fail \
             -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
             -X POST \
             "https://${{ secrets.CPANEL_HOST }}/execute/VersionControlDeployment/create" \
-            -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}"
+            -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}")
+          echo "$resp" | jq .
+          [ "$(echo "$resp" | jq -r '.status')" = "1" ]
