@@ -36,15 +36,9 @@ php -S localhost:5050 router.php
 
 Push to `main` on GitHub → GitHub Action triggers → cPanel auto-deploys.
 
-The Action calls two cPanel UAPI endpoints in sequence:
-1. `POST /execute/VersionControl/update` with `repository_root=...&branch=main` — git pulls latest commits onto the server (**`branch=main` is required**, without it the call only updates repo settings and does nothing)
-2. `POST /execute/VersionControlDeployment/create` with `repository_root=...` — runs `.cpanel.yml` tasks
+The Action calls two cPanel UAPI endpoints in sequence: a `VersionControl/update` (git pull on the server) followed by a `VersionControlDeployment/create` (runs `.cpanel.yml` tasks, which copy the PHP files and `images/` folder to the web root).
 
-`.cpanel.yml` copies PHP files and the entire `images/` folder to `/home/REDACTED/public_html/`.
-
-cPanel server: `REDACTED-HOST`, username: `REDACTED`
-GitHub secret: `CPANEL_API_TOKEN`
-Repo path on server: `/home/REDACTED/repositories/website-html`
+Server hostnames, usernames, and paths live in `private/DEPLOY_NOTES.md` (gitignored). The cPanel API token is stored as a GitHub Actions secret.
 
 ## File structure
 

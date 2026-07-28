@@ -11,16 +11,16 @@ jobs:
     steps:
       - name: Update cPanel repo from GitHub
         run: |
-          curl -s \
-            -H "Authorization: cpanel REDACTED:${{ secrets.CPANEL_API_TOKEN }}" \
+          curl -sS --fail \
+            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
             -X POST \
-            "https://REDACTED-HOST/execute/VersionControl/update" \
-            -d "repository_root=/home/REDACTED/repositories/website-html&branch=main"
+            "https://${{ secrets.CPANEL_HOST }}/execute/VersionControl/update" \
+            -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}&branch=main"
 
       - name: Deploy HEAD commit
         run: |
-          curl -s \
-            -H "Authorization: cpanel REDACTED:${{ secrets.CPANEL_API_TOKEN }}" \
+          curl -sS --fail \
+            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
             -X POST \
-            "https://REDACTED-HOST/execute/VersionControlDeployment/create" \
-            -d "repository_root=/home/REDACTED/repositories/website-html"
+            "https://${{ secrets.CPANEL_HOST }}/execute/VersionControlDeployment/create" \
+            -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}"
