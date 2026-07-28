@@ -8,6 +8,7 @@ $routes = [
     '/adventures'   => 'adventures.php',
     '/conferences'  => 'conferences.php',
     '/projects'     => 'projects.php',
+    '/sitemap.xml'  => 'sitemap.php',
 ];
 
 if (isset($routes[$path])) {
