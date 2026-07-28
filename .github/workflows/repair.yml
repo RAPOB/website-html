@@ -1,0 +1,39 @@
+name: Repair cPanel deployment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show current repo config
+        run: |
+          resp=$(curl -sS --fail -G \
+            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
+            "https://${{ secrets.CPANEL_HOST }}/execute/VersionControl/retrieve" \
+            --data-urlencode "fields=name,clone_urls,branch,last_update")
+          echo "$resp" | jq .
+
+      - name: Fresh clone into new repository root
+        run: |
+          resp=$(curl -sS --fail \
+            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
+            -X POST \
+            "https://${{ secrets.CPANEL_HOST }}/execute/VersionControl/create" \
+            --data-urlencode "repository_root=${{ secrets.CPANEL_REPO_ROOT }}-2" \
+            --data-urlencode "name=website-html-2" \
+            --data-urlencode "clone_url=https://github.com/RAPOB/website-html.git" \
+            --data-urlencode "branch=main")
+          echo "$resp" | jq .
+          [ "$(echo "$resp" | jq -r '.status')" = "1" ]
+
+      - name: Deploy from new root
+        run: |
+          resp=$(curl -sS --fail \
+            -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_API_TOKEN }}" \
+            -X POST \
+            "https://${{ secrets.CPANEL_HOST }}/execute/VersionControlDeployment/create" \
+            -d "repository_root=${{ secrets.CPANEL_REPO_ROOT }}-2")
+          echo "$resp" | jq .
+          [ "$(echo "$resp" | jq -r '.status')" = "1" ]
