@@ -76,11 +76,6 @@ if (is_dir($adventuresPath)) {
     padding: 20px 0; border-bottom: 1px solid var(--border);
   }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
-  .dot {
-    width: 10px; height: 10px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    box-shadow: 0 0 14px var(--magenta);
-  }
   .nav-links { display: flex; align-items: center; gap: 4px; }
   .nav-links a {
     margin-left: 16px; color: var(--muted); font-size: 15px;
@@ -168,8 +163,8 @@ if (is_dir($adventuresPath)) {
     </div>
     <div class="nav-links">
       <a href="/#projects">Projects</a>
-      <a href="/#publications">Publications</a>
       <a href="/#about">About</a>
+      <a href="/#publications">Publications</a>
       <a href="/#contact">Contact</a>
       <div class="nav-sep" aria-hidden="true"></div>
       <a href="/adventures" class="nav-page active">Adventures</a>

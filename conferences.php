@@ -120,8 +120,8 @@
     </div>
     <div class="nav-links">
       <a href="/#projects">Projects</a>
-      <a href="/#publications">Publications</a>
       <a href="/#about">About</a>
+      <a href="/#publications">Publications</a>
       <a href="/#contact">Contact</a>
       <div class="nav-sep" aria-hidden="true"></div>
       <a href="/adventures" class="nav-page">Adventures</a>

@@ -336,8 +336,8 @@
     </div>
     <div class="nav-links">
       <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
       <a href="#about">About</a>
+      <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
       <div class="nav-sep" aria-hidden="true"></div>
       <a href="/adventures" class="nav-page">Adventures</a>
@@ -406,6 +406,26 @@
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">About</div>
+    <div class="about-text">
+      <p>Started off as a wannabe Race Engineer in Formula SAE at the University of Auckland, then camera specialist with <strong>Toyota GAZOO Racing</strong> (Formula Regional Oceania). That led to the NZ Rally series, first event alongside the World Rally Championship, letting me work on series 2 cars. Formula racing is crazy, but rally is another whole level of insanity.</p>
+      <p>Realizing that motorsports is for entertainment, I tried <strong>Fisher &amp; Paykel Healthcare</strong> as an intern working on medical devices. Cool to see Auckland on the global stage, but this still didn't do it for me.</p>
+      <p>Final year at uni I found robotics. <strong>Crown Equipment Corporation</strong> let me work on autonomous lift trucks as a Systems Engineer: industrial hardware, PLCs, real-time C++. First overseas work trip, based in New Bremen, Ohio for a few months. Beer league baseball, golf, and ten-pin bowling.</p>
+      <p>Picked up a Master's thesis to finish what I started with my Honours project. A year of madness: evenings, weekends, and remaining sanity in the labs, muddy ponds, creeks, and the Manukau Harbour. Transitioned to <strong>Acumino</strong> mid-thesis. Two IROS papers, first class. Then a Partnership PhD with Acumino and the <strong>University of Glasgow</strong> in Biomedical Engineering. This thesis will let me close a book within my family, and be the creator of many more adventures and chaos...</p>
+    </div>
+    <div class="social-row">
+      <a class="social-chip" href="https://github.com/rapob" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.6c0 5.34 3.44 9.86 8.2 11.46.6.12.82-.26.82-.58 0-.28-.01-1.03-.02-2.02-3.34.75-4.04-1.64-4.04-1.64-.55-1.43-1.35-1.81-1.35-1.81-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.27 1.86 1.27 1.08 1.91 2.84 1.36 3.53 1.04.11-.8.42-1.35.76-1.66-2.67-.31-5.48-1.38-5.48-6.14 0-1.36.46-2.47 1.23-3.34-.12-.31-.53-1.56.12-3.25 0 0 1.01-.33 3.3 1.27a11.2 11.2 0 0 1 6 0c2.3-1.6 3.3-1.27 3.3-1.27.66 1.69.24 2.94.12 3.25.77.87 1.23 1.98 1.23 3.34 0 4.78-2.81 5.82-5.49 6.13.43.37.81 1.1.81 2.23 0 1.61-.02 2.9-.02 3.29 0 .32.21.7.83.58A12 12 0 0 0 24 12.6 12 12 0 0 0 12 .5Z"/></svg>
+        GitHub
+      </a>
+      <a class="social-chip" href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="social-chip" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="social-chip" href="https://www.researchgate.net/profile/Reuben-Obrien" target="_blank" rel="noopener">ResearchGate</a>
+    </div>
+  </section>
+
   <!-- PUBLICATIONS -->
   <section id="publications">
     <div class="section-label">Publications</div>
@@ -461,49 +481,6 @@
     <a class="item-link" href="/conferences" style="display:inline-block; margin-top:16px;">View photos &rarr;</a>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-label">About</div>
-    <div class="about-text">
-      <p>Started off as a wannabe Race Engineer in Formula SAE at the University of Auckland, then camera specialist with <strong>Toyota GAZOO Racing</strong> (Formula Regional Oceania). That led to the NZ Rally series, first event alongside the World Rally Championship, letting me work on series 2 cars. Formula racing is crazy, but rally is another whole level of insanity.</p>
-      <p>Realizing that motorsports is for entertainment, I tried <strong>Fisher &amp; Paykel Healthcare</strong> as an intern working on medical devices. Cool to see Auckland on the global stage, but this still didn't do it for me.</p>
-      <p>Final year at uni I found robotics. <strong>Crown Equipment Corporation</strong> let me work on autonomous lift trucks as a Systems Engineer: industrial hardware, PLCs, real-time C++. First overseas work trip, based in New Bremen, Ohio for a few months. Beer league baseball, golf, and ten-pin bowling.</p>
-      <p>Picked up a Master's thesis to finish what I started with my Honours project. A year of madness: evenings, weekends, and remaining sanity in the labs, muddy ponds, creeks, and the Manukau Harbour. Transitioned to <strong>Acumino</strong> mid-thesis. Two IROS papers, first class. Then a Partnership PhD with Acumino and the <strong>University of Glasgow</strong> in Biomedical Engineering. This thesis will let me close a book within my family, and be the creator of many more adventures and chaos...</p>
-    </div>
-    <div class="social-row">
-      <a class="social-chip" href="https://github.com/rapob" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.6c0 5.34 3.44 9.86 8.2 11.46.6.12.82-.26.82-.58 0-.28-.01-1.03-.02-2.02-3.34.75-4.04-1.64-4.04-1.64-.55-1.43-1.35-1.81-1.35-1.81-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.27 1.86 1.27 1.08 1.91 2.84 1.36 3.53 1.04.11-.8.42-1.35.76-1.66-2.67-.31-5.48-1.38-5.48-6.14 0-1.36.46-2.47 1.23-3.34-.12-.31-.53-1.56.12-3.25 0 0 1.01-.33 3.3 1.27a11.2 11.2 0 0 1 6 0c2.3-1.6 3.3-1.27 3.3-1.27.66 1.69.24 2.94.12 3.25.77.87 1.23 1.98 1.23 3.34 0 4.78-2.81 5.82-5.49 6.13.43.37.81 1.1.81 2.23 0 1.61-.02 2.9-.02 3.29 0 .32.21.7.83.58A12 12 0 0 0 24 12.6 12 12 0 0 0 12 .5Z"/></svg>
-        GitHub
-      </a>
-      <a class="social-chip" href="https://www.linkedin.com/in/reubenapob" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="social-chip" href="https://scholar.google.com/citations?user=A0ajSv8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-      <a class="social-chip" href="https://www.researchgate.net/profile/Reuben-Obrien" target="_blank" rel="noopener">ResearchGate</a>
-    </div>
-  </section>
-
-  <!-- ADVENTURES -->
-  <section id="adventures-teaser">
-    <div class="section-label">Adventures</div>
-    <?php
-    $advPath = 'images/adventures/';
-    $advAll = array_filter(scandir($advPath) ?: [], fn($f) => preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $f));
-    usort($advAll, function($a, $b) {
-      preg_match('/^(\d{2})_(\d{2})/', $a, $mA);
-      preg_match('/^(\d{2})_(\d{2})/', $b, $mB);
-      if (count($mA) >= 3 && count($mB) >= 3) return $mA[1] !== $mB[1] ? $mB[1] - $mA[1] : $mB[2] - $mA[2];
-      return strcmp($a, $b);
-    });
-    $recent = array_slice(array_values($advAll), 0, 4);
-    ?>
-    <?php if ($recent): ?>
-    <div class="adv-strip">
-      <?php foreach ($recent as $img): ?>
-      <img src="<?php echo htmlspecialchars($advPath . $img); ?>" alt="Adventure" class="adv-thumb" loading="lazy">
-      <?php endforeach; ?>
-    </div>
-    <?php endif; ?>
-    <a href="/adventures" class="adv-cta">Send It &rarr;</a>
-  </section>
 
   <!-- AFFILIATIONS -->
   <section id="teams">
@@ -531,7 +508,7 @@
         <span class="affil-name"><a href="https://www.auckland.ac.nz/" target="_blank" rel="noopener">University of Auckland</a> <span class="affil-role">&middot; MEng Mechatronics 2023&ndash;24, BE Mechatronics 2018&ndash;21</span></span>
       </div>
       <div class="affil-row">
-        <span class="affil-date"></span>
+        <span class="affil-date">2021 &ndash; 2024</span>
         <span class="affil-name"><a href="https://newdexterity.org/" target="_blank" rel="noopener">New Dexterity</a> <span class="affil-role">&middot; Auckland robotics lab, where the boats were built</span></span>
       </div>
       <div class="affil-row">
@@ -540,6 +517,31 @@
       </div>
     </div>
   </section>
+
+  <!-- ADVENTURES -->
+  <section id="adventures-teaser">
+    <div class="section-label">Adventures</div>
+    <?php
+    $advPath = 'images/adventures/';
+    $advAll = array_filter(scandir($advPath) ?: [], fn($f) => preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $f));
+    usort($advAll, function($a, $b) {
+      preg_match('/^(\d{2})_(\d{2})/', $a, $mA);
+      preg_match('/^(\d{2})_(\d{2})/', $b, $mB);
+      if (count($mA) >= 3 && count($mB) >= 3) return $mA[1] !== $mB[1] ? $mB[1] - $mA[1] : $mB[2] - $mA[2];
+      return strcmp($a, $b);
+    });
+    $recent = array_slice(array_values($advAll), 0, 4);
+    ?>
+    <?php if ($recent): ?>
+    <div class="adv-strip">
+      <?php foreach ($recent as $img): ?>
+      <img src="<?php echo htmlspecialchars($advPath . $img); ?>" alt="Adventure" class="adv-thumb" loading="lazy">
+      <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
+    <a href="/adventures" class="adv-cta">Send It &rarr;</a>
+  </section>
+
 
   <!-- CONTACT -->
   <section id="contact">
