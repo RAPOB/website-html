@@ -346,7 +346,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <img src="images/me.jpeg" alt="Reuben O'Brien" class="hero-photo">
+    <img src="images/me.jpeg?v=2" alt="Reuben O'Brien" class="hero-photo">
     <div class="hero-meta">
       <span class="status-text">PhD Student &middot; University of Glasgow &middot; Acumino</span>
     </div>
